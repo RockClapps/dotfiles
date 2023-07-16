@@ -1,0 +1,234 @@
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "left", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "width": 30, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces", "custom/workspaceright", "custom/workspaceleft", "custom/minusworkspace", "custom/addworkspace", "custom/media", "custom/wofi", "custom/supergraphics", "wlr/window"],
+    "modules-center": [],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "keyboard-state", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "clock"],
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    // Modules configuration
+     "wlr/window": {
+        "format": "hyprctl activewindow",
+        "rotate": 90,
+        "on-click-middle": "hyprctl kill"
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "wlr/mode": {
+        "rotate": 90,
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "wlr/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "mpd": {
+       "rotate": 90,
+        "format": " {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}%  ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+       "rotate": 90,
+        "format": " {icon} ",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "tray": {
+       "rotate": 90,
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+       "rotate": 90,
+        // "timezone": "America/New_York",
+	"format": "{:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "format-alt": "{:%Y-%m-%d}"
+	"format-alt": "{:%A, %B %d, %H:%M}"
+    },
+    "cpu": {
+       "rotate": 90,
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+       "rotate": 90,
+        "format": "{}% "
+    },
+    "temperature": {
+       "rotate": 90,
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+       "rotate": 90,
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+	"on-scroll-up": "brightnessctl set +1%",
+	"on-scroll-down": "brightnessctl set 1%-",
+    },
+    "battery": {
+       "rotate": 90,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon} ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+       "rotate": 90,
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        //"format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{signalStrength}%  ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"on-click-middle": "bash Scripts/wifitoggle.sh",
+	"on-click-right": "systemsettings5 kcm_networkmanagement",
+    },
+    "pulseaudio": {
+       "rotate": 90,
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/media": {
+       "rotate": 90,
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/rofi": {
+       "rotate": 90,
+    	"format": " rofi ",
+	"on-click": "switcherooctl rofi -show drun"
+    },
+    "custom/wofi": {
+       "rotate": 90,
+    	"format": " wofi ",
+	"on-click": "wofi -S drun -I -i"
+    },
+    "custom/apps": {
+       "rotate": 90,
+	"format": "  apps  ",
+	"on-click": "xfce4-appfinder"
+    },
+    "bluetooth": {
+       "rotate": 90,
+	"format":" {status}  ",
+	"on-click-right": "systemsettings5 kcm_bluetooth",
+	"on-click-middle": "bash Scripts/bluetoothtoggle.sh"
+    },
+    "custom/supergraphics": {
+       "rotate": 90,
+	"format": " {} ",
+	"interval": "once",
+	"exec": "supergfxctl -g",
+	"on-click": "switcherooctl wofi -S drun -I -i"
+    },
+    "custom/popgraphics": {
+       "rotate": 90,
+	"format": " {} ",
+	"interval": "once",
+	"exec": "system76-power graphics"
+    },
+    "custom/addworkspace": {
+       "rotate": 90,
+  "format": "  ",
+  "on-click": "wlrmsg -t get_workspaces -r | expr $(jq '[.[].num] | max') + 1 | xargs wlrmsg workspace"
+    },
+    "custom/minusworkspace": {
+       "rotate": 90,
+  "format": "  ",
+  "on-click": "wlrmsg -t get_workspaces -r | expr $(jq '[.[].num] | max') - 1 | xargs wlrmsg workspace"
+    },
+    "custom/workspaceleft": {
+       "rotate": 90,
+      "format": "  ",
+      "on-click": "wlrmsg move to workspace prev"
+    },
+    "custom/workspaceright": {
+       "rotate": 90,
+      "format": "  ",
+      "on-click": "wlrmsg move to workspace next"
+    }
+}
+
