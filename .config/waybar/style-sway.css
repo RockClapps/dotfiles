@@ -1,0 +1,383 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 6;
+}
+
+window#waybar {
+    /* background-color: rgba(43, 48, 59, 0.5); */
+    /* background-color: #22222a; */
+    background-color: transparent;
+    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+/*
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+*/
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    /* border-radius: 0; */
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces {
+    background-color: #22222a;
+}
+
+#workspaces button {
+    padding: 2 0px;
+    margin: 0 0 0 0px;
+    background-color: #1e1e1e;
+    color: #00FFAA;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#workspaces button.focused {
+    /* background-color: #64727D; */
+    background-color: #00FFAA;
+    color: #000000;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    /* border-bottom: 3px solid #ffffff; */
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 0px;
+    color: #ffffff;
+}
+
+#window {
+	background-color: #22222a; 
+	color: #00FFAA;
+  padding: 10 7 10 7;
+  margin: 4 0px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+    margin-bottom: 4;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#battery {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#memory {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#disk {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#backlight {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#network {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+}
+
+#pulseaudio {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#pulseaudio.muted {
+	background-color: #22222a;
+	color: #00FFAA;
+}
+
+#wireplumber {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#wireplumber.muted {
+    background-color: #f53c3c;
+}
+
+#custom-media {
+	background-color: #22222a;
+	color: #00FFAA;
+    min-width: 100px;
+    padding: 5px 0 5px 0;
+}
+
+#custom-media.custom-spotify {
+    background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+    background-color: #ffa000;
+}
+
+#temperature {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+	  color: white;
+}
+
+#tray {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    /* background-color: #2d3436; */
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    /* color: #2d3436; */
+  color: #3c3c3c;
+}
+
+#mpd {
+	background-color: #22222a;
+	color: #00FFAA;
+    padding: 5px 0 5px 0;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+    padding: 5px 0 5px 0;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+    padding: 5px 0 5px 0;
+}
+
+#keyboard-state > label {
+    padding: 0 0px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#custom-scratchpad {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#scratchpad.empty {
+	background-color: #22222a;
+}
+
+#custom-rofi {
+	background-color: #22222a;
+	color: #00FFAA;
+}
+#custom-wofi {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#custom-apps {
+	background-color: #22222a;
+	color: #00FFAA;
+}
+
+#bluetooth {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5 0 5 0px;
+}
+
+#custom-supergraphics {
+	background-color: #22222a;
+	color: #00FFAA;
+  padding: 5px 0 5px 0;
+}
+
+#custom-addworkspace {
+	background-color: #22222a;
+	color: #00FFAA;
+  	padding: 5 0 5 0;
+}
+#custom-upworkspace {
+	background-color: #22222a;
+	color: #00FFAA;
+  	padding: 5 0 5 0;
+}
+#custom-downworkspace {
+	background-color: #22222a;
+	color: #00FFAA;
+  	padding: 5 0 5 0;
+}
+
+#taskbar {
+	background-color: #22222a;
+	color: #00FFAA;
+  	padding: 5 0 5 0;
+}
+
+#taskbar.empty {
+    background-color: transparent;
+}
