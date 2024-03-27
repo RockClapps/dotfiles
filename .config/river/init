@@ -30,8 +30,8 @@ do
     riverctl map normal Super+Control L spawn "systemctl suspend"
 done
 
-riverctl map normal None Print spawn grim
-riverctl map normal Super Print spawn 'grim -g "$(slurp)"'
+riverctl map normal Super Print spawn grim
+riverctl map normal Super+Shift Print spawn 'grim -g "$(slurp)"'
 
 riverctl map normal Super E focus-view next
 riverctl map normal Super I focus-view previous
