@@ -1,0 +1,71 @@
+theme = "catppuccin_mocha"
+
+[editor.cursor-shape]
+normal = "underline"
+insert = "bar"
+select = "block"
+
+
+[keys.normal]
+n = "move_char_left" 
+e = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
+E = "join_selections_space"
+I = "keep_selections"
+
+h = "search_next"
+j = "move_next_word_end"
+k = "insert_mode"
+l = "open_below"
+H = "search_prev"
+J = "move_next_long_word_end"
+K = "insert_at_line_start"
+L = "open_above"
+
+[keys.select]
+n = "move_char_left" 
+e = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
+E = "join_selections_space"
+I = "keep_selections"
+
+h = "search_next"
+j = "move_next_word_end"
+k = "insert_mode"
+l = "open_below"
+H = "search_prev"
+J = "move_next_long_word_end"
+K = "insert_at_line_start"
+L = "open_above"
+
+[keys.normal.z]
+e = "scroll_down"
+k = "scroll_up"
+
+[keys.normal.g]
+n = "goto_line_start"
+e = "move_line_down"
+i = "move_line_up"
+o = "goto_line_end"
+
+h = "goto_next_buffer"
+j = "goto_last_line"
+k = "goto_implementation"
+
+[keys.normal.m]
+k = "select_textobject_inner"
+
+[keys.normal.w]
+n = "jump_view_left"
+e = "jump_view_down"
+i = "jump_view_up"
+o = "jump_view_right"
+N = "swap_view_left"
+E = "swap_view_down"
+I = "swap_view_up"
+O = "swap_view_right"
+
+l = "wonly"
+
