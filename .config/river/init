@@ -14,9 +14,9 @@ riverctl map normal Super Return spawn kitty
 riverctl map normal Super+Shift Return spawn neovide
 riverctl map normal Super F spawn dolphin
 riverctl map normal Super M spawn thunderbird
-#riverctl map normal Super B spawn "firefox --private-window"
-#riverctl map normal Super+Shift B spawn firefox
-riverctl map normal Super B spawn chromium
+riverctl map normal Super B spawn "firefox --private-window"
+riverctl map normal Super+Shift B spawn firefox
+#riverctl map normal Super B spawn chromium
 riverctl map normal Super Space spawn "fuzzel --font='Fira Code' --icon-theme='Papirus-Dark' -w 64 -b 222222ff -C aa0000ff -s aa0000ff -S ffffffff -M ffff00ff -B 2"
 riverctl map normal Super V spawn "cliphist list | fuzzel --font='Fira Code' -d -w 64 -b 222222ff -C aa0000ff -s aa0000ff -S ffffffff -M ffff00ff -B 2 | cliphist decode | wl-copy"
 
