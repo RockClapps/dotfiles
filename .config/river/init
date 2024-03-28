@@ -19,6 +19,7 @@ riverctl map normal Super+Shift B spawn firefox
 #riverctl map normal Super B spawn chromium
 riverctl map normal Super Space spawn "fuzzel --font='Fira Code' --icon-theme='Papirus-Dark' -w 64 -b 222222ff -C aa0000ff -s aa0000ff -S ffffffff -M ffff00ff -B 2"
 riverctl map normal Super V spawn "cliphist list | fuzzel --font='Fira Code' -d -w 64 -b 222222ff -C aa0000ff -s aa0000ff -S ffffffff -M ffff00ff -B 2 | cliphist decode | wl-copy"
+riverctl map normal Super+Shift V spawn "cliphist wipe"
 
 riverctl map normal Super Q close
 riverctl map normal Super L spawn "swaylock -c 222222"
