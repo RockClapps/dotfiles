@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# The following lines were added by compinstall
 zstyle :compinstall filename '/home/rock/.zshrc'
 
 autoload -Uz compinit
@@ -21,15 +13,13 @@ bindkey -e
 
 source ~/.bash_aliases
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[b' history-substring-search-down
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+if [ -f /usr/bin/starship ]; then
+	eval "$(starship init zsh)"
+fi
 
-eval "$(thefuck --alias)"
-#eval "$(starship init zsh)"
-
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
