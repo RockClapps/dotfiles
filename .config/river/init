@@ -196,7 +196,7 @@ wlsunset -l 42.72 -L -73.68 &
 wl-paste --watch cliphist store  &
 cliphist wipe &
 
-swaybg -m fill -i ~/MEGA/blobs-d-red.png &
+swaybg -m fill -i ~/blobs-d-red.png &
 swayidle before-sleep 'swaylock -c 222222' &
 swayidle timeout 1800 'systemctl suspend' &
 swayidle timeout 1500 'brightnessctl -s set 10%' resume 'brightnessctl -r' &

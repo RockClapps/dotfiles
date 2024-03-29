@@ -175,7 +175,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper="~/MEGA/blobs-d-red.png",
+        wallpaper="~/blobs-d-red.png",
         wallpaper_mode="fill",
         #top=bar.Gap(32)
         #top=bar.Bar(
