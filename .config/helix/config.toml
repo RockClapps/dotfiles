@@ -57,7 +57,7 @@ k = "goto_implementation"
 [keys.normal.m]
 k = "select_textobject_inner"
 
-[keys.normal.w]
+[keys.normal."C-w"]
 n = "jump_view_left"
 e = "jump_view_down"
 i = "jump_view_up"
