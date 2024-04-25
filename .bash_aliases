@@ -6,9 +6,14 @@ alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
 alias tb="toolbox enter"
+alias tbr="toolbox run"
 if [ -f /usr/bin/dnf ]; then
 	alias dnfi="sudo dnf5 install"
 	alias dnfr="sudo dnf5 remove"
 	alias dnfu="sudo dnf5 update"
 	alias dnfs="dnf5 search"
+fi
+
+if ! [ -f /usr/bin/hx ]; then 
+	alias hx="toolbox run hx"
 fi
