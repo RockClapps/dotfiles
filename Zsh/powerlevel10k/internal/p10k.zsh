@@ -8830,8 +8830,8 @@ _p9k_init_vcs() {
   typeset -g _p9k_preinit="function _p9k_preinit() {
     (( $+commands[git] )) || { unfunction _p9k_preinit; return 1 }
     [[ \$ZSH_VERSION == ${(q)ZSH_VERSION} ]]                      || return
-    [[ -r ${(q)gitstatus_dir}/gitstatus.plugin.zsh ]]             || return
-    builtin source ${(q)gitstatus_dir}/gitstatus.plugin.zsh _p9k_ || return
+    return
+    return
     GITSTATUS_AUTO_INSTALL=${(q)GITSTATUS_AUTO_INSTALL}         \
       GITSTATUS_DAEMON=${(q)GITSTATUS_DAEMON}                   \
       GITSTATUS_CACHE_DIR=${(q)GITSTATUS_CACHE_DIR}             \
@@ -8847,7 +8847,7 @@ _p9k_init_vcs() {
           ${${_POWERLEVEL9K_VCS_RECURSE_UNTRACKED_DIRS:#0}:+-e} \
           -a POWERLEVEL9K
   }"
-  builtin source $gitstatus_dir/gitstatus.plugin.zsh _p9k_ || return
+  return
   () {
     trap 'return 130' INT
     {
