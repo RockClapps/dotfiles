@@ -1,0 +1,92 @@
+[06b64d4f-978c-474e-bab6-d56b44eaf5ce]
+Description=Not big system windows
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.kde.plasmashell
+wmclassmatch=1
+
+[0dd842f5-3cee-4521-996d-959a193b4f29]
+Description=Yakuake Not big
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.kde.yakuake
+wmclassmatch=1
+
+[0f41104c-bd52-4dcc-83c8-779bd8197b91]
+Description=Big apps
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+types=1
+
+[1]
+Description=Not big system windows
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.kde.plasmashell
+wmclassmatch=1
+
+[1f9e515b-3ab0-4893-8c19-0214d49602d8]
+Description=File upload thing not big
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.freedesktop.impl.portal.desktop.kde
+wmclassmatch=1
+
+[1fd82cf8-9bb5-429a-ac7f-aacff4a73776]
+Description=New window settings
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.kde.plasmashell
+wmclassmatch=1
+
+[2]
+Description=Yakuake Not big
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.kde.yakuake
+wmclassmatch=1
+
+[3]
+Description=File upload thing not big
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=org.freedesktop.impl.portal.desktop.kde
+wmclassmatch=1
+
+[3e82c4a6-8599-4e99-b5ea-f2a3abe11637]
+Description=minimize xwaylandvideobridge
+minimize=true
+minimizerule=3
+wmclass=xwaylandvideobridge xwaylandvideobridge
+wmclasscomplete=true
+wmclassmatch=1
+
+[4]
+Description=Settings for xwaylandvideobridge xwaylandvideobridge
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=xwaylandvideobridge xwaylandvideobridge
+wmclasscomplete=true
+wmclassmatch=1
+
+[431ea917-3537-4ac1-8ea2-e407fb7fb181]
+Description=Settings for xwaylandvideobridge xwaylandvideobridge
+maximizehorizrule=3
+maximizevertrule=3
+wmclass=xwaylandvideobridge xwaylandvideobridge
+wmclasscomplete=true
+wmclassmatch=1
+
+[5]
+Description=Big apps
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+types=1
+
+[General]
+count=5
+rules=1,2,3,4,5
