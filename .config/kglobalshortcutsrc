@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-37ffde03-3a09-4cf9-94a0-0a5b2871557f=none,none,Switch to activity "Default"
 switch-to-activity-6dbc3ebd-5bee-40e6-97cc-c2b537354bc9=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -264,6 +265,10 @@ _launch=Meta+D
 [services][emacs.desktop]
 _launch=Meta+Shift+Return
 
+[services][firefox.desktop]
+_launch=Meta+B
+new-window=Meta+Shift+B
+
 [services][org.codeberg.dnkl.foot.desktop]
 _launch=Meta+Return
 
@@ -279,6 +284,17 @@ _launch=Meta+M
 [services][org.mozilla.firefox.desktop]
 _launch=Meta+B
 new-window=Meta+Shift+B
+
+[wacomtablet]
+Map to fullscreen=,Meta+Ctrl+F,Map to fullscreen
+Map to screen 1=Meta+Ctrl+1,Meta+Ctrl+1,Map to screen 1
+Map to screen 2=Meta+Ctrl+2,Meta+Ctrl+2,Map to screen 2
+Next Profile=Meta+Ctrl+N,Meta+Ctrl+N,Next profile
+Previous Profile=Meta+Ctrl+P,Meta+Ctrl+P,Previous Profile
+Toggle screen map selection=Meta+Ctrl+M,Meta+Ctrl+M,Toggle between all screens
+Toggle stylus mode=Meta+Ctrl+S,Meta+Ctrl+S,Toggle the Stylus Tool Relative/Absolute
+Toggle touch tool=,Meta+Ctrl+T,Enable/Disable the Touch Tool
+_k_friendly_name=Wacom Tablet
 
 [yakuake]
 _k_friendly_name=Yakuake
