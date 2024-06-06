@@ -138,8 +138,7 @@ History Items[$e]=file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/L
 
 [General]
 AccentColor=61,212,37
-ColorScheme=BreezeDark2
-ColorSchemeHash=cb4c6ee5cc9a59dbe09fb467a529af1bf5c55c97
+ColorSchemeHash=6d5f022b37f257f109414eebbb25996b16179a82
 LastUsedCustomAccentColor=61,212,37
 TerminalApplication=foot
 TerminalService=org.codeberg.dnkl.foot.desktop
