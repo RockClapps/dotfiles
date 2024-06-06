@@ -286,6 +286,9 @@ _launch=Meta+M
 _launch=Meta+B
 new-window=Meta+Shift+B
 
+[services][thunderbird.desktop]
+_launch=Meta+M
+
 [wacomtablet]
 Map to fullscreen=none,Meta+Ctrl+F,Map to fullscreen
 Map to screen 1=Meta+Ctrl+1,Meta+Ctrl+1,Map to screen 1
