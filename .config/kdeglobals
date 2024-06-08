@@ -133,8 +133,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=959,653
-History Items[$e]=file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Zsh/powerlevel10k,file:$HOME/Git/RingRacers/RingRacers-2.0,file:$HOME/Downloads/uBOLite_2024.4.8.931.chromium.mv3,file:$HOME/Games/Daggerfall,file:///home/rock/.local/share/Steam/steamapps/common/The Elder Scrolls Daggerfall
+DirSelectDialog Size=980,658
+History Items[$e]=file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Zsh/powerlevel10k,file:$HOME/Git/RingRacers/RingRacers-2.0,file:$HOME/Downloads/uBOLite_2024.4.8.931.chromium.mv3,file:$HOME/Games/Daggerfall,file:$HOME/.local/share/Steam/steamapps/common/The Elder Scrolls Daggerfall
 
 [General]
 AccentColor=61,212,37
