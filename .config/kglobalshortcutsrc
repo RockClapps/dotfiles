@@ -264,6 +264,9 @@ _launch=
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
+[services][discord.desktop]
+_launch=Meta+D
+
 [services][emacs.desktop]
 _launch=Meta+Shift+Return
 

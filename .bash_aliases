@@ -6,6 +6,6 @@ alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
 alias zypi="sudo zypper install"
-alias zypr="sudo zypper remove"
+alias zypr="sudo zypper remove --clean-deps"
 alias zypu="sudo zypper refresh; sudo zypper dist-upgrade"
 alias zyps="zypper search"
