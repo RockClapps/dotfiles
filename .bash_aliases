@@ -7,5 +7,5 @@ alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
 alias zypi="sudo zypper install"
 alias zypr="sudo zypper remove --clean-deps"
-alias zypu="sudo zypper refresh; sudo zypper dist-upgrade"
+alias zypu="sudo zypper refresh; sudo zypper dist-upgrade --details"
 alias zyps="zypper search"

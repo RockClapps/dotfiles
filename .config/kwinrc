@@ -29,6 +29,9 @@ wobblywindowsEnabled=true
 [Tiling]
 padding=4
 
+[Tiling][0d45ae35-ae79-5e84-bffa-93df9bfbeaf3]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][a3ad6542-782c-5d1f-a4d1-82ef2ea7d20d]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 

@@ -274,7 +274,7 @@ _launch=Meta+Shift+Return
 _launch=Meta+B
 new-window=Meta+Shift+B
 
-[services][kitty.desktop]
+[services][org.codeberg.dnkl.foot.desktop]
 _launch=Meta+Return
 
 [services][org.kde.dolphin.desktop]
