@@ -25,6 +25,7 @@
  ;; If there is more than one, they won't work right.
  )
 (evil-mode)
+(flyspell-mode)
 (global-evil-surround-mode)
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory

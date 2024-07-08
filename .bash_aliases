@@ -4,6 +4,8 @@ alias switchloader="sudo -E java -jar ~/MEGA/Game\ Saves/Switch\ Hacking/ns-usbl
 alias suedit="sudo nvim -u ~/.config/nvim/init-root.lua"
 alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
+alias ubuntu='cd ~/UbuntuHome; distrobox enter ubuntu'
+alias stopubuntu='distrobox stop ubuntu'
 
 alias zypi="sudo zypper install"
 alias zypr="sudo zypper remove --clean-deps"
