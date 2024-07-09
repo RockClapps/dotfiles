@@ -27,9 +27,8 @@ if [ -f ~/Zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]; t
 	HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 fi
 
-if [ -f ~/Zsh/powerlevel10k/powerlevel10k.zsh-theme ]; then
-	source ~/.p10k.zsh
-	source ~/Zsh/powerlevel10k/powerlevel10k.zsh-theme
+if [ -f ~/Zsh/spaceship-prompt/spaceship.zsh ]; then
+	source ~/Zsh/spaceship-prompt/spaceship.zsh
 fi
 
 if [ -f /usr/bin/zoxide ]; then
