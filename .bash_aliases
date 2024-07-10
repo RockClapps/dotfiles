@@ -1,3 +1,4 @@
+alias l="ls -ahlF --color=auto"
 alias xyeys="xeyes"
 alias hackswitch="sudo python3 ~/MEGA/Game\ Saves/Switch\ Hacking/fusee-launcher-1.0/fusee-launcher.py ~/MEGA/Game\ Saves/Switch\ Hacking/fusee-launcher-1.0/pls/payload.bin"
 alias switchloader="sudo -E java -jar ~/MEGA/Game\ Saves/Switch\ Hacking/ns-usbloader-7.1.jar"
