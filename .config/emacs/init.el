@@ -7,10 +7,11 @@
  '(custom-enabled-themes '(monokai))
  '(custom-safe-themes
    '("95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" default))
+ '(delete-selection-mode nil)
  '(evil-undo-system 'undo-redo)
  '(global-display-line-numbers-mode t)
  '(indent-tabs-mode nil)
- '(initial-buffer-choice t)
+ '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
  '(package-selected-packages '(evil-surround monokai-theme magit evil))
  '(pixel-scroll-precision-mode t)
