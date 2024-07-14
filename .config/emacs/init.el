@@ -13,7 +13,8 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
- '(package-selected-packages '(evil-surround monokai-theme magit evil))
+ '(package-selected-packages
+   '(which-key ## company evil-surround monokai-theme magit evil))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -25,8 +26,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(evil-mode)
+;; (evil-mode)
+;; (global-evil-surround-mode)
 (flyspell-mode)
-(global-evil-surround-mode)
+(auto-fill-mode)
+(global-company-mode)
+(which-key-mode)
+
+
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
