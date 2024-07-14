@@ -10,6 +10,9 @@ alias stopubuntu='distrobox stop ubuntu'
 
 alias flati="sudo flatpak install"
 alias faltr="sudo flatpak remove --delete-data"
+alias flatu="sudo flatpak update"
+alias flats="flatpak search"
+
 alias zypi="sudo zypper install"
 alias zypr="sudo zypper remove --clean-deps"
 alias zypu="sudo zypper refresh; sudo zypper dist-upgrade --details"
