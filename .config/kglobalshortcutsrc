@@ -267,9 +267,6 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][Vscodium.desktop]
 _launch=
 
-[services][dev.vencord.Vesktop.desktop]
-_launch=Meta+D
-
 [services][discord.desktop]
 _launch=Meta+D
 
