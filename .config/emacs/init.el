@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-save-default nil)
+ '(auto-save-default t)
  '(custom-enabled-themes '(monokai))
  '(custom-safe-themes
    '("95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" default))
@@ -13,6 +13,8 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ '(kill-buffer-delete-auto-save-files t)
+ '(make-backup-files nil)
  '(package-selected-packages
    '(which-key ## company evil-surround monokai-theme magit evil))
  '(pixel-scroll-precision-mode t)
@@ -28,10 +30,13 @@
  )
 ;; (evil-mode)
 ;; (global-evil-surround-mode)
-(flyspell-mode)
-(auto-fill-mode)
 (global-company-mode)
-(which-key-mode)
+(global-tab-line-mode)
+;; (which-key-mode)
+(add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook 'electric-pair-mode)
 
 
 

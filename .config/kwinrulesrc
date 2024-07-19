@@ -55,6 +55,16 @@ maximizevertrule=3
 wmclass=org.freedesktop.impl.portal.desktop.kde
 wmclassmatch=1
 
+[3b653e15-7a28-44ed-a010-8ebcebd96b0a]
+Description=Not big Emacs popups
+maximizehorizrule=3
+maximizevertrule=3
+title=Question
+types=1
+wmclass=emacs-wayland emacs
+wmclasscomplete=true
+wmclassmatch=1
+
 [3e82c4a6-8599-4e99-b5ea-f2a3abe11637]
 Description=minimize xwaylandvideobridge
 minimize=true
@@ -101,5 +111,5 @@ wmclass=firefox
 wmclassmatch=1
 
 [General]
-count=6
-rules=1,602af714-7207-4a0b-b3f2-f90ba6b1c91d,2,3,4,5
+count=7
+rules=3b653e15-7a28-44ed-a010-8ebcebd96b0a,1,602af714-7207-4a0b-b3f2-f90ba6b1c91d,2,3,4,5
