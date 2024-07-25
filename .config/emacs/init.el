@@ -3,7 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-save-default t)
+ '(auto-save-default nil)
+ '(auto-save-visited-mode t)
  '(custom-enabled-themes '(monokai))
  '(custom-safe-themes
    '("95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" default))
@@ -13,10 +14,10 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
- '(kill-buffer-delete-auto-save-files t)
+ '(kill-buffer-delete-auto-save-files nil)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(which-key ## company evil-surround monokai-theme magit evil))
+   '(go-mode which-key ## company evil-surround monokai-theme magit evil))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -28,16 +29,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-hook 'text-mode-hook 'auto-fill-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook 'electric-pair-mode)
+(add-hook 'evil-mode-hook 'global-evil-surround-mode)
 ;; (evil-mode)
 ;; (global-evil-surround-mode)
 (global-company-mode)
 (global-tab-line-mode)
 ;; (which-key-mode)
-(add-hook 'text-mode-hook 'auto-fill-mode)
-(add-hook 'text-mode-hook 'flyspell-mode)
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'prog-mode-hook 'electric-pair-mode)
-
-
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
