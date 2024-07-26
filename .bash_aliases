@@ -18,4 +18,4 @@ alias zypr="sudo zypper remove --clean-deps"
 alias zypu="sudo zypper refresh && sudo zypper dist-upgrade --details"
 alias zyps="zypper search"
 
-alias update="zypu; flatu"
+alias update="zypu && flatu"
