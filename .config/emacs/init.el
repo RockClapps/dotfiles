@@ -24,18 +24,6 @@
  '(standard-indent 2)
  '(tab-always-indent t)
  '(tool-bar-mode nil)
- '(whitespace-display-mappings
-   '((space-mark 32
-                 [183]
-                 [46])
-     (space-mark 160
-                 [164]
-                 [95])
-     (newline-mark 10
-                   [])
-     (tab-mark 9
-               [187 9]
-               [92 9]))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,7 +42,6 @@
 ;; (global-evil-surround-mode)
 (global-company-mode)
 (global-tab-line-mode)
-(global-whitespace-mode)
 (windmove-default-keybindings)
 ;; (which-key-mode)
 
