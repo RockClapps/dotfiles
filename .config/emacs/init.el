@@ -17,7 +17,7 @@
  '(kill-buffer-delete-auto-save-files nil)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(go-mode which-key ## company evil-surround monokai-theme magit evil))
+   '(markdown-mode go-mode which-key ## company evil-surround monokai-theme magit evil))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
