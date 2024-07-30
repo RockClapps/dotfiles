@@ -37,3 +37,9 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+if vim.g.neovide then
+  vim.o.guifont = 'FiraCode Nerd Font:h12'
+  vim.g.neovide_transparency = 0.8
+  vim.g.transparency = 0.0
+end

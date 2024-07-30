@@ -13,4 +13,12 @@ M.base46 = {
 	-- },
 }
 
+M.ui = {
+	theme = "doomchad",
+  theme_toggle = {"doomchad", "one_light"},
+  statusline = {
+    theme = "minimal",
+  },
+}
+
 return M
