@@ -13,4 +13,12 @@ M.base46 = {
 	-- },
 }
 
+M.ui = {
+	theme = "tokyonight",
+  theme_toggle = {"tokyonight", "one_light"},
+  statusline = {
+    theme = "minimal",
+  },
+}
+
 return M

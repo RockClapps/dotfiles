@@ -14,6 +14,10 @@ map("n", "<M-h>", "<C-w>h")
 map("n", "<M-j>", "<C-w>j")
 map("n", "<M-k>", "<C-w>k")
 map("n", "<M-l>", "<C-w>l")
+map("n", "<M-H>", "<C-w>H")
+map("n", "<M-J>", "<C-w>J")
+map("n", "<M-K>", "<C-w>K")
+map("n", "<M-L>", "<C-w>L")
 -- local modes = {"n", "v", "s"}
 --
 -- local prefixes = {
