@@ -11,6 +11,7 @@ setopt autocd extendedglob nomatch
 unsetopt beep
 bindkey -e
 
+export GOPATH="$HOME/go"
 source ~/.bash_aliases
 
 if [ -f ~/Zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
