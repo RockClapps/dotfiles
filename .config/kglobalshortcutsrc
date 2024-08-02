@@ -264,8 +264,14 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][Alacritty.desktop]
+_launch=Meta+Return
+
 [services][Vscodium.desktop]
 _launch=
+
+[services][alacritty.desktop]
+_launch=Meta+Shift+Return
 
 [services][discord.desktop]
 _launch=Meta+D
@@ -274,14 +280,8 @@ _launch=Meta+D
 _launch=Meta+B
 new-window=Meta+Shift+B
 
-[services][foot.desktop]
-_launch=Meta+Shift+Return
-
 [services][org.kde.dolphin.desktop]
 _launch=Meta+F
-
-[services][org.kde.konsole.desktop]
-_launch=Meta+Return\tCtrl+Alt+T
 
 [services][org.kde.spectacle.desktop]
 RecordWindow=none
