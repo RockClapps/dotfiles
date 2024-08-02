@@ -16,6 +16,7 @@ M.base46 = {
 M.ui = {
 	theme = "doomchad",
   theme_toggle = {"doomchad", "one_light"},
+  transparency = true,
   statusline = {
     theme = "minimal",
   },
