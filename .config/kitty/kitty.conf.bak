@@ -1,4 +1,0 @@
-font_family Fira Code
-disable_ligatures cursor
-
-shell fish --interactive
