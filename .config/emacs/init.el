@@ -22,6 +22,7 @@
  '(savehist-mode t)
  '(standard-indent 2)
  '(tab-always-indent t)
+ '(tab-bar-mode t)
  '(tool-bar-mode nil))
 
 ;; (setq viper-mode t)
@@ -61,7 +62,6 @@
 (evil-mode)
 (global-evil-surround-mode)
 (global-company-mode)
-(global-tab-line-mode)
 (windmove-default-keybindings)
 ;; (which-key-mode)
 
