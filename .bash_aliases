@@ -8,6 +8,13 @@ alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 alias ubuntu='cd ~/UbuntuHome; distrobox enter ubuntu'
 alias stopubuntu='distrobox stop ubuntu'
 
+alias gstat= "git status"
+alias gadd="git add"
+alias gcom="git commit -m"
+alias gpush="git push"
+alias gpull="git pull"
+alias gch="git checkout"
+
 alias flati="sudo flatpak install"
 alias flatr="sudo flatpak remove --delete-data"
 alias flatu="sudo flatpak update"
