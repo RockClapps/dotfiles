@@ -469,7 +469,10 @@ included in `evil-insert-state-bindings' by default."
 
 ;; Ex
 (define-key evil-motion-state-map ":" 'evil-ex)
+(define-key evil-motion-state-map ";" 'evil-ex)
 (define-key evil-motion-state-map "!" 'evil-shell-command)
+(define-key evil-motion-state-map (kbd "<tab>") 'tab-bar-switch-to-next-tab)
+(define-key evil-motion-state-map (kbd "<backtab>") 'tab-bar-switch-to-next-tab)
 
 (evil-ex-define-cmd "e[dit]" 'evil-edit)
 (evil-ex-define-cmd "w[rite]" 'evil-write)
@@ -642,4 +645,3 @@ included in `evil-insert-state-bindings' by default."
 (provide 'evil-maps)
 
 ;;; evil-maps.el ends here
-
