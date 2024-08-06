@@ -8,7 +8,7 @@ alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 alias ubuntu='cd ~/UbuntuHome; distrobox enter ubuntu'
 alias stopubuntu='distrobox stop ubuntu'
 
-alias gstat= "git status"
+alias gstat="git status"
 alias gadd="git add"
 alias gcom="git commit -m"
 alias gpush="git push"
