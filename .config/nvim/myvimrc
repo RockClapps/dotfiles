@@ -1,5 +1,13 @@
 set langmap=hjklHJKLneioNEIO;neioNEIOhjklHJKL
 noremap ; :
+noremap <M-h> <C-w>h
+noremap <M-j> <C-w>j
+noremap <M-k> <C-w>k
+noremap <M-l> <C-w>l
+noremap <M-H> <C-w>H
+noremap <M-J> <C-w>J
+noremap <M-K> <C-w>K
+noremap <M-L> <C-w>L
 set startofline
 set cdhome
 set autochdir
