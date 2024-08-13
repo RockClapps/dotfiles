@@ -1,0 +1,16 @@
+set langmap=hjklHJKLneioNEIO;neioNEIOhjklHJKL
+noremap ; :
+set startofline
+set cdhome
+set autochdir
+set ignorecase
+set smartcase
+set breakindent
+set sidescroll=16
+set number
+set clipboard=unnamedplus
+set undofile
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
