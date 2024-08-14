@@ -1,20 +1,30 @@
 set langmap=hjklHJKLneioNEIO;neioNEIOhjklHJKL
 noremap ; :
-noremap <M-h> <C-w>h
-noremap <M-j> <C-w>j
-noremap <M-k> <C-w>k
-noremap <M-l> <C-w>l
-noremap <M-H> <C-w>H
-noremap <M-J> <C-w>J
-noremap <M-K> <C-w>K
-noremap <M-L> <C-w>L
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+inoremap <A-h> <C-\><C-N><C-w>h
+inoremap <A-j> <C-\><C-N><C-w>j
+inoremap <A-k> <C-\><C-N><C-w>k
+inoremap <A-l> <C-\><C-N><C-w>l
+noremap <A-h> <C-w>h
+noremap <A-j> <C-w>j
+noremap <A-k> <C-w>k
+noremap <A-l> <C-w>l
+noremap <A-H> <C-w>H
+noremap <A-J> <C-w>J
+noremap <A-K> <C-w>K
+noremap <A-L> <C-w>L
 set startofline
 set cdhome
 set autochdir
 set ignorecase
 set smartcase
 set breakindent
+set scrolloff=2
 set sidescroll=16
+set sidescrolloff=2
 set number
 set clipboard=unnamedplus
 set undofile
