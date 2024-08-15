@@ -51,6 +51,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+local servers = {'clangd', 'gopls', 'lua_ls', 'pylsp'}
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -70,7 +71,6 @@ require("lazy").setup({
       version = "*",
       config = function()
         local lsp = require('lspconfig')
-        local servers = {'clangd', 'gopls', 'lua_ls', 'pylsp'}
         for _, server in ipairs(servers) do
           lsp[server].setup{}
         end
@@ -89,12 +89,65 @@ require("lazy").setup({
       end
     },
     {
-      'catppuccin/nvim',
+      'hrsh7th/cmp-nvim-lsp',
+    },
+    {
+      'hrsh7th/nvim-cmp',
       config = function()
-        require("catppuccin").setup({
-          transparent_background = true,
-        })
-      end,
+        local cmp = require('cmp')
+        cmp.setup({
+            snippet = {
+              -- REQUIRED - you must specify a snippet engine
+              expand = function(args)
+                vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+              end,
+            },
+            window = {
+              completion = cmp.config.window.bordered(),
+              documentation = cmp.config.window.bordered(),
+            },
+            mapping = cmp.mapping.preset.insert({
+              ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+              ['<C-f>'] = cmp.mapping.scroll_docs(4),
+              ['<C-Space>'] = cmp.mapping.complete(),
+              ['<C-e>'] = cmp.mapping.abort(),
+              ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+            }),
+            sources = cmp.config.sources({
+              { name = 'nvim_lsp' },
+            }, {
+              { name = 'buffer' },
+            })
+          })
+
+          -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+          cmp.setup.cmdline({ '/', '?' }, {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = {
+              { name = 'buffer' }
+            }
+          })
+
+          -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+          cmp.setup.cmdline(':', {
+            mapping = cmp.mapping.preset.cmdline(),
+            sources = cmp.config.sources({
+              { name = 'path' }
+            }, {
+              { name = 'cmdline' }
+            }),
+            matching = { disallow_symbol_nonprefix_matching = false }
+          })
+
+          -- Set up lspconfig.
+          local capabilities = require('cmp_nvim_lsp').default_capabilities()
+          -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+          for _, server in ipairs(servers) do
+            require('lspconfig')[server].setup {
+            capabilities = capabilities
+            }
+          end
+      end
     },
     {
       'kylechui/nvim-surround',
@@ -138,7 +191,15 @@ require("lazy").setup({
         "nvim-lua/plenary.nvim",         -- required
       },
       config = true
-    }
+    },
+    {
+      'catppuccin/nvim',
+      config = function()
+        require("catppuccin").setup({
+          transparent_background = true,
+        })
+      end,
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
