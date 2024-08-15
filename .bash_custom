@@ -11,5 +11,5 @@ if [ -f /usr/bin/starship ]; then
 fi
 
 if [ -f /usr/bin/zoxide ]; then
-	eval "$(zoxide init bash)"
+  eval "$(zoxide init bash)"
 fi
