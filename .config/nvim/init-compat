@@ -18,10 +18,10 @@ noremap <A-K> <C-w>K
 noremap <A-L> <C-w>L
 set startofline
 set cdhome
-set autochdir
 set ignorecase
 set smartcase
 set breakindent
+set autoread
 set scrolloff=2
 set sidescroll=16
 set sidescrolloff=2
