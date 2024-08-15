@@ -127,6 +127,13 @@ require("lazy").setup({
       version = "*", -- Pin Neorg to the latest stable release
       config = true,
     },
+    {
+      "NeogitOrg/neogit",
+      dependencies = {
+        "nvim-lua/plenary.nvim",         -- required
+      },
+      config = true
+    }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
