@@ -91,6 +91,9 @@ require("lazy").setup({
       'hrsh7th/cmp-nvim-lsp',
     },
     {
+      'hrsh7th/cmp-cmdline',
+    },
+    {
       'hrsh7th/nvim-cmp',
       config = function()
         local cmp = require('cmp')
@@ -114,8 +117,6 @@ require("lazy").setup({
             }),
             sources = cmp.config.sources({
               { name = 'nvim_lsp' },
-            }, {
-              { name = 'buffer' },
             })
           })
 
