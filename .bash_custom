@@ -1,15 +1,15 @@
 export GOPATH="$HOME/go"
 source ~/.bash_aliases
-HISTFILE="~/.bash_history"
+HISTFILE="$HOME/.bash_history"
 HISTSIZE=1000
 
 bind "\C-p":history-search-backward
 bind "\C-n":history-search-forward
 
-if [ -f /usr/bin/starship ]; then
+if [ "$(command -v starship)" != '' ]; then
   eval "$(starship init bash)"
 fi
 
-if [ -f /usr/bin/zoxide ]; then
-  eval "$(zoxide init bash)"
+if [ "$(command -v zoxide)" != '' ]; then
+	eval "$(zoxide init bash)"
 fi
