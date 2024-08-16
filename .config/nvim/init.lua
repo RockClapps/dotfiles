@@ -215,8 +215,9 @@ require("lazy").setup({
 
 vim.cmd("colorscheme catppuccin-macchiato")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<leader>ww", ":w<CR>")
-vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+vim.keymap.set("n", "<leader>Q", ":q!<CR>")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>W", ":wq<CR>")
 vim.keymap.set("n", "<leader>e", ":e ")
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>")
 vim.keymap.set("n", "<leader>d", ":bdelete<CR>")
