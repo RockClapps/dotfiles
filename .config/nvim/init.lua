@@ -1,5 +1,4 @@
 vim.opt.langmap="hjklHJKLneioNEIO;neioNEIOhjklHJKL"
-vim.keymap.set("n", ";", ":")
 vim.keymap.set({"t", "i"}, "<A-h>", "<C-\\><C-N><C-w>h")
 vim.keymap.set({"t", "i"}, "<A-j>", "<C-\\><C-N><C-w>j")
 vim.keymap.set({"t", "i"}, "<A-k>", "<C-\\><C-N><C-w>k")
@@ -215,6 +214,10 @@ require("lazy").setup({
 })
 
 vim.cmd("colorscheme catppuccin-macchiato")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>ww", ":w<CR>")
+vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+vim.keymap.set("n", "<leader>e", ":e ")
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>")
 vim.keymap.set("n", "<leader>d", ":bdelete<CR>")
 vim.keymap.set("n", "<leader>l", ":vsp<CR><C-w>l")
