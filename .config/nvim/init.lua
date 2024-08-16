@@ -141,10 +141,9 @@ require("lazy").setup({
 
           -- Set up lspconfig.
           local capabilities = require('cmp_nvim_lsp').default_capabilities()
-          -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
           for _, server in ipairs(servers) do
             require('lspconfig')[server].setup {
-            capabilities = capabilities
+              capabilities = capabilities
             }
           end
       end
@@ -222,3 +221,7 @@ vim.keymap.set("n", "<leader>l", ":vsp<CR><C-w>l")
 vim.keymap.set("n", "<leader>j", ":sp<CR><C-w>j")
 vim.keymap.set("n", "<leader>c", ":term<CR>")
 vim.keymap.set("n", "<leader>g", ":Neogit<CR>")
+vim.keymap.set("n", "<leader>n", ":bn<CR>")
+vim.keymap.set("n", "<leader>p", ":bp<CR>")
+vim.keymap.set("n", "<leader>m", ":marks<CR>")
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
