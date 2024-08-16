@@ -1,5 +1,4 @@
 set langmap=hjklHJKLneioNEIO;neioNEIOhjklHJKL
-noremap ; :
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
@@ -28,7 +27,7 @@ set sidescrolloff=2
 set number
 set clipboard=unnamedplus
 set undofile
-set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
