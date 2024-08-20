@@ -7,11 +7,9 @@ alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
 alias gstat="git status"
-alias gadd="git add"
 alias gcom="git commit -m"
 alias gpush="git push"
 alias gpull="git pull"
-alias gch="git checkout"
 
 alias flati="sudo flatpak install"
 alias flatr="sudo flatpak remove --delete-data"

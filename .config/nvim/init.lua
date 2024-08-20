@@ -1,4 +1,5 @@
 vim.opt.langmap="hjklHJKLneioNEIO;neioNEIOhjklHJKL"
+vim.keymap.set("n", ";", ":")
 vim.keymap.set({"t", "i"}, "<A-h>", "<C-\\><C-N><C-w>h")
 vim.keymap.set({"t", "i"}, "<A-j>", "<C-\\><C-N><C-w>j")
 vim.keymap.set({"t", "i"}, "<A-k>", "<C-\\><C-N><C-w>k")
@@ -25,11 +26,11 @@ vim.opt.scrolloff=2
 vim.opt.sidescroll=16
 vim.opt.sidescrolloff=2
 vim.opt.number=true
+vim.opt.relativenumber=true
 vim.opt.clipboard="unnamedplus"
 vim.opt.undofile=true
-vim.opt.softtabstop=2
+vim.opt.tabstop=2
 vim.opt.shiftwidth=2
-vim.opt.expandtab=true
 vim.opt.smartindent=true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
