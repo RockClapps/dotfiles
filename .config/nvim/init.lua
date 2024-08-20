@@ -49,7 +49,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
 local servers = {'clangd', 'gopls', 'lua_ls', 'pylsp'}
 -- Setup lazy.nvim
@@ -231,7 +230,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>W", ":wq<CR>")
 vim.keymap.set("n", "<leader>e", ":e ")
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>")
-vim.keymap.set("n", "<leader>d", ":bdelete<CR>")
+vim.keymap.set("n", "<leader>x", ":bdelete<CR>")
 vim.keymap.set("n", "<leader>l", ":vsp<CR><C-w>l")
 vim.keymap.set("n", "<leader>j", ":sp<CR><C-w>j")
 vim.keymap.set("n", "<leader>c", ":term<CR>")
@@ -239,4 +238,5 @@ vim.keymap.set("n", "<leader>g", ":Neogit<CR>")
 vim.keymap.set("n", "<leader>n", ":bn<CR>")
 vim.keymap.set("n", "<leader>p", ":bp<CR>")
 vim.keymap.set("n", "<leader>m", ":marks<CR>")
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.references)
