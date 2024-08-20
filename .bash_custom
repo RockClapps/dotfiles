@@ -3,8 +3,8 @@ source ~/.bash_aliases
 HISTFILE="$HOME/.bash_history"
 HISTSIZE=1000
 
-bind "\C-p":history-search-backward
-bind "\C-n":history-search-forward
+bind '\C-p':history-search-backward
+bind '\C-n':history-search-forward
 
 if [ "$(command -v starship)" != '' ]; then
   eval "$(starship init bash)"
