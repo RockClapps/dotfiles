@@ -25,9 +25,9 @@ set scrolloff=2
 set sidescroll=16
 set sidescrolloff=2
 set number
+set relativenumber
 set clipboard=unnamedplus
 set undofile
-set softtabstop=2
+set tabstop=2
 set shiftwidth=2
-set expandtab
 set smartindent
