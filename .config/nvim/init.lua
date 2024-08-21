@@ -30,6 +30,7 @@ vim.opt.relativenumber=true
 vim.opt.clipboard='unnamedplus'
 vim.opt.undofile=true
 vim.opt.tabstop=2
+vim.opt.expandtab=true
 vim.opt.shiftwidth=2
 vim.opt.smartindent=true
 
