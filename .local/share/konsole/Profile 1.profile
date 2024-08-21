@@ -2,11 +2,10 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=New Color Scheme
+Font=MonaspiceKr Nerd Font Mono,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 IgnoreWcWidth=false
 UseFontLineChararacters=false
-WordMode=false
-WordModeAttr=true
-WordModeBrahmic=true
+WordMode=true
 
 [Cursor Options]
 CursorShape=1
@@ -25,6 +24,6 @@ ScrollBarPosition=1
 
 [Terminal Features]
 BidiLineLTR=true
-BidiRenderingEnabled=true
+BidiRenderingEnabled=false
 BidiTableDirOverride=true
 BlinkingCursorEnabled=true
