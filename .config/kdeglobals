@@ -143,12 +143,12 @@ LastUsedCustomAccentColor=61,212,37
 TerminalApplication=alacritty
 TerminalService=Alacritty.desktop
 XftHintStyle=hintslight
-XftSubPixel=none
-fixed=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=FiraCode Nerd Font,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=FiraCode Nerd Font,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+XftSubPixel=rgb
+fixed=MonaspiceKr NFM,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
+font=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=MonaspiceKr NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=MonaspiceKr NF,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
@@ -186,7 +186,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=49,54,59
 activeBlend=252,252,252
-activeFont=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=252,252,252
 inactiveBackground=34,34,34
 inactiveBlend=161,169,177
