@@ -15,6 +15,11 @@ noremap <A-H> <C-w>H
 noremap <A-J> <C-w>J
 noremap <A-K> <C-w>K
 noremap <A-L> <C-w>L
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap ( ()<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
 set startofline
 set cdhome
 set ignorecase

@@ -16,6 +16,11 @@ vim.keymap.set('n', '<A-H>', '<C-w>H')
 vim.keymap.set('n', '<A-J>', '<C-w>J')
 vim.keymap.set('n', '<A-K>', '<C-w>K')
 vim.keymap.set('n', '<A-L>', '<C-w>L')
+vim.keymap.set('i', '{', '{}<Left>')
+vim.keymap.set('i', '[', '[]<Left>')
+vim.keymap.set('i', '(', '()<Left>')
+vim.keymap.set('i', "'", "''<Left>")
+vim.keymap.set('i', '"', '""<Left>')
 vim.opt.startofline=true
 vim.opt.cdhome=true
 vim.opt.ignorecase=true
@@ -149,31 +154,6 @@ require('lazy').setup({
               capabilities = capabilities
             }
           end
-      end
-    },
-    {
-      'windwp/nvim-autopairs',
-      event = 'InsertEnter',
-      config = true
-      -- use opts = {} for passing setup options
-      -- this is equalent to setup({}) function
-    },
-    {
-      'kylechui/nvim-surround',
-      version = '*', -- Use for stability; omit to use `main` branch for the latest features
-      event = 'VeryLazy',
-      config = function()
-          require('nvim-surround').setup({
-              -- Configuration here, or leave empty to use defaults
-          })
-      end
-    },
-    {
-      'ggandor/leap.nvim',
-      lazy = false,
-      version = '*',
-      config = function()
-        require('leap').create_default_mappings()
       end
     },
     {
