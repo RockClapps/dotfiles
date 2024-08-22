@@ -12,6 +12,7 @@ CursorShape=1
 
 [General]
 AlternatingBackground=1
+Command=/bin/fish
 ErrorBackground=1
 Name=Profile 1
 Parent=FALLBACK/
