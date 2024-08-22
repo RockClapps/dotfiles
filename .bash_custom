@@ -1,5 +1,5 @@
 export GOPATH="$HOME/go"
-source ~/.bash_aliases
+source ~/.aliases
 HISTFILE="$HOME/.bash_history"
 HISTSIZE=1000
 

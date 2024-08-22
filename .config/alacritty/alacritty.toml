@@ -1,3 +1,5 @@
+[general]
+shell = 'fish'
 [window]
 opacity = 0.8
 blur = true
@@ -5,4 +7,4 @@ blur = true
 #background = "#222222"
 
 [font]
-normal = { family = "MonaspiceKr Nerd Font Mono", style = "Regular"}
+normal = { family = 'MonaspiceKr Nerd Font Mono', style = 'Regular'}
