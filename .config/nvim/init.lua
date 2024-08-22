@@ -198,8 +198,6 @@ require('lazy').setup({
     }
   },
   -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { 'habamax' } },
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
@@ -211,7 +209,8 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>W', ':wq<CR>')
 vim.keymap.set('n', '<leader>e', ':e ')
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
-vim.keymap.set('n', '<leader>x', ':bdelete<CR>')
+vim.keymap.set('n', '<leader>b', ':buffers<CR>')
+vim.keymap.set('n', '<leader>x', ':bdelete ')
 vim.keymap.set('n', '<leader>l', ':vsp<CR><C-w>l')
 vim.keymap.set('n', '<leader>j', ':sp<CR><C-w>j')
 vim.keymap.set('n', '<leader>c', ':term<CR>')
