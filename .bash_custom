@@ -1,6 +1,5 @@
 export GOPATH="$HOME/go"
 source ~/.aliases
-HISTFILE="$HOME/.bash_history"
 HISTSIZE=1000
 
 bind '\C-p':history-search-backward
