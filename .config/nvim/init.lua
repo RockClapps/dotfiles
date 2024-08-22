@@ -1,5 +1,5 @@
 vim.opt.langmap='hjklHJKLneioNEIO;neioNEIOhjklHJKL'
-vim.keymap.set('n', ';', ':')
+vim.keymap.set({'n', 'v'}, ';', ':')
 vim.keymap.set({'t', 'i'}, '<A-h>', '<C-\\><C-N><C-w>h')
 vim.keymap.set({'t', 'i'}, '<A-j>', '<C-\\><C-N><C-w>j')
 vim.keymap.set({'t', 'i'}, '<A-k>', '<C-\\><C-N><C-w>k')
