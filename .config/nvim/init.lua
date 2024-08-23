@@ -38,6 +38,7 @@ vim.opt.tabstop=2
 vim.opt.expandtab=true
 vim.opt.shiftwidth=2
 vim.opt.smartindent=true
+vim.opt.timeout=false
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
