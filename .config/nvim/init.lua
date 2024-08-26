@@ -19,7 +19,6 @@ vim.keymap.set('n', '<A-L>', '<C-w>L')
 vim.keymap.set('i', '{', '{}<Left>')
 vim.keymap.set('i', '[', '[]<Left>')
 vim.keymap.set('i', '(', '()<Left>')
-vim.keymap.set('i', "'", "''<Left>")
 vim.keymap.set('i', '"', '""<Left>')
 vim.opt.startofline=true
 vim.opt.cdhome=true
