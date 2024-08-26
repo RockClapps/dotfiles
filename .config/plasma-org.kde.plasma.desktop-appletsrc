@@ -57,8 +57,12 @@ popupWidth=156
 chartFace=org.kde.ksysguard.piechart
 title=Total CPU Use
 
+[Containments][2][Applets][29][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][2][Applets][29][Configuration][SensorColors]
-cpu/all/usage=52,158,36
+cpu/all/usage=170,0,0
 
 [Containments][2][Applets][29][Configuration][Sensors]
 highPrioritySensorIds=["cpu/all/usage"]
@@ -81,7 +85,7 @@ DialogWidth=720
 [Containments][2][Applets][3][Configuration][General]
 applicationsDisplay=0
 favoritesPortedToKAstats=true
-icon=distributor-logo-archlinux
+icon=/home/rock/.local/share/icons/red-arch.svg
 showActionButtonCaptions=false
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
@@ -105,8 +109,12 @@ popupWidth=156
 chartFace=org.kde.ksysguard.piechart
 title=Memory Usage
 
+[Containments][2][Applets][30][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][2][Applets][30][Configuration][SensorColors]
-memory/physical/used=52,158,36
+memory/physical/used=170,0,0
 
 [Containments][2][Applets][30][Configuration][Sensors]
 highPrioritySensorIds=["memory/physical/used"]
