@@ -3,6 +3,7 @@ _k_friendly_name=Activity Manager
 switch-to-activity-37ffde03-3a09-4cf9-94a0-0a5b2871557f=none,none,Switch to activity "Default"
 switch-to-activity-6dbc3ebd-5bee-40e6-97cc-c2b537354bc9=none,none,Switch to activity "Default"
 switch-to-activity-7e18d393-45bd-4b81-8a02-175f641eed84=none,none,Switch to activity "Default"
+switch-to-activity-bba2ed27-ab72-41ed-8127-f74cea27b13e=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (Colemak)=none,none,Switch keyboard layout to English (Colemak)
@@ -22,7 +23,7 @@ Toggle Touchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Touchpad Toggle\tMeta
 _k_friendly_name=Touchpad
 
 [kmix]
-_k_friendly_name=Audio Volume
+_k_friendly_name=KMix
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
 decrease_volume=Volume Down,Volume Down,Decrease Volume
 decrease_volume_small=Shift+Volume Down,Shift+Volume Down,Decrease Volume by 1%

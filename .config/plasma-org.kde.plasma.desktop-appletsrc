@@ -4,36 +4,6 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1536x960=
-ItemGeometries-1600x1200=
-ItemGeometries-1920x1080=Applet-33:368,288,368,160,0;
-ItemGeometries-1920x1200=Applet-33:368,288,368,160,0;
-ItemGeometriesHorizontal=Applet-33:368,288,368,160,0;
-activityId=7e18d393-45bd-4b81-8a02-175f641eed84
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1][Applets][33]
-immutability=1
-plugin=com.github.prayag2.modernclock
-
-[Containments][1][Applets][33][Configuration][Appearance]
-day_font_size=32
-use_24_hour_format=true
-
-[Containments][1][Applets][33][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][1][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=432
-
 [Containments][2]
 activityId=
 formfactor=3
@@ -111,7 +81,7 @@ DialogWidth=720
 [Containments][2][Applets][3][Configuration][General]
 applicationsDisplay=0
 favoritesPortedToKAstats=true
-icon=openSUSE-distributor-logo
+icon=distributor-logo-archlinux
 showActionButtonCaptions=false
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
@@ -177,11 +147,13 @@ SystrayContainmentId=8
 [Containments][2][General]
 AppletOrder=3;4;25;5;26;29;30;32;19;6;7
 
-[Containments][27]
-activityId=7e18d393-45bd-4b81-8a02-175f641eed84
+[Containments][35]
+ItemGeometries-1920x1200=
+ItemGeometriesHorizontal=
+activityId=bba2ed27-ab72-41ed-8127-f74cea27b13e
 formfactor=0
 immutability=1
-lastScreen=1
+lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
@@ -299,6 +271,9 @@ plugin=org.kde.kdeconnect
 [Containments][8][Applets][28][Configuration]
 PreloadWeight=90
 
+[Containments][8][Applets][34][Configuration]
+PreloadWeight=42
+
 [Containments][8][Applets][9]
 immutability=1
 plugin=org.kde.plasma.printmanager
@@ -309,9 +284,9 @@ DialogWidth=720
 
 [Containments][8][General]
 extraItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.kdeconnect
-hiddenItems=org.kde.plasma.keyboardlayout
+hiddenItems=org.kde.plasma.keyboardlayout,KMix
 iconSize=1
-knownItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.kdeconnect
+knownItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.kdeconnect
 shownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth
 
 [ScreenMapping]
