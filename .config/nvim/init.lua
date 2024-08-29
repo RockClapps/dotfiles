@@ -1,13 +1,13 @@
-vim.opt.langmap='hjklHJKLneioNEIO;neioNEIOhjklHJKL'
-vim.keymap.set({'n', 'v'}, ';', ':')
-vim.keymap.set({'t', 'i'}, '<A-h>', '<C-\\><C-N><C-w>h')
-vim.keymap.set({'t', 'i'}, '<A-j>', '<C-\\><C-N><C-w>j')
-vim.keymap.set({'t', 'i'}, '<A-k>', '<C-\\><C-N><C-w>k')
-vim.keymap.set({'t', 'i'}, '<A-l>', '<C-\\><C-N><C-w>l')
-vim.keymap.set({'t', 'i'}, '<A-h>', '<C-\\><C-N><C-w>h')
-vim.keymap.set({'t', 'i'}, '<A-j>', '<C-\\><C-N><C-w>j')
-vim.keymap.set({'t', 'i'}, '<A-k>', '<C-\\><C-N><C-w>k')
-vim.keymap.set({'t', 'i'}, '<A-l>', '<C-\\><C-N><C-w>l')
+vim.opt.langmap = 'hjklHJKLneioNEIO;neioNEIOhjklHJKL'
+vim.keymap.set({ 'n', 'v' }, ';', ':')
+vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
+vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
 vim.keymap.set('n', '<A-h>', '<C-w>h')
 vim.keymap.set('n', '<A-j>', '<C-w>j')
 vim.keymap.set('n', '<A-k>', '<C-w>k')
@@ -20,24 +20,24 @@ vim.keymap.set('i', '{', '{}<Left>')
 vim.keymap.set('i', '[', '[]<Left>')
 vim.keymap.set('i', '(', '()<Left>')
 vim.keymap.set('i', '"', '""<Left>')
-vim.opt.startofline=true
-vim.opt.cdhome=true
-vim.opt.ignorecase=true
-vim.opt.smartcase=true
-vim.opt.breakindent=true
-vim.opt.autoread=true
-vim.opt.scrolloff=2
-vim.opt.sidescroll=16
-vim.opt.sidescrolloff=2
-vim.opt.number=true
-vim.opt.relativenumber=true
-vim.opt.clipboard='unnamedplus'
-vim.opt.undofile=true
-vim.opt.tabstop=2
-vim.opt.expandtab=true
-vim.opt.shiftwidth=2
-vim.opt.smartindent=true
-vim.opt.timeout=false
+vim.opt.startofline = true
+vim.opt.cdhome = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.breakindent = true
+vim.opt.autoread = true
+vim.opt.scrolloff = 2
+vim.opt.sidescroll = 16
+vim.opt.sidescrolloff = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.undofile = true
+vim.opt.tabstop = 2
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.timeout = false
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -46,7 +46,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   if vim.v.shell_error ~= 0 then
     vim.api.nvim_echo({
       { 'Failed to clone lazy.nvim:\n', 'ErrorMsg' },
-      { out, 'WarningMsg' },
+      { out,                            'WarningMsg' },
       { '\nPress any key to exit...' },
     }, true, {})
     vim.fn.getchar()
@@ -56,7 +56,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
-local servers = {'clangd', 'gopls', 'lua_ls', 'pylsp'}
+local servers = { 'clangd', 'gopls', 'lua_ls', 'pylsp' }
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
@@ -64,9 +64,9 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter',
       version = '*',
       config = function()
-        require('nvim-treesitter.configs').setup{
+        require('nvim-treesitter.configs').setup {
           highlight = {
-            enabled=true
+            enabled = true
           }
         }
       end,
@@ -77,7 +77,7 @@ require('lazy').setup({
       config = function()
         local lsp = require('lspconfig')
         for _, server in ipairs(servers) do
-          lsp[server].setup{}
+          lsp[server].setup {}
         end
       end,
     },
@@ -106,54 +106,54 @@ require('lazy').setup({
       config = function()
         local cmp = require('cmp')
         cmp.setup({
-            snippet = {
-              -- REQUIRED - you must specify a snippet engine
-              expand = function(args)
-                vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
-              end,
-            },
-            window = {
-              completion = cmp.config.window.bordered(),
-              documentation = cmp.config.window.bordered(),
-            },
-            mapping = cmp.mapping.preset.insert({
-              ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-              ['<C-f>'] = cmp.mapping.scroll_docs(4),
-              ['<C-Space>'] = cmp.mapping.complete(),
-              ['<C-e>'] = cmp.mapping.abort(),
-              ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-            }),
-            sources = cmp.config.sources({
-              { name = 'nvim_lsp' },
-            })
+          snippet = {
+            -- REQUIRED - you must specify a snippet engine
+            expand = function(args)
+              vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
+            end,
+          },
+          window = {
+            completion = cmp.config.window.bordered(),
+            documentation = cmp.config.window.bordered(),
+          },
+          mapping = cmp.mapping.preset.insert({
+            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+            ['<C-f>'] = cmp.mapping.scroll_docs(4),
+            ['<C-Space>'] = cmp.mapping.complete(),
+            ['<C-e>'] = cmp.mapping.abort(),
+            ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+          }),
+          sources = cmp.config.sources({
+            { name = 'nvim_lsp' },
           })
+        })
 
-          -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-          cmp.setup.cmdline({ '/', '?' }, {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = {
-              { name = 'buffer' }
-            }
-          })
+        -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+        cmp.setup.cmdline({ '/', '?' }, {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = {
+            { name = 'buffer' }
+          }
+        })
 
-          -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-          cmp.setup.cmdline(':', {
-            mapping = cmp.mapping.preset.cmdline(),
-            sources = cmp.config.sources({
-              { name = 'path' }
-            }, {
-              { name = 'cmdline' }
-            }),
-            matching = { disallow_symbol_nonprefix_matching = false }
-          })
+        -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+        cmp.setup.cmdline(':', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources({
+            { name = 'path' }
+          }, {
+            { name = 'cmdline' }
+          }),
+          matching = { disallow_symbol_nonprefix_matching = false }
+        })
 
-          -- Set up lspconfig.
-          local capabilities = require('cmp_nvim_lsp').default_capabilities()
-          for _, server in ipairs(servers) do
-            require('lspconfig')[server].setup {
-              capabilities = capabilities
-            }
-          end
+        -- Set up lspconfig.
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        for _, server in ipairs(servers) do
+          require('lspconfig')[server].setup {
+            capabilities = capabilities
+          }
+        end
       end
     },
     {
@@ -170,14 +170,20 @@ require('lazy').setup({
     },
     {
       'nvim-neorg/neorg',
-      lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+      lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
       version = '*', -- Pin Neorg to the latest stable release
       config = true,
     },
     {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup()
+      end
+    },
+    {
       'NeogitOrg/neogit',
       dependencies = {
-        'nvim-lua/plenary.nvim',         -- required
+        'nvim-lua/plenary.nvim', -- required
       },
       config = true
     },
