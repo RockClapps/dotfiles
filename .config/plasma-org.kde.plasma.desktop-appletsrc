@@ -79,13 +79,13 @@ popupHeight=498
 popupWidth=697
 
 [Containments][2][Applets][3][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1172
+DialogWidth=1876
 
 [Containments][2][Applets][3][Configuration][General]
 applicationsDisplay=0
 favoritesPortedToKAstats=true
-icon=/home/rock/.local/share/icons/red-arch.svg
+icon=/home/rock/.local/share/icons/red-arch-alt-2.svg
 showActionButtonCaptions=false
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
@@ -162,6 +162,15 @@ activityId=bba2ed27-ab72-41ed-8127-f74cea27b13e
 formfactor=0
 immutability=1
 lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][36]
+activityId=bba2ed27-ab72-41ed-8127-f74cea27b13e
+formfactor=0
+immutability=1
+lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
@@ -253,7 +262,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][23][Configuration]
-PreloadWeight=86
+PreloadWeight=92
 
 [Containments][8][Applets][23][Configuration][General]
 currentDetailsTab=details
@@ -263,7 +272,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=78
+PreloadWeight=48
 
 [Containments][8][Applets][27]
 immutability=1
@@ -277,7 +286,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][28][Configuration]
-PreloadWeight=90
+PreloadWeight=95
 
 [Containments][8][Applets][34][Configuration]
 PreloadWeight=42

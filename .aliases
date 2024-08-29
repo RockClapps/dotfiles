@@ -11,9 +11,9 @@ alias gcom='git commit -m'
 alias gpush='git push'
 alias gpull='git pull'
 
-alias flati='sudo flatpak install'
-alias flatr='sudo flatpak remove --delete-data'
-alias flatu='sudo flatpak update'
+alias flati='flatpak install'
+alias flatr='flatpak remove --delete-data'
+alias flatu='flatpak update'
 alias flats='flatpak search'
 
 alias paci='sudo pacman -S'
