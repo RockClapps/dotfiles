@@ -38,6 +38,7 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.timeout = false
+vim.g.markdown_recommended_style = 0
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -213,7 +214,7 @@ vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>Q', ':q!<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>W', ':wq<CR>')
-vim.keymap.set('n', '<leader>e', ':e ')
+vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
 vim.keymap.set('n', '<leader>b', ':buffers<CR>')
 vim.keymap.set('n', '<leader>x', ':bdelete ')
@@ -228,3 +229,4 @@ vim.keymap.set('n', '<leader>/', ':let @/=""<CR>')
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
