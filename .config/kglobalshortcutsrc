@@ -33,10 +33,6 @@ increase_volume_small=Shift+Volume Up,Shift+Volume Up,Increase Volume by 1%
 mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
 
-[konsole]
-Konsole Background Mode=Ctrl+Shift+F12,Ctrl+Shift+F12,Toggle Background Window
-_k_friendly_name=Konsole
-
 [ksmserver]
 Halt Without Confirmation=Meta+Ctrl+Q,,Shut Down Without Confirmation
 Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session

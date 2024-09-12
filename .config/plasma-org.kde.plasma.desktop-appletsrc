@@ -49,7 +49,7 @@ plugin=org.kde.plasma.systemmonitor.cpu
 
 [Containments][2][Applets][29][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=65
+PreloadWeight=70
 popupHeight=228
 popupWidth=156
 
@@ -101,8 +101,8 @@ plugin=org.kde.plasma.systemmonitor.memory
 
 [Containments][2][Applets][30][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=60
-popupHeight=138
+PreloadWeight=70
+popupHeight=174
 popupWidth=156
 
 [Containments][2][Applets][30][Configuration][Appearance]
@@ -156,6 +156,7 @@ SystrayContainmentId=8
 AppletOrder=3;4;25;5;26;29;30;32;19;6;7
 
 [Containments][35]
+ItemGeometries-1920x1080=
 ItemGeometries-1920x1200=
 ItemGeometriesHorizontal=
 activityId=bba2ed27-ab72-41ed-8127-f74cea27b13e
@@ -248,7 +249,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=7
+PreloadWeight=0
 
 [Containments][8][Applets][22]
 immutability=1
@@ -262,7 +263,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][8][Applets][23][Configuration]
-PreloadWeight=97
+PreloadWeight=100
 
 [Containments][8][Applets][23][Configuration][General]
 currentDetailsTab=details
@@ -272,7 +273,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=53
+PreloadWeight=54
 
 [Containments][8][Applets][27]
 immutability=1
