@@ -20,7 +20,6 @@ vim.keymap.set('i', '{', '{}<Left>')
 vim.keymap.set('i', '[', '[]<Left>')
 vim.keymap.set('i', '(', '()<Left>')
 vim.keymap.set('i', '"', '""<Left>')
-vim.opt.startofline = true
 vim.opt.cdhome = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -33,9 +32,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.timeout = false
 vim.g.markdown_recommended_style = 0
@@ -229,4 +228,5 @@ vim.keymap.set('n', '<leader>/', ':let @/=""<CR>')
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
