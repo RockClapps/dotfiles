@@ -1,4 +1,5 @@
 set langmap=hjklHJKLneioNEIO;neioNEIOhjklHJKL
+noremap ; :
 tnoremap <A-h> <C-\><C-N><C-w>h
 tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
@@ -20,7 +21,6 @@ inoremap [ []<Left>
 inoremap ( ()<Left>
 inoremap ' ''<Left>
 inoremap " ""<Left>
-set startofline
 set cdhome
 set ignorecase
 set smartcase
@@ -33,6 +33,8 @@ set number
 set relativenumber
 set clipboard=unnamedplus
 set undofile
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set expandtab
+set shiftwidth=4
 set smartindent
+set notimeout
