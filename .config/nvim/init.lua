@@ -209,6 +209,7 @@ require('lazy').setup({
 })
 
 vim.cmd('colorscheme catppuccin-macchiato')
+vim.cmd('autocmd BufWrite * lua vim.lsp.buf.format()')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>Q', ':q!<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
