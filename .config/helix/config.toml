@@ -5,44 +5,35 @@ normal = "underline"
 insert = "bar"
 select = "block"
 
-
 [keys.normal]
 n = "move_char_left" 
 e = "move_visual_line_down"
 i = "move_visual_line_up"
 o = "move_char_right"
-E = "join_selections_space"
-I = "keep_selections"
 
-h = "search_next"
 j = "move_next_word_end"
-k = "insert_mode"
-l = "open_below"
-H = "search_prev"
 J = "move_next_long_word_end"
+
+k = "insert_mode"
 K = "insert_at_line_start"
+
+l = "open_below"
 L = "open_above"
 
-[keys.select]
-n = "move_char_left" 
-e = "move_visual_line_down"
-i = "move_visual_line_up"
-o = "move_char_right"
-E = "join_selections_space"
-I = "keep_selections"
+A-l = "expand_selection"
+A-k = "shrink_selection"
+A-K = "select_all_children"
+A-h = "select_next_sibling"
+A-j = "move_parent_node_end"
 
 h = "search_next"
-j = "move_next_word_end"
-k = "insert_mode"
-l = "open_below"
 H = "search_prev"
-J = "move_next_long_word_end"
-K = "insert_at_line_start"
-L = "open_above"
 
-[keys.normal.z]
-e = "scroll_down"
-k = "scroll_up"
+E = "join_selections"
+A-E = "join_selections_space"
+I = "keep_selections"
+A-I = "remove_selections"
+
 
 [keys.normal.g]
 n = "goto_line_start"
@@ -50,22 +41,130 @@ e = "move_line_down"
 i = "move_line_up"
 o = "goto_line_end"
 
-h = "goto_next_buffer"
 j = "goto_last_line"
 k = "goto_implementation"
+h = "goto_next_buffer"
 
 [keys.normal.m]
 k = "select_textobject_inner"
 
+[keys.normal."["]
+j = "goto_prev_entry"
+
+[keys.normal."]"]
+j = "goto_next_entry"
+
 [keys.normal."C-w"]
+l = "wonly"
 n = "jump_view_left"
 e = "jump_view_down"
 i = "jump_view_up"
 o = "jump_view_right"
+C-n = "jump_view_left"
+C-e = "jump_view_down"
+C-i = "jump_view_up"
+C-o = "jump_view_right"
+
 N = "swap_view_left"
 E = "swap_view_down"
 I = "swap_view_up"
 O = "swap_view_right"
 
+[keys.normal."C-w".h]
+C-s = "hsplit_new"
+s = "hsplit_new"
+C-v = "vsplit_new"
+v = "vsplit_new"
+
+[keys.normal."space"]
+e = "jumplist_picker"
+i = "hover"
+n = "select_references_to_symbol_under_cursor"
+
+#Custom
+q = ":q"
+Q = ":q!"
+";" = "command_mode"
+
+[keys.normal."space".G]
+o = "dap_launch"
+
+n = "dap_pause"
+k = "dap_step_in"
+l = "dap_step_out"
+h = "dap_next"
+
+C-o = "dap_edit_log"
+
+j = "dap_enable_exceptions"
+J = "dap_disable_exceptions"
+
+[keys.normal."space".G.s]
+t = "dap_switch_thread"
+f = "dap_switch_stack_frame"
+
+[keys.normal."space".w]
 l = "wonly"
+n = "jump_view_left"
+e = "jump_view_down"
+i = "jump_view_up"
+o = "jump_view_right"
+C-n = "jump_view_left"
+C-e = "jump_view_down"
+C-i = "jump_view_up"
+C-o = "jump_view_right"
+
+N = "swap_view_left"
+E = "swap_view_down"
+I = "swap_view_up"
+O = "swap_view_right"
+
+[keys.normal."space".w.h]
+C-s = "hsplit_new"
+s = "hsplit_new"
+C-v = "vsplit_new"
+v = "vsplit_new"
+
+[keys.normal.z]
+e = "scroll_down"
+k = "scroll_up"
+
+h = "search_next"
+H = "search_prev"
+
+[keys.normal.Z]
+e = "scroll_down"
+k = "scroll_up"
+
+h = "search_next"
+H = "search_prev"
+
+[keys.select]
+n = "move_char_left" 
+e = "move_visual_line_down"
+i = "move_visual_line_up"
+o = "move_char_right"
+
+j = "extend_next_word_end"
+J = "extend_next_long_word_end"
+A-e = "extend_parent_node_end"
+
+h = "extend_search_next"
+H = "extend_search_prev"
+
+
+[keys.select.g]
+i = "extend_line_up"
+e = "extend_line_down"
+
+#E = "join_selections_space"
+#I = "keep_selections"
+#
+#h = "search_next"
+#k = "insert_mode"
+#l = "open_below"
+#H = "search_prev"
+#J = "move_next_long_word_end"
+#K = "insert_at_line_start"
+#L = "open_above"
 
