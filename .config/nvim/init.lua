@@ -16,10 +16,6 @@ vim.keymap.set('n', '<A-H>', '<C-w>H')
 vim.keymap.set('n', '<A-J>', '<C-w>J')
 vim.keymap.set('n', '<A-K>', '<C-w>K')
 vim.keymap.set('n', '<A-L>', '<C-w>L')
-vim.keymap.set('i', '{', '{}<Left>')
-vim.keymap.set('i', '[', '[]<Left>')
-vim.keymap.set('i', '(', '()<Left>')
-vim.keymap.set('i', '"', '""<Left>')
 vim.opt.cdhome = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -32,9 +28,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.timeout = false
 vim.g.markdown_recommended_style = 0
@@ -154,6 +150,19 @@ require('lazy').setup({
             capabilities = capabilities
           }
         end
+      end
+    },
+    {
+      'windwp/nvim-autopairs',
+      event = "InsertEnter",
+      opts = {}
+    },
+    {
+      "kylechui/nvim-surround",
+      version = "*",
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup({})
       end
     },
     {
