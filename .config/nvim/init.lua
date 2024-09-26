@@ -1,40 +1,3 @@
-vim.opt.langmap = 'hjklHJKLneioNEIO;neioNEIOhjklHJKL'
-vim.keymap.set({ 'n', 'v' }, ';', ':')
-vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
-vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
-vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
-vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
-vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
-vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
-vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
-vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
-vim.keymap.set('n', '<A-h>', '<C-w>h')
-vim.keymap.set('n', '<A-j>', '<C-w>j')
-vim.keymap.set('n', '<A-k>', '<C-w>k')
-vim.keymap.set('n', '<A-l>', '<C-w>l')
-vim.keymap.set('n', '<A-H>', '<C-w>H')
-vim.keymap.set('n', '<A-J>', '<C-w>J')
-vim.keymap.set('n', '<A-K>', '<C-w>K')
-vim.keymap.set('n', '<A-L>', '<C-w>L')
-vim.opt.cdhome = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.breakindent = true
-vim.opt.autoread = true
-vim.opt.scrolloff = 2
-vim.opt.sidescroll = 16
-vim.opt.sidescrolloff = 2
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.undofile = true
-vim.opt.tabstop = 2
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.smartindent = true
-vim.opt.timeout = false
-vim.g.markdown_recommended_style = 0
-
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
@@ -217,8 +180,45 @@ require('lazy').setup({
   checker = { enabled = false },
 })
 
+vim.opt.langmap = 'hjklHJKLneioNEIO;neioNEIOhjklHJKL'
+vim.opt.cdhome = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.breakindent = true
+vim.opt.autoread = true
+vim.opt.scrolloff = 2
+vim.opt.sidescroll = 16
+vim.opt.sidescrolloff = 2
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.undofile = true
+vim.opt.tabstop = 2
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.smartindent = true
+vim.opt.timeout = false
+vim.g.markdown_recommended_style = 0
 vim.cmd('colorscheme catppuccin-macchiato')
 vim.cmd('autocmd BufWrite * lua vim.lsp.buf.format()')
+
+vim.keymap.set({ 'n', 'v' }, ';', ':')
+vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
+vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-N><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-N><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-N><C-w>l')
+vim.keymap.set('n', '<A-h>', '<C-w>h')
+vim.keymap.set('n', '<A-j>', '<C-w>j')
+vim.keymap.set('n', '<A-k>', '<C-w>k')
+vim.keymap.set('n', '<A-l>', '<C-w>l')
+vim.keymap.set('n', '<A-H>', '<C-w>H')
+vim.keymap.set('n', '<A-J>', '<C-w>J')
+vim.keymap.set('n', '<A-K>', '<C-w>K')
+vim.keymap.set('n', '<A-L>', '<C-w>L')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>Q', ':q!<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
