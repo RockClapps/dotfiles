@@ -1,9 +1,15 @@
-theme = "catppuccin_mocha"
+theme = "base16_transparent"
+
+[editor]
+line-number = "relative"
 
 [editor.cursor-shape]
 normal = "underline"
 insert = "bar"
 select = "block"
+
+[editor.soft-wrap]
+enable = true
 
 [keys.normal]
 n = "move_char_left" 
@@ -84,6 +90,8 @@ n = "select_references_to_symbol_under_cursor"
 #Custom
 q = ":q"
 Q = ":q!"
+W = ":w"
+x = ":buffer-close"
 ";" = "command_mode"
 
 [keys.normal."space".G]
@@ -156,15 +164,4 @@ H = "extend_search_prev"
 [keys.select.g]
 i = "extend_line_up"
 e = "extend_line_down"
-
-#E = "join_selections_space"
-#I = "keep_selections"
-#
-#h = "search_next"
-#k = "insert_mode"
-#l = "open_below"
-#H = "search_prev"
-#J = "move_next_long_word_end"
-#K = "insert_at_line_start"
-#L = "open_above"
 
