@@ -10,7 +10,14 @@ alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
 ZSH_THEME="agnoster"
 
-plugins=(git z archlinux history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  archlinux
+  git
+  history-substring-search
+  z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 if [ ! -d $ZSH ];
 then
