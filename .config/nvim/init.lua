@@ -51,7 +51,11 @@ require('lazy').setup({
         vim.keymap.set('n', '<leader>fc', builtin.commands, {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+        vim.keymap.set('n', '<leader>b', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+        vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
+        vim.keymap.set('n', '<leader>fm', builtin.marks, {})
+        vim.keymap.set('n', '<leader>m', builtin.marks, {})
       end
     },
     {
@@ -147,6 +151,14 @@ require('lazy').setup({
       config = true,
     },
     {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function()
+        vim.fn["mkdp#util#install()"]()
+      end,
+    },
+    {
       'lewis6991/gitsigns.nvim',
       config = function()
         require('gitsigns').setup()
@@ -225,15 +237,13 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>W', ':wq<CR>')
 vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
-vim.keymap.set('n', '<leader>b', ':buffers<CR>')
-vim.keymap.set('n', '<leader>x', ':bdelete ')
+vim.keymap.set('n', '<leader>x', ':bdelete<CR>')
 vim.keymap.set('n', '<leader>l', ':vsp<CR><C-w>l')
 vim.keymap.set('n', '<leader>j', ':sp<CR><C-w>j')
 vim.keymap.set('n', '<leader>c', ':term<CR>')
 vim.keymap.set('n', '<leader>g', ':Neogit<CR>')
 vim.keymap.set('n', '<leader>n', ':bn<CR>')
 vim.keymap.set('n', '<leader>p', ':bp<CR>')
-vim.keymap.set('n', '<leader>m', ':marks<CR>')
 vim.keymap.set('n', '<leader>/', ':let @/=""<CR>')
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
