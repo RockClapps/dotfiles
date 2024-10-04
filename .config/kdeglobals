@@ -136,8 +136,8 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=980,658
-History Items[$e]=file:$HOME/Git/nstor,file:$HOME/Git/loge,file:$HOME/Git/psp/middleware/src,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:///usr/bin,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp,file:$HOME/Git/psp,file:$HOME/Zsh,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/.local/share/Steam/steamapps/compatdata/489830/pfx,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/drive_c/users/steamuser/,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/drive_c/,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx/drive_c/users/steamuser/,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx/,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/.steam/steam/steamapps/common/,file:$HOME/.steam/steam/steamapps/common/Red Dead Redemption 2/,file:$HOME/.steam/steam/steamapps/common/Red Dead Redemption 2,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Zsh/powerlevel10k,file:$HOME/Git/RingRacers/RingRacers-2.0,file:$HOME/Downloads/uBOLite_2024.4.8.931.chromium.mv3,file:$HOME/Games/Daggerfall,file:$HOME/.local/share/Steam/steamapps/common/The Elder Scrolls Daggerfall
+DirSelectDialog Size=1876,1172
+History Items[$e]=file:$HOME/.steam/steam/steamapps/compatdata/3619381745/pfx/drive_c/Modding/MO2/,file:$HOME/code/psp,file:$HOME/Games/Gamecube,file:///mnt,file:$HOME/Downloads,file:$HOME/Games/God of War - Ragnarok,file:$HOME/Downloads/Ragnarok,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/Git/nstor,file:$HOME/Git/loge,file:$HOME/Git/psp/middleware/src,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:///usr/bin,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp/middleware,file:$HOME/Git/psp,file:$HOME/Git/psp,file:$HOME/Zsh,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/.local/share/Steam/steamapps/compatdata/489830/pfx,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/drive_c/users/steamuser/,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/drive_c/,file:$HOME/.steam/steam/steamapps/compatdata/489830/pfx/,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx/drive_c/users/steamuser/,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx/,file:$HOME/.steam/steam/steamapps/compatdata/22380/pfx,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/Downloads/MK7-USA-DecrTD-Ziperto,file:$HOME/.steam/steam/steamapps/common/,file:$HOME/.steam/steam/steamapps/common/Red Dead Redemption 2/,file:$HOME/.steam/steam/steamapps/common/Red Dead Redemption 2,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/MEGA,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Git/Lime3DS,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Music/Spotube,file:$HOME/Zsh/powerlevel10k,file:$HOME/Git/RingRacers/RingRacers-2.0
 
 [General]
 AccentColor=170,0,0
@@ -173,7 +173,7 @@ Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
 Show hidden files=true
-Sort by=Name
+Sort by=Date
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false

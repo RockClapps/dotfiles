@@ -49,7 +49,7 @@ plugin=org.kde.plasma.systemmonitor.cpu
 
 [Containments][2][Applets][29][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=70
+PreloadWeight=75
 popupHeight=228
 popupWidth=156
 
@@ -101,7 +101,7 @@ plugin=org.kde.plasma.systemmonitor.memory
 
 [Containments][2][Applets][30][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=70
+PreloadWeight=75
 popupHeight=174
 popupWidth=156
 
@@ -196,6 +196,7 @@ PreloadWeight=100
 
 [Containments][8][Applets][10][Configuration][General]
 migrated=true
+showVirtualDevices=true
 
 [Containments][8][Applets][11]
 immutability=1
@@ -249,7 +250,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=0
+PreloadWeight=13
 
 [Containments][8][Applets][22]
 immutability=1
@@ -273,7 +274,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=58
+PreloadWeight=90
 
 [Containments][8][Applets][27]
 immutability=1

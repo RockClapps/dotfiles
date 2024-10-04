@@ -16,6 +16,7 @@ klipperClearHistoryAskAgain=false
 
 [PlasmaViews][Panel 2]
 floating=0
+panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
