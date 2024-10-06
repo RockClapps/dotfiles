@@ -1,11 +1,13 @@
 alias l='ls -AGXhl --group-directories-first --color=auto'
-alias xyeys='xeyes'
 alias suedit='sudo nvim -u ~/.config/nvim/init-compat'
 alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
 
-alias gs='git status'
-alias gc='git commit -m'
+alias gst='git status'
+alias gcom='git commit -m'
+alias gadd='git add'
+alias grm='git remove --cached'
+alias glog='git log'
 alias gpush='git push'
 alias gpull='git pull'
 

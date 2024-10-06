@@ -3,16 +3,12 @@ export PATH="$PATH:$GOPATH/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-alias suedit='sudo nvim -u ~/.config/nvim/init-compat'
-alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
-alias lazydotfiles='lazygit -g "$HOME/.dotfiles" -w "$HOME"'
+source ~/.aliases
 
 fpath+="$ZSH/themes/pure"
 ZSH_THEME='pure'
 
 plugins=(
-  archlinux
-  git
   history-substring-search
   z
   zsh-autosuggestions
