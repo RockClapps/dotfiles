@@ -3,8 +3,6 @@ export PATH="$PATH:$GOPATH/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-source ~/.aliases
-
 fpath+="$ZSH/themes/pure"
 ZSH_THEME='pure'
 
@@ -27,4 +25,9 @@ then
   popd
 fi
 source $ZSH/oh-my-zsh.sh
+
+if [ -f ~/.aliases ]
+then
+  source ~/.aliases
+fi
 
