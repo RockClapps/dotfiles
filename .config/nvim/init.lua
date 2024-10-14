@@ -212,7 +212,7 @@ vim.opt.smartindent = true
 vim.opt.timeout = false
 vim.g.markdown_recommended_style = 0
 vim.cmd('colorscheme catppuccin-macchiato')
-vim.cmd('autocmd BufWrite * lua vim.lsp.buf.format()')
+-- vim.cmd('autocmd BufWrite * lua vim.lsp.buf.format()')
 
 vim.keymap.set({ 'n', 'v' }, ';', ':')
 vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-N><C-w>h')
@@ -233,8 +233,8 @@ vim.keymap.set('n', '<A-K>', '<C-w>K')
 vim.keymap.set('n', '<A-L>', '<C-w>L')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>Q', ':q!<CR>')
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>W', ':w!<CR>')
+vim.keymap.set('n', '<leader>w', ':lua vim.lsp.buf.format()<CR>:w<CR>')
+vim.keymap.set('n', '<leader>W', ':lua vim.lsp.buf.format()<CR>::w!<CR>')
 vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
 vim.keymap.set('n', '<leader>x', ':bdelete<CR>')
