@@ -4,18 +4,29 @@
 (dolist (package '(use-package))
    (unless (package-installed-p package)
        (package-install package)))
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
-(use-package company :ensure t)
-(use-package flycheck :ensure t)
-(use-package go-mode :ensure t)
-(use-package lsp-mode :ensure t)
-(use-package magit :ensure t)
-(use-package markdown-mode :ensure t)
-(use-package powerline :ensure t)
-(use-package rainbow-delimiters :ensure t)
-(use-package treemacs :ensure t)
-(use-package which-key :ensure t)
-(use-package zenburn-theme :ensure t)
+(use-package company
+  :config
+  (global-company-mode))
+(use-package dap-mode)
+(use-package flycheck)
+(use-package go-mode)
+(use-package lsp-mode
+  :config
+  (lsp-mode))
+(use-package magit)
+(use-package markdown-mode)
+(use-package powerline
+  :config
+  (powerline-default-theme))
+(use-package rainbow-delimiters)
+(use-package treemacs)
+(use-package which-key
+  :config
+  (which-key-mode))
+(use-package zenburn-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -56,7 +67,7 @@
 (add-hook 'text-mode-hook 'electric-pair-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'before-save-hook 'whitespace-cleanup)
-(global-company-mode)
+(add-hook 'before-save-hook 'lsp-format-buffer)
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
