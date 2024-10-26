@@ -1,6 +1,3 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
 (dolist (package '(use-package))
    (unless (package-installed-p package)
        (package-install package)))
@@ -10,19 +7,12 @@
 (use-package company
   :config
   (global-company-mode))
-(use-package dap-mode)
+(use-package dape)
 (use-package flycheck)
 (use-package go-mode)
-(use-package lsp-mode
-  :config
-  (lsp-mode))
 (use-package magit)
 (use-package markdown-mode)
-(use-package powerline
-  :config
-  (powerline-default-theme))
 (use-package rainbow-delimiters)
-(use-package treemacs)
 (use-package which-key
   :config
   (which-key-mode))
@@ -45,7 +35,7 @@
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(zenburn-theme which-key rainbow-delimiters magit lsp-mode go-mode flycheck company))
+   '(zenburn-theme which-key rainbow-delimiters magit go-mode flycheck company))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -66,8 +56,9 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'electric-pair-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'before-save-hook 'whitespace-cleanup)
-(add-hook 'before-save-hook 'lsp-format-buffer)
+(add-hook 'before-save-hook 'eglot-format-buffer)
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
