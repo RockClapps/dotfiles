@@ -277,6 +277,9 @@ _launch=Meta+Shift+Return
 _launch=Meta+B
 new-window=Meta+Shift+B
 
+[services][net.local.if.desktop]
+_launch=Meta+Ctrl+B
+
 [services][org.kde.dolphin.desktop]
 _launch=Meta+F
 
