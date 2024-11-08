@@ -1,6 +1,7 @@
 #shell = 'fish'
 
 [window]
+startup_mode = 'maximized'
 opacity = 0.8
 blur = true
 #[colors.primary]
