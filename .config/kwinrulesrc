@@ -89,6 +89,9 @@ maximizehorizrule=3
 maximizevert=true
 maximizevertrule=3
 types=1
+wmclass=arstarst
+wmclasscomplete=true
+wmclassmatch=1
 
 [602af714-7207-4a0b-b3f2-f90ba6b1c91d]
 Description=Not big PIP

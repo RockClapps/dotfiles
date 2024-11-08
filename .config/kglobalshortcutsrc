@@ -264,10 +264,13 @@ toggle do not disturb=none,,Toggle do not disturb
 [services][Alacritty.desktop]
 New=Meta+Return
 
+[services][Vampire® The Masquerade - Bloodlines™.desktop]
+_launch=
+
 [services][Vscodium.desktop]
 _launch=
 
-[services][discord.desktop]
+[services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacs.desktop]

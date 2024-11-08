@@ -24,6 +24,7 @@ LongitudeAuto=-73.67
 
 [Plugins]
 cubeEnabled=true
+hidecursorEnabled=true
 wobblywindowsEnabled=true
 
 [Tiling]
@@ -57,6 +58,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][b9a736b7-1ece-51bf-8ba6-bcecaa4c41bb]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][d6abcd0e-2e2e-5e80-9f79-747c48c98ef9]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][e3dab143-89ad-55ea-a133-2e75a42a31e3]

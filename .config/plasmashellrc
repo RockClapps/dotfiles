@@ -5,9 +5,6 @@ ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcAAAAACAQAAAQAA
 1920x1200 screen: Height=550
 1920x1200 screen: Width=723
 
-[FileDialogSize]
-1920x1200 screen: Window-Maximized=true
-
 [General]
 Number of Actions=0
 
