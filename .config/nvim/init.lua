@@ -15,7 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
-local servers = { 'clangd', 'gopls', 'lua_ls', 'pylsp' }
+local servers = { 'clangd', 'gopls', 'lua_ls', 'pylsp', 'html' }
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
@@ -37,6 +37,13 @@ require('lazy').setup({
         local lsp = require('lspconfig')
         for _, server in ipairs(servers) do
           lsp[server].setup {}
+          vim.o.updatetime = 128
+          vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+            group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
+            callback = function()
+              vim.diagnostic.open_float(nil, { focus = false })
+            end
+          })
         end
       end,
     },
