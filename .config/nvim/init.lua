@@ -209,7 +209,6 @@ vim.opt.scrolloff = 2
 vim.opt.sidescroll = 16
 vim.opt.sidescrolloff = 2
 vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.undofile = true
 vim.opt.tabstop = 2
@@ -254,7 +253,7 @@ vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
 vim.keymap.set('n', '<leader>N', ':tabnext<CR>')
 vim.keymap.set('n', '<leader>P', ':tabprevious<CR>')
 vim.keymap.set('n', '<leader>X', ':tabclose<CR>')
-vim.keymap.set('n', '<leader>/', ':let @/=""<CR>')
+vim.keymap.set('n', '<ESC>', '<ESC>:let @/=""<CR>')
 vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)

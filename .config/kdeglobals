@@ -145,6 +145,7 @@ ColorSchemeHash=6d5f022b37f257f109414eebbb25996b16179a82
 LastUsedCustomAccentColor=0,170,136
 TerminalApplication=alacritty
 TerminalService=Alacritty.desktop
+UseSystemBell=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
 fixed=MonaspiceKr NFM,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular

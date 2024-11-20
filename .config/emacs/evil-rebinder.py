@@ -65,8 +65,9 @@ for i in range(len(filestr)):
             # Don't mess up the modifier keys
             if '\\' + y[0] + '"' in xFilt: continue
             filestr[i] = x.replace(y[0] + '"', y[1] + '"')
+            print(filestr[i])
             break
 
 output = unsplit(filestr, "\n")
-with open(sys.argv[1], "w") as file:
-    file.write(output)
+#with open(sys.argv[1], "w") as file:
+#    file.write(output)

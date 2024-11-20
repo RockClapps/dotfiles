@@ -30,7 +30,6 @@ set scrolloff=2
 set sidescroll=16
 set sidescrolloff=2
 set number
-set relativenumber
 set clipboard=unnamedplus
 set undofile
 set tabstop=4

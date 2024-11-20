@@ -49,7 +49,7 @@ plugin=org.kde.plasma.systemmonitor.cpu
 
 [Containments][2][Applets][29][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=85
+PreloadWeight=90
 popupHeight=228
 popupWidth=156
 
@@ -235,9 +235,8 @@ plugin=org.kde.plasma.devicenotifier
 [Containments][8][Applets][14][Configuration]
 PreloadWeight=100
 
-[Containments][8][Applets][15]
-immutability=1
-plugin=org.kde.plasma.manage-inputmethod
+[Containments][8][Applets][15][Configuration]
+PreloadWeight=42
 
 [Containments][8][Applets][16]
 immutability=1
@@ -262,7 +261,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=14
+PreloadWeight=5
 
 [Containments][8][Applets][22]
 immutability=1
@@ -286,7 +285,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=97
+PreloadWeight=100
 
 [Containments][8][Applets][27]
 immutability=1
@@ -310,11 +309,11 @@ immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][8][ConfigDialog]
-DialogHeight=1172
-DialogWidth=1876
+DialogHeight=540
+DialogWidth=720
 
 [Containments][8][General]
-extraItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.kdeconnect
+extraItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.kdeconnect
 hiddenItems=org.kde.plasma.keyboardlayout,KMix
 iconSize=1
 knownItems=org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.kscreen,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.vault,org.kde.kdeconnect

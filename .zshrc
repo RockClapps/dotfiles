@@ -1,6 +1,6 @@
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:$HOME/scripts/bin"
+export PATH="$HOME/scripts/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 

@@ -270,15 +270,15 @@ _launch=
 [services][Vscodium.desktop]
 _launch=
 
+[services][chromium.desktop]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
+
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacs.desktop]
 _launch=Meta+Shift+Return
-
-[services][firefox.desktop]
-_launch=Meta+B
-new-window=Meta+Shift+B
 
 [services][net.local.if.desktop]
 _launch=Meta+Ctrl+B
