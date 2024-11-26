@@ -15,7 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
-local servers = { 'clangd', 'gopls', 'lua_ls', 'pylsp', 'html' }
+local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html' }
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
@@ -46,6 +46,12 @@ require('lazy').setup({
           })
         end
       end,
+    },
+    {
+      'williamboman/mason.nvim',
+      config = function()
+        require("mason").setup()
+      end
     },
     {
       'nvim-telescope/telescope.nvim',
