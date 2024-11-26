@@ -4,11 +4,14 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+(use-package avy)
 (use-package company
  :config
  (global-company-mode))
 (use-package dape)
 (use-package evil
+ :init
+ (setq evil-want-C-u-scroll t)
  :config
  (evil-mode))
 (use-package evil-exchange)
@@ -20,9 +23,14 @@
  (global-evil-surround-mode))
 (use-package flycheck)
 (use-package go-mode)
+(use-package helm)
 (use-package magit)
 (use-package markdown-mode)
 (use-package rainbow-delimiters)
+(use-package undo-tree
+ :config
+ (global-undo-tree-mode)
+ (setq undo-tree-auto-save-history nil))
 (use-package which-key
  :config
  (which-key-mode))
@@ -45,7 +53,7 @@
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(evil zenburn-theme which-key rainbow-delimiters magit go-mode flycheck company))
+   '(counsel ivy projectile avy evil zenburn-theme which-key rainbow-delimiters magit go-mode flycheck company))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -59,17 +67,54 @@
 (global-set-key (kbd "M-O") 'windmove-swap-states-right)
 (global-set-key (kbd "M-E") 'windmove-swap-states-down)
 (global-set-key (kbd "M-I") 'windmove-swap-states-up)
+
 (require 'evil)
-(evil-define-key '(normal) 'global 
+(evil-set-undo-system 'undo-tree)
+(evil-set-leader '(normal visual motion) (kbd "<SPC>"))
+(evil-define-key '(normal visual motion) 'global
  "n" 'evil-backward-char
  "e" 'evil-next-line
  "i" 'evil-previous-line
  "o" 'evil-forward-char
- "k" 'evil-insert
- "K" 'evil-insert-line
+ "N" 'evil-window-top
  "E" 'evil-join
+ "I" 'evil-lookup
+ "O" 'evil-window-bottom
+ "h" 'evil-search-next
+ "j" 'evil-forward-word-end
+ "k" 'evil-insert
  "l" 'evil-open-below
+ "H" 'evil-search-previous
+ "J" 'evil-forward-WORD-end
+ "K" 'evil-insert-line
  "L" 'evil-open-above
+ (kbd "<leader>q") 'evil-window-delete
+ (kbd "<leader>w") 'save-buffer
+ (kbd "<leader>e") 'split-window-below
+ (kbd "<leader>o") 'split-window-right
+ (kbd "<leader>t") 'evil-buffer-new
+ (kbd "<leader>x") 'evil-delete-buffer
+ (kbd "<leader>n") 'evil-next-buffer
+ (kbd "<leader>p") 'evil-prev-buffer
+ (kbd "<leader>b") 'helm-buffers-list
+ (kbd "<leader>T") 'tab-new
+ (kbd "<leader>X") 'tab-close
+ (kbd "<leader>N") 'tab-next
+ (kbd "<leader>P") 'tab-previous
+ (kbd "<leader>g") 'magit
+ (kbd "<leader>h") 'help
+ (kbd "<leader>s") 'avy-goto-char-2
+ (kbd "<leader>d") 'eglot-find-declaration
+ (kbd "<leader>D") 'eglot-find-typeDefinition
+ (kbd "<leader>i") 'eglot-find-implementation
+ (kbd "<leader>r") 'eglot-rename
+ (kbd "<leader>ff") 'project-find-file
+ (kbd "<leader>fg") 'helm-regexp
+ (kbd "<leader>fp") 'helm-recentf
+)
+
+(evil-define-key '(normal) 'global 
+ "gi" 'evil-previous-visual-line
  "gk" 'evil-insert-resume
  "gK" 'evil-insert-0-line
  "gE" 'evil-join-whitespace
@@ -78,27 +123,12 @@
  "\C-h" 'evil-paste-pop-next
  )
 (evil-define-key '(visual) 'global 
- "n" 'evil-backward-char
- "e" 'evil-next-line
- "i" 'evil-previous-line
- "o" 'evil-forward-char
  "K" 'evil-insert
  "l" 'exchange-point-and-mark
  "L" 'evil-visual-exchange-corners
  "k" evil-inner-text-objects-map
  )
 (evil-define-key '(motion) 'global 
- "j" 'evil-forward-word-end
- "J" 'evil-forward-WORD-end
- "n" 'evil-backward-char
- "N" 'evil-window-top
- "e" 'evil-next-line
- "i" 'evil-previous-line
- "o" 'evil-forward-char
- "I" 'evil-lookup
- "O" 'evil-window-bottom
- "h" 'evil-search-next
- "H" 'evil-search-previous
  "gj" 'evil-backward-word-end
  "gJ" 'evil-backward-WORD-end
  "ge" 'evil-next-visual-line
@@ -116,29 +146,19 @@
 (evil-define-key '(operator) 'global 
  "k" evil-inner-text-objects-map
  )
-(evil-set-leader '(normal visual motion) (kbd "<SPC>"))
-(evil-define-key '(normal visual motion) 'global
- (kbd "<leader>q") 'evil-window-delete
- (kbd "<leader>w") 'save-buffer
- (kbd "<leader>e") 'split-window-below
- (kbd "<leader>o") 'split-window-right
- (kbd "<leader>t") 'tab-new
- (kbd "<leader>x") 'tab-close
- (kbd "<leader>n") 'tab-next
- (kbd "<leader>p") 'tab-previous
- (kbd "<leader>d") 'project-switch-project
- (kbd "<leader>g") 'magit
- (kbd "<leader>ff") 'find-name-dired
- (kbd "<leader>fg") 'find-grep-dired
- )
 
+(electric-pair-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'electric-pair-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'eglot-ensure)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook 'eglot-format-buffer)
+
+(add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) "~/scripts/bin/clangd"))
 
 (add-to-list 'warning-suppress-types '(emacs))
 
