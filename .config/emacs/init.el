@@ -34,7 +34,6 @@
 (use-package which-key
  :config
  (which-key-mode))
-(use-package zenburn-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -42,9 +41,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
- '(custom-enabled-themes '(zenburn))
+ '(custom-enabled-themes '(womby-dark))
  '(custom-safe-themes
-   '("f366d4bc6d14dcac2963d45df51956b2409a15b770ec2f6d730e73ce0ca5c8a7" default))
+   '("ce705d0cd0b55d19cb48596f0f2b91c0c986c2d015a48aa22a4ee588cd128445" "427eb94b8511f8d6d1e7756367369beb179f19dfbe0de478065543cab9c2c3d5" default))
+ '(custom-theme-directory "~/.config/emacs/themes")
  '(delete-selection-mode nil)
  '(global-display-line-numbers-mode t)
  '(indent-tabs-mode nil)
@@ -53,7 +53,7 @@
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(counsel ivy projectile avy evil zenburn-theme which-key rainbow-delimiters magit go-mode flycheck company))
+   '(avy evil which-key rainbow-delimiters magit go-mode flycheck company))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -161,6 +161,9 @@
 (add-to-list 'eglot-server-programs '((c++-mode c-mode) "~/scripts/bin/clangd"))
 
 (add-to-list 'warning-suppress-types '(emacs))
+
+(load-file (concat custom-theme-directory "/womby-light-theme.el"))
+(load-file (concat custom-theme-directory "/womby-dark-theme.el"))
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
