@@ -92,15 +92,15 @@
  (kbd "<leader>w") 'save-buffer
  (kbd "<leader>e") 'split-window-below
  (kbd "<leader>o") 'split-window-right
- (kbd "<leader>t") 'evil-buffer-new
- (kbd "<leader>x") 'evil-delete-buffer
- (kbd "<leader>n") 'evil-next-buffer
- (kbd "<leader>p") 'evil-prev-buffer
+ (kbd "<leader>T") 'evil-buffer-new
+ (kbd "<leader>X") 'evil-delete-buffer
+ (kbd "<leader>N") 'evil-next-buffer
+ (kbd "<leader>P") 'evil-prev-buffer
  (kbd "<leader>b") 'helm-buffers-list
- (kbd "<leader>T") 'tab-new
- (kbd "<leader>X") 'tab-close
- (kbd "<leader>N") 'tab-next
- (kbd "<leader>P") 'tab-previous
+ (kbd "<leader>t") 'tab-new
+ (kbd "<leader>x") 'tab-close
+ (kbd "<leader>n") 'tab-next
+ (kbd "<leader>p") 'tab-previous
  (kbd "<leader>g") 'magit
  (kbd "<leader>h") 'help
  (kbd "<leader>s") 'avy-goto-char-2
@@ -108,7 +108,8 @@
  (kbd "<leader>D") 'eglot-find-typeDefinition
  (kbd "<leader>i") 'eglot-find-implementation
  (kbd "<leader>r") 'eglot-rename
- (kbd "<leader>ff") 'project-find-file
+ ;;(kbd "<leader>ff") 'project-find-file
+ (kbd "<leader>ff") 'find-name-dired
  (kbd "<leader>fg") 'helm-regexp
  (kbd "<leader>fp") 'helm-recentf
 )
@@ -164,6 +165,9 @@
 
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
 (load-file (concat custom-theme-directory "/womby-dark-theme.el"))
+
+(add-to-list 'load-path "~/Apps/gdscript-emacs")
+(require 'gdscript-mode)
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
