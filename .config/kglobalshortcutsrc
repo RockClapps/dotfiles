@@ -98,7 +98,7 @@ Switch to Desktop 7=Meta+7,,Switch to Desktop 7
 Switch to Desktop 8=Meta+8,,Switch to Desktop 8
 Switch to Desktop 9=Meta+9,,Switch to Desktop 9
 Switch to Next Desktop=none,,Switch to Next Desktop
-Switch to Next Screen=none,,Switch to Next Screen
+Switch to Next Screen=Meta+Ctrl+E\tMeta+Ctrl+I,,Switch to Next Screen
 Switch to Previous Desktop=none,,Switch to Previous Desktop
 Switch to Previous Screen=none,,Switch to Previous Screen
 Switch to Screen 0=none,,Switch to Screen 0
@@ -186,9 +186,9 @@ Window to Desktop 7=Meta+&,,Window to Desktop 7
 Window to Desktop 8=Meta+*,,Window to Desktop 8
 Window to Desktop 9=Meta+(,,Window to Desktop 9
 Window to Next Desktop=none,,Window to Next Desktop
-Window to Next Screen=Meta+Shift+Right,Meta+Shift+Right,Move Window to Next Screen
+Window to Next Screen=Meta+Shift+Right\tMeta+Ctrl+Shift+I,Meta+Shift+Right,Move Window to Next Screen
 Window to Previous Desktop=none,,Window to Previous Desktop
-Window to Previous Screen=Meta+Shift+Left,Meta+Shift+Left,Move Window to Previous Screen
+Window to Previous Screen=Meta+Ctrl+Shift+E\tMeta+Shift+Left,Meta+Shift+Left,Move Window to Previous Screen
 Window to Screen 0=none,,Move Window to Screen 0
 Window to Screen 1=none,,Move Window to Screen 1
 Window to Screen 2=none,,Move Window to Screen 2
@@ -270,23 +270,27 @@ _launch=
 [services][Vscodium.desktop]
 _launch=
 
-[services][chromium.desktop]
-_launch=Meta+B
-new-private-window=Meta+Shift+B
-
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacs.desktop]
 _launch=Meta+Shift+Return
 
+[services][firefox.desktop]
+PrivateBrowsing=Meta+Shift+B
+_launch=Meta+B
+
 [services][net.local.if.desktop]
 _launch=Meta+Ctrl+B
+
+[services][net.local.kill.desktop]
+_launch=Meta+Shift+R
 
 [services][org.kde.dolphin.desktop]
 _launch=Meta+F
 
 [services][org.kde.spectacle.desktop]
+RecordRegion=Meta+R
 RecordWindow=none
 
 [services][org.mozilla.Thunderbird.desktop]
