@@ -138,11 +138,18 @@ require('lazy').setup({
       opts = {}
     },
     {
-      "kylechui/nvim-surround",
+      'kylechui/nvim-surround',
       version = "*",
       event = "VeryLazy",
       config = function()
         require("nvim-surround").setup({})
+      end
+    },
+    {
+      'ggandor/leap.nvim',
+      config = function()
+        vim.keymap.set({ 'n', 'x', 'o' }, '<leader>s', '<Plug>(leap-forward)')
+        vim.keymap.set({ 'n', 'x', 'o' }, '<leader>S', '<Plug>(leap-backward)')
       end
     },
     {
@@ -164,7 +171,7 @@ require('lazy').setup({
       config = true,
     },
     {
-      "iamcco/markdown-preview.nvim",
+      'iamcco/markdown-preview.nvim',
       cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
       ft = { "markdown" },
       build = function()
