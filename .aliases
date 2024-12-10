@@ -31,5 +31,7 @@ alias pacr='sudo pacman -Rsn'
 alias pacu='sudo pacman -Syu'
 alias pacs='pacman -Ss'
 alias pacsi='pacman -Si'
+alias pacq='pacman -Q'
+alias pacql='pacman -Ql'
 
 alias update='pacu && flatu'
