@@ -1,31 +1,34 @@
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt autocd extendedglob nomatch
+bindkey -e
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/scripts/bin:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH_EXTENSIONS="$HOME/.zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+zstyle ':completion:*' menu select
 
-fpath+="$ZSH/themes/pure"
-ZSH_THEME='pure'
-
-plugins=(
-  history-substring-search
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-if [ ! -d $ZSH ];
+if [ ! -d $ZSH_EXTENSIONS ];
 then
-  mkdir ~/.oh-my-zsh
-  pushd ~/.oh-my-zsh
-  git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git .
-  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git plugins/zsh-autosuggestions
-  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git plugins/zsh-syntax-highlighting
-  git clone --depth=1 https://github.com/sindresorhus/pure.git themes/pure
-  ln -rs themes/pure/pure.zsh themes/pure.zsh-theme
+  mkdir $ZSH_EXTENSIONS
+  pushd $ZSH_EXTENSIONS
+  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git zsh-autosuggestions
+  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting
+  git clone --depth=1 https://github.com/agkozak/zsh-z.git z
+  git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git spaceship
   popd
 fi
-source $ZSH/oh-my-zsh.sh
+
+source $ZSH_EXTENSIONS/z/zsh-z.plugin.zsh
+autoload -Uz compinit; compinit
+
+export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
+source $ZSH_EXTENSIONS/spaceship/spaceship.zsh
+
+source $ZSH_EXTENSIONS/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_EXTENSIONS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [ -f ~/.aliases ]
 then
