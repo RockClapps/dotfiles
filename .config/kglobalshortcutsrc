@@ -73,7 +73,7 @@ Switch One Desktop Down=Meta+Ctrl+Down,Meta+Ctrl+Down,Switch One Desktop Down
 Switch One Desktop Up=Meta+Ctrl+Up,Meta+Ctrl+Up,Switch One Desktop Up
 Switch One Desktop to the Left=Meta+Ctrl+Left,Meta+Ctrl+Left,Switch One Desktop to the Left
 Switch One Desktop to the Right=Meta+Ctrl+Right,Meta+Ctrl+Right,Switch One Desktop to the Right
-Switch Window Down=Meta+E\tMeta+Alt+Down,Meta+Alt+Down,Switch to Window Below
+Switch Window Down=Meta+Alt+Down\tMeta+E,Meta+Alt+Down,Switch to Window Below
 Switch Window Left=Meta+N\tMeta+Alt+Left,Meta+Alt+Left,Switch to Window to the Left
 Switch Window Right=Meta+Alt+Right\tMeta+O,Meta+Alt+Right,Switch to Window to the Right
 Switch Window Up=Meta+Alt+Up\tMeta+I,Meta+Alt+Up,Switch to Window Above
@@ -277,8 +277,8 @@ _launch=Meta+D
 _launch=Meta+Shift+Return
 
 [services][firefox.desktop]
-PrivateBrowsing=Meta+Shift+B
 _launch=Meta+B
+new-private-window=Meta+Shift+B
 
 [services][net.local.if.desktop]
 _launch=Meta+Ctrl+B
