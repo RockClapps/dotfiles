@@ -20,6 +20,18 @@ maximizevert=true
 maximizevertrule=3
 types=1
 
+[18051806-0af1-46d9-8999-5830b2fec91c]
+Description=Firefox PIP
+above=true
+aboverule=3
+desktops=\\0
+desktopsrule=3
+title=Picture-in-Picture
+titlematch=1
+wmclass=firefox firefox
+wmclasscomplete=true
+wmclassmatch=1
+
 [1f9e515b-3ab0-4893-8c19-0214d49602d8]
 Description=File upload thing not big
 maximizehorizrule=3
@@ -58,28 +70,12 @@ wmclassmatch=1
 
 [554f82be-6e7e-42f4-9e68-5196fe88f79b]
 Description=Gamescope borderless window
-above=true
-aboverule=3
-noborder=true
-noborderrule=3
-position=0,0
-positionrule=3
-size=1920,1080
-sizerule=3
+fullscreen=true
+fullscreenrule=3
 wmclass=gamescope gamescope
 wmclasscomplete=true
 wmclassmatch=1
 
-[6eaa2cb3-ed28-4195-b1e3-3246739ef890]
-Description=Minecraft borderless window
-above=true
-aboverule=3
-noborder=true
-noborderrule=3
-wmclass=Minecraft
-wmclasscomplete=true
-wmclassmatch=2
-
 [General]
 count=2
-rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,6eaa2cb3-ed28-4195-b1e3-3246739ef890
+rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c
