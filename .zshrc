@@ -2,7 +2,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob nomatch
-bindkey -e
+bindkey "^[f" vi-forward-word
+bindkey "^[b" vi-backward-word
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/scripts/bin:$PATH"
