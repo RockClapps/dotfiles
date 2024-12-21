@@ -89,6 +89,7 @@
  "K" 'evil-insert-line
  "L" 'evil-open-above
  (kbd "<leader>q") 'evil-window-delete
+ (kbd "<leader>Q") 'kill-emacs
  (kbd "<leader>w") 'save-buffer
  (kbd "<leader>e") 'split-window-below
  (kbd "<leader>o") 'split-window-right
@@ -114,7 +115,7 @@
  (kbd "<leader>fp") 'helm-recentf
 )
 
-(evil-define-key '(normal) 'global 
+(evil-define-key '(normal) 'global
  "gi" 'evil-previous-visual-line
  "gk" 'evil-insert-resume
  "gK" 'evil-insert-0-line
@@ -123,13 +124,13 @@
  "zL" 'evil-open-fold-rec
  "\C-h" 'evil-paste-pop-next
  )
-(evil-define-key '(visual) 'global 
+(evil-define-key '(visual) 'global
  "K" 'evil-insert
  "l" 'exchange-point-and-mark
  "L" 'evil-visual-exchange-corners
  "k" evil-inner-text-objects-map
  )
-(evil-define-key '(motion) 'global 
+(evil-define-key '(motion) 'global
  "gj" 'evil-backward-word-end
  "gJ" 'evil-backward-WORD-end
  "ge" 'evil-next-visual-line
@@ -144,7 +145,7 @@
  "zO" 'evil-scroll-right
  "zN" 'evil-scroll-left
  )
-(evil-define-key '(operator) 'global 
+(evil-define-key '(operator) 'global
  "k" evil-inner-text-objects-map
  )
 
