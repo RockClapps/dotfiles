@@ -4,6 +4,7 @@ SAVEHIST=1000
 setopt autocd extendedglob nomatch
 bindkey "^[f" vi-forward-word
 bindkey "^[b" vi-backward-word
+bindkey "^[^?" vi-backward-kill-word
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 export GOPATH="$HOME/go"
