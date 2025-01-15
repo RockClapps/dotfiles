@@ -160,7 +160,7 @@
 (add-hook 'before-save-hook 'eglot-format-buffer)
 
 (add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) "~/scripts/bin/clangd"))
+(add-to-list 'eglot-server-programs '((csharp-mode) "~/.dotnet/tools/csharp-ls"))
 
 (add-to-list 'warning-suppress-types '(emacs))
 
