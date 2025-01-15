@@ -84,20 +84,5 @@ wmclasscomplete=true
 wmclassmatch=1
 
 [General]
-count=3
-rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,ed024a60-9b7a-485a-82a4-4f0bef6b4ebc,18051806-0af1-46d9-8999-5830b2fec91c
-
-[ed024a60-9b7a-485a-82a4-4f0bef6b4ebc]
-Description=Minecraft Borderless Window
-above=true
-aboverule=3
-fullscreenrule=3
-maximizehorizrule=3
-maximizevertrule=3
-noborder=true
-noborderrule=3
-position=0,0
-positionrule=3
-wmclass=Minecraft.*Minecraft
-wmclasscomplete=true
-wmclassmatch=3
+count=2
+rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c
