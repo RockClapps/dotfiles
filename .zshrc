@@ -9,6 +9,7 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/scripts/bin:$PATH"
 export ZSH_EXTENSIONS="$HOME/.zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
