@@ -1,2 +1,0 @@
-#!/bin/sh
-podman exec -i pspvpn clangd $@
