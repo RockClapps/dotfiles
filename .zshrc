@@ -7,6 +7,7 @@ bindkey "^[b" vi-backward-word
 bindkey "^[^?" vi-backward-kill-word
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+export EDITOR="nvim"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
