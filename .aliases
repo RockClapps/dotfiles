@@ -1,3 +1,4 @@
+alias please='sudo'
 alias l='ls -AGXhl --group-directories-first --color=auto'
 alias suedit='sudo nvim -u ~/.config/nvim/init-compat'
 alias dotfiles='git --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'

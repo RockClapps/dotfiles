@@ -4,9 +4,26 @@ $env.GOPATH = $env.HOME | path join "go"
 $env.PATH = [ ($env.GOPATH | path join "bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join ".cargo/bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join "scripts/bin") ] ++ $env.PATH
+let fish_completer = {|spans|
+    fish --command $'complete "--do-complete=($spans | str join " ")"'
+    | from tsv --flexible --noheaders --no-infer
+    | rename value description
+}
+$env.config.completions.external = {
+    enable: true
+    max_results: 100
+    completer: $fish_completer
+}
 
 #ALIASES
-def l [] {ls --all | sort-by type }
+alias please = sudo
+def l [folder?] {
+  match $folder {
+    nothing => ( ls --all $folder | sort-by type )
+    _ => ( ls --all | sort-by type )
+  }
+}
+alias please = sudo
 alias suedit = sudo nvim -u ~/.config/nvim/init-compat
 alias dotfiles = git --git-dir=($env.HOME | path join .dotfiles) --work-tree=($env.HOME)
 alias lazydotfiles = lazygit -g ($env.HOME | path join .dotfiles) -w $env.HOME
