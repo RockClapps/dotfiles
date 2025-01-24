@@ -17,11 +17,8 @@ $env.config.completions.external = {
 
 #ALIASES
 alias please = sudo
-def l [folder?] {
-  match $folder {
-    nothing => ( ls --all $folder | sort-by type )
-    _ => ( ls --all | sort-by type )
-  }
+def l [folder = '.'] {
+  ls --all $folder | sort-by type
 }
 alias please = sudo
 alias suedit = sudo nvim -u ~/.config/nvim/init-compat
