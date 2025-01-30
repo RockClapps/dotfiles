@@ -56,7 +56,36 @@ alias pacsi = pacman -Si
 alias pacq = pacman -Q
 alias pacql = pacman -Ql
 
-def update [] { pacu; flatu }
+alias apti = sudo apt install
+alias aptr = sudo apt remove
+def aptu [] { sudo apt update; sudo apt upgrade }
+alias apts = apt search
+
+alias dnfi = sudo dnf install
+alias dnfr = sudo dnf remove
+alias dnfu = sudo dnf update
+alias dnfs = dnf search
+
+alias zypi = sudo zypper install
+alias zypr = sudo zypper remove
+alias zypu = sudo zypper update
+alias zyps = zypper search
+
+def upd [] { 
+  if ('/bin/pacman' | path exists) {
+    pacu; flatu
+  }
+  if ('/bin/apt' | path exists) {
+    aptu; flatu
+  }
+  if ('/bin/dnf' | path exists) {
+    dnfu; flatu
+  }
+  if ('/bin/zypu' | path exists) {
+    zypu; flatu
+  }
+}
+
 #ALIASES
 
 #STARSHIP

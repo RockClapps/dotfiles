@@ -35,4 +35,17 @@ alias pacsi='pacman -Si'
 alias pacq='pacman -Q'
 alias pacql='pacman -Ql'
 
-alias update='pacu && flatu'
+alias apti='sudo apt install'
+alias aptr='sudo apt remove'
+alias aptu='sudo apt update && sudo apt upgrade'
+alias apts='apt search'
+
+alias dnfi='sudo dnf install'
+alias dnfr='sudo dnf remove'
+alias dnfu='sudo dnf update'
+alias dnfs='dnf search'
+
+alias zypi='sudo zypper install'
+alias zypr='sudo zypper remove'
+alias zypu='sudo zypper update'
+alias zyps='zypper search'

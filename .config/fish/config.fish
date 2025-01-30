@@ -5,6 +5,17 @@ if status is-interactive
     if test -e ~/.aliases
       source ~/.aliases
     end
+
+    if test -f /bin/pacman
+      alias update='pacu && flatu'
+    else if test -f /bin/apt
+      alias update='aptu && flatu'
+    else if test -f /bin/dnf
+      alias update='dnfu && flatu'
+    else if test -f /bin/zypper
+      alias update='zypu && flatu'
+    end
+
     if test (type -p starship != '')
       starship init fish | source
     end
