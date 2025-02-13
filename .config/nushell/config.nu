@@ -89,38 +89,67 @@ def upd [] {
 #ALIASES
 
 #STARSHIP
-export-env { $env.STARSHIP_SHELL = "nu"; load-env {
-    STARSHIP_SESSION_KEY: (random chars -l 16)
-    PROMPT_MULTILINE_INDICATOR: (
-        ^/usr/bin/starship prompt --continuation
-    )
+if ('/bin/starship' | path exists) {
+  export-env { $env.STARSHIP_SHELL = "nu"; load-env {
+      STARSHIP_SESSION_KEY: (random chars -l 16)
+      PROMPT_MULTILINE_INDICATOR: (
+          ^/usr/bin/starship prompt --continuation
+      )
+      PROMPT_INDICATOR: ""
 
-    # Does not play well with default character module.
-    # TODO: Also Use starship vi mode indicators?
-    PROMPT_INDICATOR: ""
+      PROMPT_COMMAND: {||
+          # jobs are not supported
+          (
+              ^/usr/bin/starship prompt
+                  --cmd-duration $env.CMD_DURATION_MS
+                  $"--status=($env.LAST_EXIT_CODE)"
+                  --terminal-width (term size).columns
+          )
+      }
 
-    PROMPT_COMMAND: {||
-        # jobs are not supported
-        (
-            ^/usr/bin/starship prompt
-                --cmd-duration $env.CMD_DURATION_MS
-                $"--status=($env.LAST_EXIT_CODE)"
-                --terminal-width (term size).columns
-        )
-    }
+      config: ($env.config? | default {} | merge {
+          render_right_prompt_on_last_line: true
+      })
 
-    config: ($env.config? | default {} | merge {
-        render_right_prompt_on_last_line: true
-    })
-
-    PROMPT_COMMAND_RIGHT: {||
-        (
-            ^/usr/bin/starship prompt
-                --right
-                --cmd-duration $env.CMD_DURATION_MS
-                $"--status=($env.LAST_EXIT_CODE)"
-                --terminal-width (term size).columns
-        )
-    }
-}}
+      PROMPT_COMMAND_RIGHT: {||
+          (
+              ^/usr/bin/starship prompt
+                  --right
+                  --cmd-duration $env.CMD_DURATION_MS
+                  $"--status=($env.LAST_EXIT_CODE)"
+                  --terminal-width (term size).columns
+          )
+      }
+  }}
+}
 #STARSHIP
+
+#ZOXIDE
+if (not ($env | default false __zoxide_hooked | get __zoxide_hooked)) {
+  $env.__zoxide_hooked = true
+  $env.config = ($env | default {} config).config
+  $env.config = ($env.config | default {} hooks)
+  $env.config = ($env.config | update hooks ($env.config.hooks | default {} env_change))
+  $env.config = ($env.config | update hooks.env_change ($env.config.hooks.env_change | default [] PWD))
+  $env.config = ($env.config | update hooks.env_change.PWD ($env.config.hooks.env_change.PWD | append {|_, dir|
+    zoxide add -- $dir
+  }))
+}
+
+def --env --wrapped __zoxide_z [...rest:string] {
+  let arg0 = ($rest | append '~').0
+  let arg0_is_dir = (try {$arg0 | path expand | path type}) == 'dir'
+  let path = if (($rest | length) <= 1) and ($arg0 == '-' or $arg0_is_dir) {
+    $arg0
+  } else {
+    (zoxide query --exclude $env.PWD -- ...$rest | str trim -r -c "\n")
+  }
+  cd $path
+}
+
+def --env --wrapped __zoxide_zi [...rest:string] {
+  cd $'(zoxide query --interactive -- ...$rest | str trim -r -c "\n")'
+}
+alias z = __zoxide_z
+alias zi = __zoxide_zi
+#ZOXIDE
