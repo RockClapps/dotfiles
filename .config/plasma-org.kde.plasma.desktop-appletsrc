@@ -171,8 +171,11 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][35][ConfigDialog]
-DialogHeight=1172
-DialogWidth=1876
+DialogHeight=540
+DialogWidth=720
+
+[Containments][35][General]
+positions={"1920x1200":[]}
 
 [Containments][35][Wallpaper][org.kde.image][General]
 Image=/usr/share/wallpapers/ScarletTree/
@@ -216,7 +219,6 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][8][Applets][10][Configuration][General]
-currentTab=streams
 migrated=true
 showVirtualDevices=true
 
@@ -278,7 +280,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][8][Applets][22][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][8][Applets][23]
 immutability=1
@@ -295,7 +297,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=100
+PreloadWeight=83
 
 [Containments][8][Applets][27]
 immutability=1
