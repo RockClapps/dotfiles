@@ -132,7 +132,9 @@ if (not ($env | default false __zoxide_hooked | get __zoxide_hooked)) {
   $env.config = ($env.config | update hooks ($env.config.hooks | default {} env_change))
   $env.config = ($env.config | update hooks.env_change ($env.config.hooks.env_change | default [] PWD))
   $env.config = ($env.config | update hooks.env_change.PWD ($env.config.hooks.env_change.PWD | append {|_, dir|
-    zoxide add -- $dir
+    if ('/bin/zoxide' | path exists) {
+      zoxide add -- $dir
+    }
   }))
 }
 
