@@ -79,9 +79,9 @@ noborder=true
 noborderrule=3
 position=0,0
 positionrule=3
-wmclass=gamescope gamescope
+wmclass=gamescope
 wmclasscomplete=true
-wmclassmatch=1
+wmclassmatch=2
 
 [General]
 count=2
