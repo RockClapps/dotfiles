@@ -73,16 +73,23 @@ alias zyps = zypper search
 
 def upd [] { 
   if ('/bin/pacman' | path exists) {
-    pacu; flatu
+    pacu
+    if ('/bin/yay' | path exists) {
+      yay -Syu
+    }
   }
   if ('/bin/apt' | path exists) {
-    aptu; flatu
+    aptu
   }
   if ('/bin/dnf' | path exists) {
-    dnfu; flatu
+    dnfu
   }
   if ('/bin/zypu' | path exists) {
-    zypu; flatu
+    zypu
+  }
+
+  if ('/bin/flatpak' | path exists) {
+    flatu
   }
 }
 
