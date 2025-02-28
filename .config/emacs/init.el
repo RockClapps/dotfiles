@@ -157,10 +157,9 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook 'eglot-format-buffer)
 
+(require 'eglot)
 (add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
 (add-to-list 'eglot-server-programs '((csharp-mode) "~/.dotnet/tools/csharp-ls"))
-
-(add-to-list 'warning-suppress-types '(emacs))
 
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
 (load-file (concat custom-theme-directory "/womby-dark-theme.el"))
