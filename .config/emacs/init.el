@@ -5,9 +5,6 @@
 (setq use-package-always-ensure t)
 
 (use-package avy)
-(use-package company
- :config
- (global-company-mode))
 (use-package dape)
 (use-package evil
  :init
@@ -31,9 +28,6 @@
  :config
  (global-undo-tree-mode)
  (setq undo-tree-auto-save-history nil))
-(use-package which-key
- :config
- (which-key-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -67,6 +61,8 @@
 (global-set-key (kbd "M-O") 'windmove-swap-states-right)
 (global-set-key (kbd "M-E") 'windmove-swap-states-down)
 (global-set-key (kbd "M-I") 'windmove-swap-states-up)
+(global-set-key (kbd "C-n") 'completion-preview-next-candidate)
+(global-set-key (kbd "C-p") 'completion-preview-prev-candidate)
 
 (require 'evil)
 (evil-set-undo-system 'undo-tree)
@@ -149,6 +145,8 @@
  "k" evil-inner-text-objects-map
  )
 
+(global-completion-preview-mode)
+(which-key-mode)
 (electric-pair-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
