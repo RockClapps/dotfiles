@@ -41,12 +41,23 @@ then
   source ~/.aliases
 fi
 
-if [ -f /bin/pacman ]; then
-  alias update='pacu && flatu'
-elif [ -f /bin/apt ]; then
-  alias update='aptu && flatu'
-elif [ -f /bin/dnf ]; then
-  alias update='dnfu && flatu'
-elif [ -f /bin/zypper ]; then
-  alias update='zypu && flatu'
-fi
+update () {
+  if [ -f /bin/pacman ]; then
+    pacu
+    if [ -f /bin/yay ]; then
+      yay -Syu
+    fi
+  fi
+  if [ -f /bin/apt ]; then
+    aptu
+  fi
+  if [ -f /bin/dnf ]; then
+    dnfu
+  fi
+  if [ -f /bin/zypper ]; then
+    zypu
+  fi
+  if [ -f /bin/flatpak ]; then
+    flatu
+  fi
+}

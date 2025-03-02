@@ -6,14 +6,25 @@ if status is-interactive
       source ~/.aliases
     end
 
-    if test -f /bin/pacman
-      alias update='pacu && flatu'
-    else if test -f /bin/apt
-      alias update='aptu && flatu'
-    else if test -f /bin/dnf
-      alias update='dnfu && flatu'
-    else if test -f /bin/zypper
-      alias update='zypu && flatu'
+    function update
+      if test -f /bin/pacman
+        pacu
+        if test -f /bin/yay
+          yay -Syu
+        end
+      end
+      if test -f /bin/apt
+        aptu
+      end
+      if test -f /bin/dnf
+        dnfu
+      end
+      if test -f /bin/zypper
+        zypu
+      end
+      if test -f /bin/flatpak
+        flatu
+      end
     end
 
     if test (type -p starship != '')
