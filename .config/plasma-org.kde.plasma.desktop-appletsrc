@@ -261,7 +261,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][37][Applets][42][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 SystrayContainmentId=43
 
 [Containments][37][Applets][60]
@@ -437,7 +437,6 @@ plugin=org.kde.plasma.volume
 PreloadWeight=100
 
 [Containments][43][Applets][52][Configuration][General]
-currentTab=streams
 migrated=true
 showVirtualDevices=true
 
@@ -484,7 +483,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][43][Applets][59][Configuration]
-PreloadWeight=57
+PreloadWeight=46
 
 [Containments][43][ConfigDialog]
 DialogHeight=540
@@ -594,7 +593,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=69
+PreloadWeight=35
 
 [Containments][8][Applets][27]
 immutability=1
