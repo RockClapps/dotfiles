@@ -12,12 +12,12 @@ Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Ke
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
-[brave-browser]
-_k_friendly_name=brave-browser
-addSite=Alt+Shift+A,Alt+Shift+A,Toggle current site
+[brave-dnfpoenibinnbbckgbhendmlljoobcfg-Default]
+_k_friendly_name=Excalidraw
+addSite=,Alt+Shift+A,Toggle current site
 autofill_card=none,none,Autofill the last used card for the current website
 autofill_identity=none,none,Autofill the last used identity for the current website
-autofill_login=Ctrl+Shift+L,Ctrl+Shift+L,Autofill the last used login for the current website
+autofill_login=,Ctrl+Shift+L,Autofill the last used login for the current website
 c000-options-page=none,none,Open the options page
 c020-theme-youtube-dark=none,none,Theme: YouTube™ (Dark)
 c025-theme-enhanced-dark=none,none,Theme: Enhancer for YouTube™
@@ -59,7 +59,7 @@ c390-quality-auto=none,none,Select the playback quality “Auto”
 c400-comments-visibility=none,none,Toggle comments visibility
 c410-related-videos-visibility=none,none,Toggle related videos visibility
 createTab=none,none,Create new tab
-generate_password=Ctrl+Shift+9,Ctrl+Shift+9,Generate and copy a new random password to the clipboard
+generate_password=,Ctrl+Shift+9,Generate and copy a new random password to the clipboard
 goBack=none,none,Go back in history
 goForward=none,none,Go forward in history
 lock_vault=none,none,Lock the vault
@@ -67,7 +67,7 @@ previousTab=none,none,Go one tab left
 quickNext=none,none,Go one tab right
 reloadTab=none,none,Reload tab
 switchEngine=none,none,Theme generation mode
-toggle=Alt+Shift+D,Alt+Shift+D,Toggle extension
+toggle=,Alt+Shift+D,Toggle extension
 userCustomized1=none,none,Custom shortcut 1
 userCustomized2=none,none,Custom shortcut 2
 
@@ -324,6 +324,9 @@ stop current activity=Meta+S,Meta+S,Stop Current Activity
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
+
+[services][Beeper.desktop]
+_launch=
 
 [services][Vampire® The Masquerade - Bloodlines™.desktop]
 _launch=
