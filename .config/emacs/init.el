@@ -6,6 +6,43 @@
 
 (use-package avy)
 (use-package dape)
+(use-package ellama
+  :ensure t
+  :bind ("C-c e" . ellama-transient-main-menu)
+  ;; send last message in chat buffer with C-c C-c
+  :hook (org-ctrl-c-ctrl-c-final . ellama-chat-send-last-message)
+  :init
+  (require 'llm-ollama)
+  (setopt ellama-provider
+    (make-llm-ollama
+     ;; this model should be pulled to use it
+     ;; value should be the same as you print in terminal during pull
+     :chat-model "deepseek-r1:1.5b"
+     :embedding-model "nomic-embed-text"
+     :default-chat-non-standard-params '(("num_ctx" . 8192))))
+  (setopt ellama-summarization-provider
+    (make-llm-ollama
+     :chat-model "deepseek-r1:1.5b"
+     :embedding-model "nomic-embed-text"
+     :default-chat-non-standard-params '(("num_ctx" . 32768))))
+  (setopt ellama-coding-provider
+    (make-llm-ollama
+     :chat-model "qwen2.5-coder:3b"
+     :embedding-model "nomic-embed-text"
+     :default-chat-non-standard-params '(("num_ctx" . 32768))))
+  (setopt ellama-extraction-provider (make-llm-ollama
+                                :chat-model "deepseek-r1:1.5b"
+                                :embedding-model "nomic-embed-text"
+                                :default-chat-non-standard-params
+                                '(("num_ctx" . 32768))))
+  ;; customize display buffer behaviour
+  ;; see ~(info "(elisp) Buffer Display Action Functions")~
+  (setopt ellama-chat-display-action-function #'display-buffer-full-frame)
+  (setopt ellama-instant-display-action-function #'display-buffer-at-bottom)
+  :config
+  ;; show ellama context in header line in all buffers
+  (ellama-context-header-line-global-mode +1))
+
 (use-package evil
  :init
  (setq evil-want-C-u-scroll t)
@@ -37,7 +74,9 @@
  '(auto-save-default nil)
  '(custom-enabled-themes '(womby-dark))
  '(custom-safe-themes
-   '("ce705d0cd0b55d19cb48596f0f2b91c0c986c2d015a48aa22a4ee588cd128445" "427eb94b8511f8d6d1e7756367369beb179f19dfbe0de478065543cab9c2c3d5" default))
+   '("ce705d0cd0b55d19cb48596f0f2b91c0c986c2d015a48aa22a4ee588cd128445"
+     "427eb94b8511f8d6d1e7756367369beb179f19dfbe0de478065543cab9c2c3d5"
+     default))
  '(custom-theme-directory "~/.config/emacs/themes")
  '(delete-selection-mode nil)
  '(global-display-line-numbers-mode t)
@@ -47,7 +86,8 @@
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
  '(package-selected-packages
-   '(avy evil which-key rainbow-delimiters magit go-mode flycheck company))
+   '(avy company ellama evil flycheck go-mode magit rainbow-delimiters
+         which-key))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -63,6 +103,7 @@
 (global-set-key (kbd "M-I") 'windmove-swap-states-up)
 (global-set-key (kbd "C-n") 'completion-preview-next-candidate)
 (global-set-key (kbd "C-p") 'completion-preview-prev-candidate)
+(global-set-key (kbd "C-<return>") 'ellama-code-complete)
 
 (require 'evil)
 (evil-set-undo-system 'undo-tree)
