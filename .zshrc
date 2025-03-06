@@ -45,7 +45,7 @@ update () {
   if [ -f /bin/pacman ]; then
     pacu
     if [ -f /bin/yay ]; then
-      yay -Syu
+      yay -Syua
     fi
   fi
   if [ -f /bin/apt ]; then

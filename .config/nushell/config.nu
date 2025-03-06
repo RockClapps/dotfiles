@@ -75,7 +75,7 @@ def upd [] {
   if ('/bin/pacman' | path exists) {
     pacu
     if ('/bin/yay' | path exists) {
-      yay -Syu
+      yay -Syua
     }
   }
   if ('/bin/apt' | path exists) {

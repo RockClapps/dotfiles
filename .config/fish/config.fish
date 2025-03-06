@@ -10,7 +10,7 @@ if status is-interactive
       if test -f /bin/pacman
         pacu
         if test -f /bin/yay
-          yay -Syu
+          yay -Syua
         end
       end
       if test -f /bin/apt
