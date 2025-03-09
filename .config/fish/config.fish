@@ -1,7 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+    set -gx EDITOR "nvim"
     set -gx GOPATH "$HOME/go"
-    set -gx PATH "$PATH:$GOPATH/bin"
+    set -gx PATH "$GOPATH/bin:$PATH"
+    set -gx PATH "$HOME/.cargo/bin:$PATH"
+    set -gx PATH "$HOME/scripts/bin:$PATH"
     if test -e ~/.aliases
       source ~/.aliases
     end
@@ -27,10 +30,10 @@ if status is-interactive
       end
     end
 
-    if test (type -p starship != '')
+    if type -q starship
       starship init fish | source
     end
-    if test (type -p zoxide != '')
+    if type -q zoxide
       zoxide init fish | source
     end
 end
