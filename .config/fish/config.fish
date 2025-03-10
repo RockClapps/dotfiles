@@ -10,22 +10,22 @@ if status is-interactive
     end
 
     function update
-      if test -f /bin/pacman
+      if type -q pacman
         pacu
-        if test -f /bin/yay
+        if type -q yay
           yay -Syua
         end
       end
-      if test -f /bin/apt
+      if type -q apt
         aptu
       end
-      if test -f /bin/dnf
+      if type -q dnf
         dnfu
       end
-      if test -f /bin/zypper
+      if type -q zypper
         zypu
       end
-      if test -f /bin/flatpak
+      if type -q flatpak
         flatu
       end
     end

@@ -18,22 +18,22 @@ if [ "$(command -v zoxide)" != '' ]; then
 fi
 
 update () {
-  if [ -f /bin/pacman ]; then
+  if type pacman > /dev/null 2>&1; then
     pacu
-    if [ -f /bin/yay ]; then
+    if type yay > /dev/null 2>&1; then
       yay -Syua
     fi
   fi
-  if [ -f /bin/apt ]; then
+  if type apt > /dev/null 2>&1; then
     aptu
   fi
-  if [ -f /bin/dnf ]; then
+  if type dnf > /dev/null 2>&1; then
     dnfu
   fi
-  if [ -f /bin/zypper ]; then
+  if type zypper > /dev/null 2>&1; then
     zypu
   fi
-  if [ -f /bin/flatpak ]; then
+  if type flatpak > /dev/null 2>&1; then
     flatu
   fi
 }
