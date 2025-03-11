@@ -41,7 +41,7 @@ then
   source ~/.aliases
 fi
 
-update () {
+upd () {
   if type pacman > /dev/null 2>&1; then
     pacu
     if type yay > /dev/null 2>&1; then

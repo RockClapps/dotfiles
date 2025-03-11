@@ -9,7 +9,7 @@ if status is-interactive
       source ~/.aliases
     end
 
-    function update
+    function upd
       if type -q pacman
         pacu
         if type -q yay
