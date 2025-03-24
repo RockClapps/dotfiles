@@ -63,7 +63,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][2][Applets][29][Configuration][SensorColors]
-cpu/all/usage=0,170,136
+cpu/all/usage=255,255,0
 
 [Containments][2][Applets][29][Configuration][Sensors]
 highPrioritySensorIds=["cpu/all/usage"]
@@ -87,7 +87,7 @@ DialogWidth=720
 alphaSort=true
 applicationsDisplay=0
 favoritesPortedToKAstats=true
-icon=/home/rock/.local/share/icons/red-arch-alt-2.svg
+icon=/home/rock/.local/share/icons/yellow-arch-alt-2.svg
 showActionButtonCaptions=false
 systemFavorites=suspend\\,hibernate\\,reboot\\,shutdown
 
@@ -117,7 +117,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][2][Applets][30][Configuration][SensorColors]
-memory/physical/used=0,170,136
+memory/physical/used=255,255,0
 
 [Containments][2][Applets][30][Configuration][Sensors]
 highPrioritySensorIds=["memory/physical/used"]
@@ -171,14 +171,14 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][35][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=1172
+DialogWidth=1876
 
 [Containments][35][General]
 positions={"1920x1200":[]}
 
 [Containments][35][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/ScarletTree/
+Image=/home/rock/Pictures/5120x2880.png
 PreviewImage=/usr/share/wallpapers/ScarletTree/
 SlidePaths=/usr/share/wallpapers/
 
@@ -201,7 +201,7 @@ DialogWidth=720
 positions={"1920x1080":[]}
 
 [Containments][36][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/ScarletTree/
+Image=/home/rock/Pictures/5120x2880.png
 PreviewImage=/usr/share/wallpapers/ScarletTree/
 SlidePaths=/usr/share/wallpapers/
 
@@ -593,7 +593,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][24][Configuration]
-PreloadWeight=35
+PreloadWeight=25
 
 [Containments][8][Applets][27]
 immutability=1
