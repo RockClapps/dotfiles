@@ -5,6 +5,10 @@ $env.PATH = [ ($env.GOPATH | path join "bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join ".cargo/bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join "scripts/bin") ] ++ $env.PATH
 let fish_completer = {|spans|
+    let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
+    let spans = (if $expanded_alias != null  {
+        $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
+    } else { $spans })
     fish --command $'complete "--do-complete=($spans | str join " ")"'
     | from tsv --flexible --noheaders --no-infer
     | rename value description
