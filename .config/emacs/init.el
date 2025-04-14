@@ -150,6 +150,7 @@
  (kbd "<leader>ff") 'find-name-dired
  (kbd "<leader>fg") 'helm-regexp
  (kbd "<leader>fp") 'helm-recentf
+ (kbd "<leader>/") 'comment-line
 )
 
 (evil-define-key '(normal) 'global
