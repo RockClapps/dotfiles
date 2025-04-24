@@ -69,6 +69,7 @@ alias dnfi = sudo dnf install
 alias dnfr = sudo dnf remove
 alias dnfu = sudo dnf update
 alias dnfs = dnf search
+alias rpm-ostree = flatpak-spawn --host sudo -S rpm-ostree
 
 alias zypi = sudo zypper install
 alias zypr = sudo zypper remove
