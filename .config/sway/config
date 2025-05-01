@@ -50,8 +50,8 @@ output * {
 
 ### Input configuration
 input type:keyboard {
-	xkb_layout us
-	xkb_variant colemak
+	xkb_layout colefix
+	xkb_variant colefix
   xkb_options ctrl:nocaps
 }
 #
