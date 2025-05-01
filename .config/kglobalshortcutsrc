@@ -408,7 +408,7 @@ _launch=Meta+Shift+Return
 _launch=Meta+B
 new-private-window=Meta+Shift+B
 
-[services][kitty.desktop]
+[services][foot.desktop]
 _launch=Meta+Return
 
 [services][net.local.if.desktop]
