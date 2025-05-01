@@ -6,8 +6,10 @@ switch-to-activity-7e18d393-45bd-4b81-8a02-175f641eed84=none,none,Switch to acti
 switch-to-activity-bba2ed27-ab72-41ed-8127-f74cea27b13e=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to Colefix=none,none,Switch keyboard layout to Colefix
 Switch keyboard layout to English (Colemak)=none,none,Switch keyboard layout to English (Colemak)
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
+Switch keyboard layout to English(US, Colefix)=none,none,Switch keyboard layout to English(US\\, Colefix)
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
@@ -384,6 +386,9 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][Avowed--Avowed--1739744605.076179.desktop]
+_launch=
+
 [services][Beeper.desktop]
 _launch=
 
@@ -393,7 +398,7 @@ _launch=
 [services][Vscodium.desktop]
 _launch=
 
-[services][discord.desktop]
+[services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacs.desktop]

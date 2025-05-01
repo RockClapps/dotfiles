@@ -5,6 +5,10 @@ ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAj0AAAACAQAAAQAA
 1920x1200 screen: Height=550
 1920x1200 screen: Width=723
 
+[FileDialogSize]
+2 screens: Height=540
+2 screens: Width=960
+
 [General]
 Number of Actions=0
 
@@ -13,6 +17,7 @@ klipperClearHistoryAskAgain=false
 
 [PlasmaViews][Panel 2]
 floating=0
+panelOpacity=1
 panelVisibility=0
 
 [PlasmaViews][Panel 2][Defaults]
@@ -23,6 +28,13 @@ floating=0
 panelVisibility=2
 
 [PlasmaViews][Panel 37][Defaults]
+thickness=44
+
+[PlasmaViews][Panel 68]
+floating=0
+panelVisibility=2
+
+[PlasmaViews][Panel 68][Defaults]
 thickness=44
 
 [Updates]

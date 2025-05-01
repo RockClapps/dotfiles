@@ -84,5 +84,13 @@ wmclasscomplete=true
 wmclassmatch=2
 
 [General]
-count=2
-rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c
+count=3
+rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c,f6ed4766-4942-4e5f-bfc0-4404fc9f66fd
+
+[f6ed4766-4942-4e5f-bfc0-4404fc9f66fd]
+Description=Kitty borderless
+noborder=true
+noborderrule=3
+wmclass=kitty kitty
+wmclasscomplete=true
+wmclassmatch=1

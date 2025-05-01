@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bba2ed27-ab72-41ed-8127-f74cea27b13e=59e12794-32d5-4cc6-9eca-59372133c0f7
+bba2ed27-ab72-41ed-8127-f74cea27b13e=9421943d-e069-490a-984c-453daed071e2
 
 [Desktops]
 Id_1=9421943d-e069-490a-984c-453daed071e2
@@ -14,6 +14,9 @@ Id_9=c340c058-e334-42b8-a836-fe3153978831
 Number=9
 Rows=9
 
+[Effect-blur]
+NoiseStrength=14
+
 [Effect-overview]
 BorderActivate=9
 
@@ -24,11 +27,26 @@ SlideBackground=false
 Active=true
 LatitudeAuto=42.73
 LongitudeAuto=-73.67
+NightTemperature=3600
 
 [Plugins]
-cubeEnabled=true
+blurEnabled=false
+contrastEnabled=false
+fadingpopupsEnabled=false
+fullscreenEnabled=false
 hidecursorEnabled=true
-wobblywindowsEnabled=true
+loginEnabled=false
+logoutEnabled=false
+maximizeEnabled=false
+overviewEnabled=false
+scaleEnabled=false
+slideEnabled=false
+slidingpopupsEnabled=false
+squashEnabled=false
+windowapertureEnabled=false
+
+[Script-desktopchangeosd]
+PopupHideDelay=256
 
 [Tiling]
 padding=4
@@ -52,6 +70,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][a3ad6542-782c-5d1f-a4d1-82ef2ea7d20d]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][ad8553e8-3ef3-5ef5-8675-67a0fb785b43]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][b139d5e7-0994-57d9-b378-1e6f13020bc3]
