@@ -157,6 +157,7 @@ Theme=Papirus-Dark
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=true
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
