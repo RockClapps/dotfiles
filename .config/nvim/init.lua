@@ -15,7 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
-local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html', 'rust_analyzer', 'csharp_ls' }
+local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html', 'rust_analyzer', 'csharp_ls', 'ts_ls',
+  'tailwindcss' }
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
