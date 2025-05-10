@@ -44,7 +44,7 @@ alias dnfi='sudo dnf install'
 alias dnfr='sudo dnf remove'
 alias dnfu='sudo dnf update'
 alias dnfs='dnf search'
-alias tb='toolbox enter'
+alias tb='toolbox run fish'
 alias bt='flatpak-spawn --host'
 
 alias zypi='sudo zypper install'
