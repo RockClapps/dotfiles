@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "plasma-devel@kde.org",
+                "Name": "KDE Visual Design Group"
+            }
+        ],
+        "Category": "",
+        "Description": "Custom spin on Breeze dark",
+        "Id": "org.rock.soliddark.desktop",
+        "License": "GPLv2+",
+        "Name": "RockSolid Dark",
+        "Website": "https://www.kde.org"
+    }
+}

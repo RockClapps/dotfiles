@@ -1,0 +1,17 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "plasma-devel@kde.org",
+                "Name": "KDE Visual Design Group"
+            }
+        ],
+        "Category": "",
+        "Description": "Custom spin on Breeze light",
+        "Id": "org.rock.solidlight.desktop",
+        "License": "GPLv2+",
+        "Name": "RockSolid Light",
+        "Website": "https://www.kde.org"
+    }
+}
