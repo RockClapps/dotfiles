@@ -206,9 +206,6 @@
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
 (load-file (concat custom-theme-directory "/womby-dark-theme.el"))
 
-(add-to-list 'load-path "~/Apps/gdscript-emacs")
-(require 'gdscript-mode)
-
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
