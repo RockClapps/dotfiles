@@ -15,8 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
--- local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html', 'rust_analyzer', 'csharp_ls', 'ts_ls',
--- local servers = {}
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
@@ -36,8 +34,6 @@ require('lazy').setup({
       version = '*',
       config = function()
         local lsp = require('lspconfig')
-        -- for _, server in ipairs(servers) do
-        --   lsp[server].setup {}
         vim.o.updatetime = 128
         vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
           group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
@@ -45,7 +41,6 @@ require('lazy').setup({
             vim.diagnostic.open_float(nil, { focus = false })
           end
         })
-        -- end
       end,
     },
     {
@@ -55,12 +50,7 @@ require('lazy').setup({
       end
     },
     {
-      'mason-org/mason-lspconfig.nvim',
-      config = function()
-        require("mason-lspconfig").setup {
-          automatic_enable = true
-        }
-      end,
+      "mason-org/mason-lspconfig.nvim",
     },
     {
       'nvim-telescope/telescope.nvim',
@@ -134,11 +124,6 @@ require('lazy').setup({
 
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        -- for _, server in ipairs(servers) do
-        --   require('lspconfig')[server].setup {
-        --     capabilities = capabilities
-        --   }
-        -- end
       end
     },
     {
@@ -161,18 +146,16 @@ require('lazy').setup({
       end
     },
     {
-      'iamcco/markdown-preview.nvim',
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      ft = { "markdown" },
-      build = function()
-        vim.fn["mkdp#util#install()"]()
-      end,
-    },
-    {
       'lewis6991/gitsigns.nvim',
       config = function()
         require('gitsigns').setup()
       end
+    },
+    {
+      "iamcco/markdown-preview.nvim",
+      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+      ft = { "markdown" },
+      build = function() vim.fn["mkdp#util#install"]() end,
     },
     {
       'NeogitOrg/neogit',
@@ -195,12 +178,17 @@ require('lazy').setup({
       config = function()
         require('lualine').setup()
       end
-    }
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+
+-- delayed extension initializations
+require("mason-lspconfig").setup {
+  automatic_enable = true
+}
 
 vim.opt.cdhome = true
 vim.opt.ignorecase = true
