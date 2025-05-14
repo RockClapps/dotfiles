@@ -15,8 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
-local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html', 'rust_analyzer', 'csharp_ls', 'ts_ls',
-  'tailwindcss' }
+-- local servers = { 'clangd', 'gopls', 'jdtls', 'lua_ls', 'pylsp', 'html', 'rust_analyzer', 'csharp_ls', 'ts_ls',
+-- local servers = {}
 -- Setup lazy.nvim
 require('lazy').setup({
   spec = {
@@ -36,23 +36,31 @@ require('lazy').setup({
       version = '*',
       config = function()
         local lsp = require('lspconfig')
-        for _, server in ipairs(servers) do
-          lsp[server].setup {}
-          vim.o.updatetime = 128
-          vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-            group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
-            callback = function()
-              vim.diagnostic.open_float(nil, { focus = false })
-            end
-          })
-        end
+        -- for _, server in ipairs(servers) do
+        --   lsp[server].setup {}
+        vim.o.updatetime = 128
+        vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+          group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
+          callback = function()
+            vim.diagnostic.open_float(nil, { focus = false })
+          end
+        })
+        -- end
       end,
     },
     {
-      'williamboman/mason.nvim',
+      'mason-org/mason.nvim',
       config = function()
         require("mason").setup()
       end
+    },
+    {
+      'mason-org/mason-lspconfig.nvim',
+      config = function()
+        require("mason-lspconfig").setup {
+          automatic_enable = true
+        }
+      end,
     },
     {
       'nvim-telescope/telescope.nvim',
@@ -126,11 +134,11 @@ require('lazy').setup({
 
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        for _, server in ipairs(servers) do
-          require('lspconfig')[server].setup {
-            capabilities = capabilities
-          }
-        end
+        -- for _, server in ipairs(servers) do
+        --   require('lspconfig')[server].setup {
+        --     capabilities = capabilities
+        --   }
+        -- end
       end
     },
     {
@@ -211,8 +219,7 @@ vim.opt.shiftwidth = 2
 vim.opt.smartindent = true
 vim.opt.timeout = false
 vim.g.markdown_recommended_style = 0
-vim.cmd('colorscheme catppuccin-macchiato')
--- vim.cmd('autocmd BufWrite * lua vim.lsp.buf.format()')
+vim.cmd.colorscheme('catppuccin-mocha')
 
 vim.keymap.set({ 'n', 'v' }, 'n', 'h')
 vim.keymap.set({ 'n', 'v' }, 'e', 'j')
@@ -285,3 +292,17 @@ vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>k', vim.lsp.buf.implementation)
+
+vim.keymap.set('n', '<leader>C', function()
+  if vim.g.colors_name == 'catppuccin-mocha' then
+    require('catppuccin').setup({
+      transparent_background = false,
+    })
+    vim.cmd.colorscheme('catppuccin-latte')
+  else
+    require('catppuccin').setup({
+      transparent_background = true,
+    })
+    vim.cmd.colorscheme('catppuccin-mocha')
+  end
+end)
