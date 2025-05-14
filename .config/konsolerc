@@ -1,7 +1,7 @@
 MenuBar=Disabled
 
 [Desktop Entry]
-DefaultProfile=Profile 1.profile
+DefaultProfile=
 
 [General]
 ConfigVersion=1
@@ -9,9 +9,6 @@ ConfigVersion=1
 [KonsoleWindow]
 FocusFollowsMouse=true
 RememberWindowSize=false
-
-[MainWindow]
-ToolBarsMovable=Disabled
 
 [Shortcut Schemes]
 Current Scheme=Default
