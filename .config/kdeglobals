@@ -135,29 +135,29 @@ ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
+[DirSelect Dialog]
+DirSelectDialog Size=960,600
+History Items[$e]=file:$HOME/Games/Heroic/VtMB,file:$HOME/Games/Heroic/VtMB
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa3\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
+
 [General]
 AccentColor=0,170,170
-ColorScheme=BreezeDark2
-ColorSchemeHash=6d5f022b37f257f109414eebbb25996b16179a82
+ColorSchemeHash=b082986f0281217b6805dd8a33f4db473082e69e
 LastUsedCustomAccentColor=0,170,170
 TerminalApplication=foot
 TerminalService=foot.desktop
 UseSystemBell=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=MonaspiceKr NFM,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Regular
-font=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=MonaspiceKr NF,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=MonaspiceKr NF,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-
-[Icons]
-Theme=Papirus-Dark
+fixed=SpaceMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=SpaceMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=SpaceMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=SpaceMono Nerd Font,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=SpaceMono Nerd Font,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
-LookAndFeelPackage=org.kde.breezedark.desktop
+LookAndFeelPackage=org.rock.soliddark.desktop
 ShowDeleteCommand=true
-widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -189,7 +189,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=49,54,59
 activeBlend=252,252,252
-activeFont=MonaspiceKr NF,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeFont=SpaceMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=252,252,252
 inactiveBackground=34,34,34
 inactiveBlend=161,169,177
