@@ -12,6 +12,9 @@ if status is-interactive
     function upd
       if type -q pacman
         pacu
+        if type -q yay
+          yay -Syua
+        end
       end
       if type -q apt
         aptu
