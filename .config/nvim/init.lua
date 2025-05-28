@@ -41,6 +41,14 @@ require('lazy').setup({
             vim.diagnostic.open_float(nil, { focus = false })
           end
         })
+
+        vim.keymap.set('n', '<leader>w', ':lua vim.lsp.buf.format()<CR>:w<CR>')
+        vim.keymap.set('n', '<leader>W', ':lua vim.lsp.buf.format()<CR>::w!<CR>')
+        vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
+        vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
+        vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
+        vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename)
+        vim.keymap.set('n', '<leader>k', vim.lsp.buf.implementation)
       end,
     },
     {
@@ -127,6 +135,46 @@ require('lazy').setup({
       end
     },
     {
+      "robitx/gp.nvim",
+      config = function()
+        local conf = {
+          providers = {
+            ollama = {
+              enable = true,
+              endpoint = "http://localhost:11434/v1/chat/completions",
+            },
+          },
+          agents = {
+            {
+              provider = "ollama",
+              name = "Gemma 3 Code",
+              chat = true,
+              command = true,
+              model = {
+                model = "gemma3:4b",
+              },
+              system_prompt = require("gp.defaults").code_system_prompt,
+            },
+            {
+              provider = "ollama",
+              name = "Gemma 3 Chat",
+              chat = true,
+              command = true,
+              model = {
+                model = "gemma3:4b",
+              },
+              system_prompt = require("gp.defaults").chat_system_prompt,
+            }
+          },
+          default_command_agent = "Gemma 3 Code",
+          default_chat_agent = "Gemma 3 Chat",
+        }
+        require("gp").setup(conf)
+
+        vim.keymap.set('n', '<leader><CR>', ':GpAppend<CR>')
+      end,
+    },
+    {
       'windwp/nvim-autopairs',
       event = "InsertEnter",
       opts = {}
@@ -152,12 +200,6 @@ require('lazy').setup({
       end
     },
     {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      ft = { "markdown" },
-      build = function() vim.fn["mkdp#util#install"]() end,
-    },
-    {
       'NeogitOrg/neogit',
       dependencies = {
         'nvim-lua/plenary.nvim', -- required
@@ -170,6 +212,20 @@ require('lazy').setup({
         require('catppuccin').setup({
           transparent_background = true,
         })
+
+        vim.keymap.set('n', '<leader>C', function()
+          if vim.g.colors_name == 'catppuccin-mocha' then
+            require('catppuccin').setup({
+              transparent_background = false,
+            })
+            vim.cmd.colorscheme('catppuccin-latte')
+          else
+            require('catppuccin').setup({
+              transparent_background = true,
+            })
+            vim.cmd.colorscheme('catppuccin-mocha')
+          end
+        end)
       end,
     },
     {
@@ -260,37 +316,16 @@ vim.keymap.set('n', '<A-I>', '<C-w>K')
 vim.keymap.set('n', '<A-O>', '<C-w>L')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>Q', ':q!<CR>')
-vim.keymap.set('n', '<leader>w', ':lua vim.lsp.buf.format()<CR>:w<CR>')
-vim.keymap.set('n', '<leader>W', ':lua vim.lsp.buf.format()<CR>::w!<CR>')
 vim.keymap.set('n', '<leader>j', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>o', ':vsp<CR><C-w>l')
 vim.keymap.set('n', '<leader>e', ':sp<CR><C-w>j')
 vim.keymap.set('n', '<leader>c', ':term<CR>')
 vim.keymap.set('n', '<leader>g', ':Neogit<CR>')
-vim.keymap.set('n', '<leader>h', ':bn<CR>')
-vim.keymap.set('n', '<leader>p', ':bp<CR>')
-vim.keymap.set('n', '<leader>x', ':bp<CR>:bd#<CR>')
+vim.keymap.set('n', '<leader>H', ':bn<CR>')
+vim.keymap.set('n', '<leader>P', ':bp<CR>')
+vim.keymap.set('n', '<leader>X', ':bp<CR>:bd#<CR>')
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
-vim.keymap.set('n', '<leader>H', ':tabnext<CR>')
-vim.keymap.set('n', '<leader>P', ':tabprevious<CR>')
-vim.keymap.set('n', '<leader>X', ':tabclose<CR>')
+vim.keymap.set('n', '<leader>h', ':tabnext<CR>')
+vim.keymap.set('n', '<leader>p', ':tabprevious<CR>')
+vim.keymap.set('n', '<leader>x', ':tabclose<CR>')
 vim.keymap.set('n', '<ESC>', '<ESC>:let @/=""<CR>')
-vim.keymap.set('n', '<leader>F', vim.lsp.buf.format)
-vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
-vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
-vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>k', vim.lsp.buf.implementation)
-
-vim.keymap.set('n', '<leader>C', function()
-  if vim.g.colors_name == 'catppuccin-mocha' then
-    require('catppuccin').setup({
-      transparent_background = false,
-    })
-    vim.cmd.colorscheme('catppuccin-latte')
-  else
-    require('catppuccin').setup({
-      transparent_background = true,
-    })
-    vim.cmd.colorscheme('catppuccin-mocha')
-  end
-end)

@@ -17,21 +17,21 @@
     (make-llm-ollama
      ;; this model should be pulled to use it
      ;; value should be the same as you print in terminal during pull
-     :chat-model "deepseek-r1:1.5b"
+     :chat-model "gemma3:4b"
      :embedding-model "nomic-embed-text"
      :default-chat-non-standard-params '(("num_ctx" . 8192))))
   (setopt ellama-summarization-provider
     (make-llm-ollama
-     :chat-model "deepseek-r1:1.5b"
+     :chat-model "gemma3:4b"
      :embedding-model "nomic-embed-text"
      :default-chat-non-standard-params '(("num_ctx" . 32768))))
   (setopt ellama-coding-provider
     (make-llm-ollama
-     :chat-model "qwen2.5-coder:3b"
+     :chat-model "gemma3:4b"
      :embedding-model "nomic-embed-text"
      :default-chat-non-standard-params '(("num_ctx" . 32768))))
   (setopt ellama-extraction-provider (make-llm-ollama
-                                :chat-model "deepseek-r1:1.5b"
+                                :chat-model "gemma3:4b"
                                 :embedding-model "nomic-embed-text"
                                 :default-chat-non-standard-params
                                 '(("num_ctx" . 32768))))
@@ -103,7 +103,7 @@
 (global-set-key (kbd "M-I") 'windmove-swap-states-up)
 (global-set-key (kbd "C-n") 'completion-preview-next-candidate)
 (global-set-key (kbd "C-p") 'completion-preview-prev-candidate)
-(global-set-key (kbd "C-<return>") 'ellama-code-complete)
+(global-set-key (kbd "C-<return>") 'ellama-chat)
 
 (require 'evil)
 (evil-set-undo-system 'undo-tree)
@@ -151,6 +151,7 @@
  (kbd "<leader>fg") 'helm-regexp
  (kbd "<leader>fp") 'helm-recentf
  (kbd "<leader>/") 'comment-line
+ (kbd "<leader><return>") 'ellama-code-complete
 )
 
 (evil-define-key '(normal) 'global
