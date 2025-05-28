@@ -356,7 +356,7 @@ powerProfile=Battery,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
 _k_friendly_name=plasmashell
-activate application launcher=Meta,Meta\tAlt+F1,Activate Application Launcher
+activate application launcher=none,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=none,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=none,,Activate Task Manager Entry 10
 activate task manager entry 2=none,Meta+2,Activate Task Manager Entry 2
@@ -392,11 +392,12 @@ _launch=
 [services][Beeper.desktop]
 _launch=
 
-[services][Vampire® The Masquerade - Bloodlines™.desktop]
-_launch=
-
 [services][Vscodium.desktop]
 _launch=
+
+[services][brave-browser.desktop]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
 
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
@@ -407,10 +408,6 @@ _launch=Meta+Shift+Return
 [services][foot.desktop]
 _launch=Meta+Return
 
-[services][io.gitlab.librewolf-community.desktop]
-_launch=Meta+B
-new-private-window=Meta+Shift+B
-
 [services][net.local.if.desktop]
 _launch=Meta+Ctrl+B
 
@@ -420,10 +417,14 @@ _launch=Meta+Shift+R
 [services][org.kde.dolphin.desktop]
 _launch=Meta+F
 
+[services][org.kde.krunner.desktop]
+_launch=Search\tMeta\tAlt+Space\tAlt+F2
+
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=none
 RecordRegion=Meta+R\tMeta+Print
 RecordWindow=none
+RectangularRegionScreenShot=Meta+Shift+Print\tCtrl+Print
 
 [services][org.mozilla.Thunderbird.desktop]
 _launch=Meta+M
