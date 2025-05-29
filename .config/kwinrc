@@ -1,5 +1,5 @@
 [Activities][LastVirtualDesktop]
-bba2ed27-ab72-41ed-8127-f74cea27b13e=9421943d-e069-490a-984c-453daed071e2
+bba2ed27-ab72-41ed-8127-f74cea27b13e=5d3e8735-71e7-4fde-bf21-c67b066a4093
 
 [Desktops]
 Id_1=9421943d-e069-490a-984c-453daed071e2
@@ -35,6 +35,7 @@ contrastEnabled=false
 fadingpopupsEnabled=false
 fullscreenEnabled=false
 hidecursorEnabled=true
+krohnkiteEnabled=true
 loginEnabled=false
 logoutEnabled=false
 maximizeEnabled=false
@@ -47,6 +48,15 @@ windowapertureEnabled=false
 
 [Script-desktopchangeosd]
 PopupHideDelay=256
+
+[Script-krohnkite]
+binaryTreeLayoutOrder=1
+screenGapBetween=8
+screenGapBottom=8
+screenGapLeft=8
+screenGapRight=8
+screenGapTop=8
+tileLayoutOrder=11
 
 [Tiling]
 padding=4
