@@ -1,3 +1,4 @@
+# sudo pacman -S autotiling foot wmenu thunar nvim
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -52,7 +53,7 @@ output * {
 input type:keyboard {
 	xkb_layout colefix
 	xkb_variant colefix
-  xkb_options ctrl:nocaps
+  xkb_options ctrl:nocaps,altwin:swap_lalt_lwin
 }
 #
 # Example configuration:
@@ -239,5 +240,7 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+exec_always autotiling
 
 include /etc/sway/config.d/*
