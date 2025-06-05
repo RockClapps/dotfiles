@@ -164,7 +164,7 @@ require('lazy').setup({
                 model = "gemma3:4b",
               },
               system_prompt = require("gp.defaults").chat_system_prompt,
-            }
+            },
           },
           default_command_agent = "Gemma 3 Code",
           default_chat_agent = "Gemma 3 Chat",
