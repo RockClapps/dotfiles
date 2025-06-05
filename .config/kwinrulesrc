@@ -71,12 +71,12 @@ wmclassmatch=1
 [554f82be-6e7e-42f4-9e68-5196fe88f79b]
 Description=Gamescope borderless window
 above=true
-aboverule=3
+aboverule=2
 fullscreenrule=3
 maximizehorizrule=3
 maximizevertrule=3
 noborder=true
-noborderrule=3
+noborderrule=2
 position=0,0
 positionrule=2
 wmclass=gamescope
