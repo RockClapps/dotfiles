@@ -1,2 +1,5 @@
 #!/bin/bash
-ollama stop $(ollama ps | grep ":" | awk '{print $1}')
+running=$(ollama ps | grep ":" | awk '{print $1}')
+if [[ $running != "" ]]; then
+  ollama stop $running
+fi

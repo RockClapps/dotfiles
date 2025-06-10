@@ -43,7 +43,7 @@ fi
 
 upd () {
   if type pacman > /dev/null 2>&1; then
-    pacu
+    pacsyu
     if type yay > /dev/null 2>&1; then
       yay -Syua
     fi

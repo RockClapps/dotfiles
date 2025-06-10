@@ -6,8 +6,17 @@ export PATH="$HOME/scripts/bin:$PATH"
 source ~/.aliases
 HISTSIZE=1000
 
-bind '\C-p':history-search-backward
-bind '\C-n':history-search-forward
+bind '"\C-p":history-search-backward'
+bind '"\C-n":history-search-forward'
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+bind "set bell-style visible"
+bind "set colored-completion-prefix on"
+bind "set colored-stats on"
+bind "set completion-ignore-case on"
+bind "set completion-map-case on"
+bind "set show-all-if-ambiguous on"
 
 if [ "$(command -v starship)" != '' ]; then
   eval "$(starship init bash)"
@@ -19,7 +28,7 @@ fi
 
 upd () {
   if type pacman > /dev/null 2>&1; then
-    pacu
+    pacsyu
     if type yay > /dev/null 2>&1; then
       yay -Syua
     fi
