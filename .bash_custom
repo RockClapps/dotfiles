@@ -18,31 +18,31 @@ bind "set completion-ignore-case on"
 bind "set completion-map-case on"
 bind "set show-all-if-ambiguous on"
 
-if which starship &> /dev/null; then
+if type starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-if which zoxide &> /dev/null; then
+if type zoxide &> /dev/null; then
 	eval "$(zoxide init bash)"
 fi
 
 upd () {
-  if which pacman &> /dev/null; then
+  if type pacman &> /dev/null; then
     pacsyu
-    if which yay &> /dev/null; then
+    if type yay &> /dev/null; then
       yay -Syua
     fi
   fi
-  if which apt &> /dev/null; then
+  if type apt &> /dev/null; then
     aptu
   fi
-  if which dnf &> /dev/null; then
+  if type dnf &> /dev/null; then
     dnfu
   fi
-  if which zypper &> /dev/null; then
+  if type zypper &> /dev/null; then
     zypu
   fi
-  if which flatpak &> /dev/null; then
+  if type flatpak &> /dev/null; then
     flatu
   fi
 }
