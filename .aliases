@@ -38,6 +38,7 @@ alias flats='flatpak search'
 
 alias pacs='sudo pacman -S'
 alias pacrsn='sudo pacman -Rsn'
+alias pacsyy='sudo pacman -Syy'
 alias pacsyu='sudo pacman -Syu'
 alias pacsyyu='sudo pacman -Syyu'
 alias pacss='pacman -Ss'

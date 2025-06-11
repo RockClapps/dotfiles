@@ -18,31 +18,41 @@ bind "set completion-ignore-case on"
 bind "set completion-map-case on"
 bind "set show-all-if-ambiguous on"
 
-if [ "$(command -v starship)" != '' ]; then
+if which starship &> /dev/null; then
   eval "$(starship init bash)"
 fi
 
-if [ "$(command -v zoxide)" != '' ]; then
+if which zoxide &> /dev/null; then
 	eval "$(zoxide init bash)"
 fi
 
 upd () {
-  if type pacman > /dev/null 2>&1; then
+  if which pacman &> /dev/null; then
     pacsyu
-    if type yay > /dev/null 2>&1; then
+    if which yay &> /dev/null; then
       yay -Syua
     fi
   fi
-  if type apt > /dev/null 2>&1; then
+  if which apt &> /dev/null; then
     aptu
   fi
-  if type dnf > /dev/null 2>&1; then
+  if which dnf &> /dev/null; then
     dnfu
   fi
-  if type zypper > /dev/null 2>&1; then
+  if which zypper &> /dev/null; then
     zypu
   fi
-  if type flatpak > /dev/null 2>&1; then
+  if which flatpak &> /dev/null; then
     flatu
   fi
+}
+
+alias cd='pushd &> /dev/null'
+d () {
+  PS3='Select a directory: '
+  select var in $(dirs)
+  do
+    \cd ${var/\~/"$HOME"}
+    break
+  done
 }
