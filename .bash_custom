@@ -6,6 +6,7 @@ export PATH="$HOME/scripts/bin:$PATH"
 source ~/.aliases
 HISTSIZE=1000
 
+bind Space:magic-space
 bind '"\C-p":history-search-backward'
 bind '"\C-n":history-search-forward'
 bind '"\e[A":history-search-backward'
@@ -17,6 +18,10 @@ bind "set colored-stats on"
 bind "set completion-ignore-case on"
 bind "set completion-map-case on"
 bind "set show-all-if-ambiguous on"
+shopt -s globstar 2> /dev/null
+shopt -s autocd 2> /dev/null
+shopt -s dirspell 2> /dev/null
+shopt -s cdspell 2> /dev/null
 
 if type starship &> /dev/null; then
   eval "$(starship init bash)"

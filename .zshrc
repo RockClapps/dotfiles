@@ -1,8 +1,9 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob nomatch
+setopt autocd extendedglob nomatch nobeep nocaseglob autopushd
 bindkey "^[f" vi-forward-word
+bindkey "^F" end-of-line
 bindkey "^[b" vi-backward-word
 bindkey "^[^?" vi-backward-kill-word
 bindkey "^[[A" history-beginning-search-backward
@@ -23,15 +24,17 @@ then
   git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git zsh-autosuggestions
   git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting
   git clone --depth=1 https://github.com/agkozak/zsh-z.git z
-  git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git spaceship
+  if ! ( type starship &> /dev/null )
+  then
+    git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git spaceship
+    export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
+    source $ZSH_EXTENSIONS/spaceship/spaceship.zsh
+  fi
   popd
 fi
 
 source $ZSH_EXTENSIONS/z/zsh-z.plugin.zsh
 autoload -Uz compinit; compinit
-
-export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
-source $ZSH_EXTENSIONS/spaceship/spaceship.zsh
 
 source $ZSH_EXTENSIONS/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZSH_EXTENSIONS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -39,6 +42,11 @@ source $ZSH_EXTENSIONS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if [ -f ~/.aliases ]
 then
   source ~/.aliases
+fi
+
+if type starship &> /dev/null
+then
+  eval "$(starship init zsh)"
 fi
 
 upd () {
@@ -60,4 +68,13 @@ upd () {
   if type flatpak > /dev/null 2>&1; then
     flatu
   fi
+}
+
+d () {
+  PS3='Select a directory: '
+  select var in $(dirs)
+  do
+    \cd ${var/\~/"$HOME"}
+    break
+  done
 }
