@@ -17,36 +17,9 @@ export ZSH_EXTENSIONS="$HOME/.zsh"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 zstyle ':completion:*' menu select
 
-if [ ! -d $ZSH_EXTENSIONS ];
-then
-  mkdir $ZSH_EXTENSIONS
-  pushd $ZSH_EXTENSIONS
-  git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git zsh-autosuggestions
-  git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting
-  git clone --depth=1 https://github.com/agkozak/zsh-z.git z
-  if ! ( type starship &> /dev/null )
-  then
-    git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git spaceship
-    export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
-    source $ZSH_EXTENSIONS/spaceship/spaceship.zsh
-  fi
-  popd
-fi
-
-source $ZSH_EXTENSIONS/z/zsh-z.plugin.zsh
-autoload -Uz compinit; compinit
-
-source $ZSH_EXTENSIONS/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZSH_EXTENSIONS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 if [ -f ~/.aliases ]
 then
   source ~/.aliases
-fi
-
-if type starship &> /dev/null
-then
-  eval "$(starship init zsh)"
 fi
 
 upd () {
@@ -78,3 +51,56 @@ d () {
     break
   done
 }
+
+if [ ! -d $ZSH_EXTENSIONS ]
+then
+  mkdir $ZSH_EXTENSIONS
+fi
+
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]
+then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+  if [ ! -d $ZSH_EXTENSIONS/zsh-autosuggestions ]
+  then
+    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_EXTENSIONS/zsh-autosuggestions
+  fi
+  source $ZSH_EXTENSIONS/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+  if [ ! -d $ZSH_EXTENSIONS/zsh-syntax-highlighting ]
+  then
+    git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_EXTENSIONS/zsh-syntax-highlighting
+  fi
+  source $ZSH_EXTENSIONS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if type zoxide &> /dev/null
+then
+  eval "$(zoxide init zsh)"
+else
+  if [ ! -d $ZSH_EXTENSIONS/z ]
+  then
+    git clone --depth=1 https://github.com/agkozak/zsh-z.git $ZSH_EXTENSIONS/z
+    source $ZSH_EXTENSIONS/z/zsh-z.plugin.zsh
+  fi
+fi
+
+if type starship &> /dev/null
+then
+  eval "$(starship init zsh)"
+else
+  if [ ! -d $ZSH_EXTENSIONS/spaceship ]
+  then
+    git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $ZSH_EXTENSIONS/spaceship
+  fi
+  export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
+  source $ZSH_EXTENSIONS/spaceship/spaceship.zsh
+fi
+
+
+autoload -Uz compinit; compinit
