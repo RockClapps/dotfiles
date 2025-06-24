@@ -45,11 +45,14 @@ upd () {
 
 d () {
   PS3='Select a directory: '
-  select var in $(dirs)
+  oldifs=$IFS
+  IFS=$'\n'
+  select var in $(dirs -p)
   do
     \cd ${var/\~/"$HOME"}
     break
   done
+  IFS=$oldifs
 }
 
 if [ ! -d $ZSH_EXTENSIONS ]

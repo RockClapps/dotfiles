@@ -1,3 +1,4 @@
+alias sudo='sudo-rs'
 alias please='sudo'
 alias l='ls -AGXhl --group-directories-first --color=auto'
 alias suedit='sudo nvim -u ~/.config/nvim/init-compat'
@@ -47,6 +48,7 @@ alias pacq='pacman -Q'
 alias pacql='pacman -Ql'
 alias pacqs='pacman -Qs'
 alias pacqsq='pacman -Qsq'
+alias pacu='sudo pacman -U'
 
 alias apti='sudo apt install'
 alias aptr='sudo apt remove'
