@@ -1,7 +1,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob nomatch nobeep nocaseglob autopushd
+setopt autocd extendedglob nomatch nobeep nocaseglob
 bindkey "^[f" vi-forward-word
 bindkey "^F" end-of-line
 bindkey "^[b" vi-backward-word
@@ -44,15 +44,19 @@ upd () {
 }
 
 d () {
-  PS3='Select a directory: '
-  oldifs=$IFS
-  IFS=$'\n'
-  select var in $(dirs -p)
-  do
-    \cd ${var/\~/"$HOME"}
-    break
-  done
-  IFS=$oldifs
+  if [[ $1 == '' ]]; then
+    PS3='Select a directory: '
+    oldifs=$IFS
+    IFS=$'\n'
+    select var in $(dirs -p)
+    do
+      \cd ${var/\~/"$HOME"}
+      break
+    done
+    IFS=$oldifs
+  else
+    pushd $1 &> /dev/null
+  fi
 }
 
 if [ ! -d $ZSH_EXTENSIONS ]

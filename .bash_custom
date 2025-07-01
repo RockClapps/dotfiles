@@ -52,15 +52,18 @@ upd () {
   fi
 }
 
-alias cd='pushd &> /dev/null'
 d () {
-  PS3='Select a directory: '
-  oldifs=$IFS
-  IFS=$'\n'
-  select var in $(dirs -p)
-  do
-    \cd ${var/\~/"$HOME"}
-    break
-  done
-  IFS=$oldifs
+  if [[ $1 == '' ]]; then
+    PS3='Select a directory: '
+    oldifs=$IFS
+    IFS=$'\n'
+    select var in $(dirs -p)
+    do
+      \cd ${var/\~/"$HOME"}
+      break
+    done
+    IFS=$oldifs
+  else
+    pushd $1 &> /dev/null
+  fi
 }
