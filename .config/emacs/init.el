@@ -126,7 +126,7 @@
  "K" 'evil-insert-line
  "L" 'evil-open-above
  (kbd "<leader>q") 'evil-window-delete
- (kbd "<leader>Q") 'kill-emacs
+ ;;(kbd "<leader>Q") 'kill-emacs
  (kbd "<leader>w") 'save-buffer
  (kbd "<leader>e") 'split-window-below
  (kbd "<leader>o") 'split-window-right
@@ -141,6 +141,7 @@
  (kbd "<leader>p") 'tab-previous
  (kbd "<leader>g") 'magit
  (kbd "<leader>h") 'help
+ (kbd "<leader>C") 'toggle-theme
  (kbd "<leader>s") 'avy-goto-char-2
  (kbd "<leader>d") 'eglot-find-declaration
  (kbd "<leader>D") 'eglot-find-typeDefinition
@@ -203,6 +204,7 @@
 (require 'eglot)
 (add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
 (add-to-list 'eglot-server-programs '((csharp-mode) "~/.dotnet/tools/csharp-ls"))
+(add-to-list 'default-frame-alist '(font . "SpaceMono Nerd Font-12"))
 
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
 (load-file (concat custom-theme-directory "/womby-dark-theme.el"))
