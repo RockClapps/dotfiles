@@ -14,15 +14,68 @@ Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Ke
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
 
+[brave-browser]
+11699A86DB81FD0B301C7B3D20442560-autofill_card=none,none,Autofill the last used card for the current website
+11699A86DB81FD0B301C7B3D20442560-autofill_identity=none,none,Autofill the last used identity for the current website
+11699A86DB81FD0B301C7B3D20442560-autofill_login=none,none,Autofill the last used login for the current website
+11699A86DB81FD0B301C7B3D20442560-generate_password=none,none,Generate and copy a new random password to the clipboard
+11699A86DB81FD0B301C7B3D20442560-lock_vault=none,none,Lock the vault
+8AF7265B95215D801139749BC630D267-c000-options-page=none,none,Open the options page
+8AF7265B95215D801139749BC630D267-c020-theme-youtube-dark=none,none,Theme: YouTube™ (Dark)
+8AF7265B95215D801139749BC630D267-c025-theme-enhanced-dark=none,none,Theme: Enhancer for YouTube™
+8AF7265B95215D801139749BC630D267-c030-theme-youtube-deep-dark=none,none,Theme: YouTube-DeepDark
+8AF7265B95215D801139749BC630D267-c040-theme-youtube-deep-dark-custom=none,none,Theme: YouTube-DeepDark (Custom)
+8AF7265B95215D801139749BC630D267-c050-theme-custom-theme=none,none,Theme: Custom theme
+8AF7265B95215D801139749BC630D267-c060-focus-video-player=none,none,Set focus on the video player
+8AF7265B95215D801139749BC630D267-c070-toggle-loop=none,none,Toggle the loop mode
+8AF7265B95215D801139749BC630D267-c080-stop-video=none,none,Stop the video
+8AF7265B95215D801139749BC630D267-c090-reverse-playlist=none,none,Reverse the playlist order
+8AF7265B95215D801139749BC630D267-c100-toggle-volume-booster=none,none,Toggle the volume booster
+8AF7265B95215D801139749BC630D267-c130-toggle-annotations=none,none,Toggle info cards and end screens visibility
+8AF7265B95215D801139749BC630D267-c140-toggle-cinema-mode=none,none,Toggle the cinema mode
+8AF7265B95215D801139749BC630D267-c150-toggle-player-size=none,none,Expand or shrink the video player
+8AF7265B95215D801139749BC630D267-c160-center-video-player=none,none,Center the video player within the viewport
+8AF7265B95215D801139749BC630D267-c170-pop-up-player=none,none,Watch with the pop-up player
+8AF7265B95215D801139749BC630D267-c180-decrease-speed=none,none,Decrease the playback speed
+8AF7265B95215D801139749BC630D267-c190-increase-speed=none,none,Increase the playback speed
+8AF7265B95215D801139749BC630D267-c200-default-speed=none,none,Select the default playback speed
+8AF7265B95215D801139749BC630D267-c210-normal-speed=none,none,Select the normal playback speed
+8AF7265B95215D801139749BC630D267-c220-toggle-video-filters=none,none,Toggle the video filters
+8AF7265B95215D801139749BC630D267-c230-flip-horizontally=none,none,Flip the video horizontally
+8AF7265B95215D801139749BC630D267-c240-flip-vertically=none,none,Flip the video vertically
+8AF7265B95215D801139749BC630D267-c250-take-screenshot=none,none,Take a screenshot of the video
+8AF7265B95215D801139749BC630D267-c260-keyboard-shortcuts=none,none,Display all the keyboard shortcuts for YouTube
+8AF7265B95215D801139749BC630D267-c270-custom-script=none,none,Execute the custom script
+8AF7265B95215D801139749BC630D267-c280-picture-in-picture=none,none,Toggle the Picture-in-Picture mode
+8AF7265B95215D801139749BC630D267-c290-quality-highres=none,none,Select the playback quality “4320p”
+8AF7265B95215D801139749BC630D267-c300-quality-hd2880=none,none,Select the playback quality “2880p”
+8AF7265B95215D801139749BC630D267-c310-quality-hd2160=none,none,Select the playback quality “2160p”
+8AF7265B95215D801139749BC630D267-c320-quality-hd1440=none,none,Select the playback quality “1440p”
+8AF7265B95215D801139749BC630D267-c330-quality-hd1080=none,none,Select the playback quality “1080p”
+8AF7265B95215D801139749BC630D267-c340-quality-hd720=none,none,Select the playback quality “720p”
+8AF7265B95215D801139749BC630D267-c350-quality-large=none,none,Select the playback quality “480p”
+8AF7265B95215D801139749BC630D267-c360-quality-medium=none,none,Select the playback quality “360p”
+8AF7265B95215D801139749BC630D267-c370-quality-small=none,none,Select the playback quality “240p”
+8AF7265B95215D801139749BC630D267-c380-quality-tiny=none,none,Select the playback quality “144p”
+8AF7265B95215D801139749BC630D267-c390-quality-auto=none,none,Select the playback quality “Auto”
+8AF7265B95215D801139749BC630D267-c400-comments-visibility=none,none,Toggle comments visibility
+8AF7265B95215D801139749BC630D267-c410-related-videos-visibility=none,none,Toggle related videos visibility
+8BF215686BBE583153BABCF53D0CE42A-addSite=none,none,Toggle current site
+8BF215686BBE583153BABCF53D0CE42A-switchEngine=none,none,Theme generation mode
+8BF215686BBE583153BABCF53D0CE42A-toggle=none,none,Toggle extension
+F1AC2CF94C170CC8FAB0F07A28792108-createTab=none,none,Create new tab
+F1AC2CF94C170CC8FAB0F07A28792108-goBack=none,none,Go back in history
+F1AC2CF94C170CC8FAB0F07A28792108-goForward=none,none,Go forward in history
+F1AC2CF94C170CC8FAB0F07A28792108-previousTab=none,none,Go one tab left
+F1AC2CF94C170CC8FAB0F07A28792108-quickNext=none,none,Go one tab right
+F1AC2CF94C170CC8FAB0F07A28792108-reloadTab=none,none,Reload tab
+F1AC2CF94C170CC8FAB0F07A28792108-userCustomized1=none,none,Custom shortcut 1
+F1AC2CF94C170CC8FAB0F07A28792108-userCustomized2=none,none,Custom shortcut 2
+_k_friendly_name=Brave
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility
-
-[kcm_touchpad]
-Disable Touchpad=Touchpad Off,Touchpad Off,Disable Touchpad
-Enable Touchpad=Touchpad On,Touchpad On,Enable Touchpad
-Toggle Touchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Touchpad Toggle\tTouchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Toggle Touchpad
-_k_friendly_name=Touchpad
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -153,14 +206,14 @@ Switch to Screen to the Right=Meta+Ctrl+O,,Switch to Screen to the Right
 Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 ToggleCurrentThumbnail=Meta+Ctrl+T,Meta+Ctrl+T,Toggle Thumbnail for Current Window
-Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
-Walk Through Windows (Reverse)=Alt+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)
-Walk Through Windows Alternative=Meta+Tab,,Walk Through Windows Alternative
-Walk Through Windows Alternative (Reverse)=none,,Walk Through Windows Alternative (Reverse)
-Walk Through Windows of Current Application=Alt+`,Alt+`,Walk Through Windows of Current Application
-Walk Through Windows of Current Application (Reverse)=Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)
-Walk Through Windows of Current Application Alternative=none,,Walk Through Windows of Current Application Alternative
-Walk Through Windows of Current Application Alternative (Reverse)=none,,Walk Through Windows of Current Application Alternative (Reverse)
+Walk Through Windows=Alt+Tab,Meta+Tab\tAlt+Tab,Walk Through Windows
+Walk Through Windows (Reverse)=Alt+Shift+Tab,Meta+Shift+Tab\tAlt+Shift+Tab,Walk Through Windows (Reverse)
+Walk Through Windows Alternative=Meta+Tab,none,Walk Through Windows Alternative
+Walk Through Windows Alternative (Reverse)=none,none,Walk Through Windows Alternative (Reverse)
+Walk Through Windows of Current Application=Alt+`,Meta+`\tAlt+`,Walk Through Windows of Current Application
+Walk Through Windows of Current Application (Reverse)=Alt+~,Meta+~\tAlt+~,Walk Through Windows of Current Application (Reverse)
+Walk Through Windows of Current Application Alternative=none,none,Walk Through Windows of Current Application Alternative
+Walk Through Windows of Current Application Alternative (Reverse)=none,none,Walk Through Windows of Current Application Alternative (Reverse)
 Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Meta+Q\tAlt+F4,Alt+F4,Close Window
@@ -175,7 +228,7 @@ Window Lower=Meta+Alt+E,,Lower Window
 Window Maximize=Meta+Shift+Space\tMeta+PgUp,Meta+PgUp,Maximize Window
 Window Maximize Horizontal=none,,Maximize Window Horizontally
 Window Maximize Vertical=none,,Maximize Window Vertically
-Window Minimize=Meta+PgDown,Meta+PgDown,Minimize Window
+Window Minimize=Meta+_\tMeta+PgDown,Meta+PgDown,Minimize Window
 Window Move=none,,Move Window
 Window Move Center=none,,Move Window to the Center
 Window No Border=none,,Toggle Window Titlebar and Frame
@@ -409,6 +462,7 @@ clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
 cycleNextAction=none,,Next History Item
 cyclePrevAction=none,,Previous History Item
+edit_clipboard=none,,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
 next activity=none,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
@@ -430,15 +484,15 @@ _launch=
 [services][Vscodium.desktop]
 _launch=
 
-[services][brave-browser.desktop]
-_launch=Meta+B
-new-private-window=Meta+Shift+B
-
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacsclient.desktop]
 _launch=Meta+Shift+Return
+
+[services][firefox.desktop]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
 
 [services][foot.desktop]
 _launch=Meta+Return
@@ -457,9 +511,16 @@ _launch=Search\tMeta\tAlt+Space\tAlt+F2
 
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=none
-RecordRegion=Meta+R\tMeta+Print
+FullScreenScreenShot=Print
+RecordRegion=none
+RecordScreen=none
 RecordWindow=none
-RectangularRegionScreenShot=Meta+Shift+Print\tCtrl+Print
+RectangularRegionScreenShot=Shift+Print
+WindowUnderCursorScreenShot=Ctrl+Print
+_launch=Meta+Shift+S
+
+[services][org.kde.touchpadshortcuts.desktop]
+ToggleTouchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 
 [services][org.mozilla.Thunderbird.desktop]
 _launch=Meta+M
