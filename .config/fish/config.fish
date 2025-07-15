@@ -6,7 +6,10 @@ if status is-interactive
     set -gx PATH "$HOME/.cargo/bin:$PATH"
     set -gx PATH "$HOME/scripts/bin:$PATH"
     if test -e ~/.aliases
-      source ~/.aliases
+      cat ~/.aliases \
+        | string replace --all alias abbr \
+        | string replace --all = ' -a ' \
+        | source
     end
 
     function upd
