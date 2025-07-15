@@ -33,7 +33,6 @@ NightTemperature=3600
 blurEnabled=false
 contrastEnabled=false
 desktopchangeosdEnabled=false
-diminactiveEnabled=true
 dimscreenEnabled=true
 fadingpopupsEnabled=false
 frozenappEnabled=false
@@ -205,6 +204,7 @@ VirtualKeyboardEnabled=true
 [Windows]
 DelayFocusInterval=256
 FocusPolicy=FocusFollowsMouse
+FocusStealingPreventionLevel=3
 RollOverDesktops=true
 
 [Xwayland]

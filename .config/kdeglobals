@@ -24,22 +24,22 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=75,194,194
-BackgroundNormal=252,252,252
+BackgroundAlternate=10,129,129
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=112,125,138
-ForegroundLink=0,124,124
+ForegroundInactive=161,169,177
+ForegroundLink=0,170,170
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Complementary]
-BackgroundAlternate=27,30,32
-BackgroundNormal=42,46,50
+BackgroundAlternate=30,87,116
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
@@ -52,98 +52,96 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Header]
-BackgroundAlternate=239,240,241
-BackgroundNormal=222,224,226
+BackgroundAlternate=34,34,34
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=112,125,138
-ForegroundLink=0,124,124
+ForegroundInactive=161,169,177
+ForegroundLink=0,170,170
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Header][Inactive]
-BackgroundAlternate=227,229,231
-BackgroundNormal=239,240,241
+BackgroundAlternate=49,54,59
+BackgroundNormal=42,46,50
 DecorationFocus=61,174,233
 DecorationHover=61,174,233
 ForegroundActive=61,174,233
-ForegroundInactive=112,125,138
-ForegroundLink=41,128,185
+ForegroundInactive=161,169,177
+ForegroundLink=29,153,243
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Selection]
-BackgroundAlternate=76,195,195
-BackgroundNormal=76,195,195
+BackgroundAlternate=10,129,129
+BackgroundNormal=10,129,129
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=0,0,0
+ForegroundInactive=255,255,255
 ForegroundLink=0,124,124
 ForegroundNegative=176,55,69
 ForegroundNeutral=198,92,0
-ForegroundNormal=0,0,0
+ForegroundNormal=255,255,255
 ForegroundPositive=23,104,57
 ForegroundVisited=155,89,182
 
 [Colors:Tooltip]
-BackgroundAlternate=239,240,241
-BackgroundNormal=247,247,247
+BackgroundAlternate=34,34,34
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=112,125,138
-ForegroundLink=0,124,124
+ForegroundInactive=161,169,177
+ForegroundLink=0,170,170
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:View]
-BackgroundAlternate=247,247,247
-BackgroundNormal=255,255,255
+BackgroundAlternate=34,34,34
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=112,125,138
-ForegroundLink=0,124,124
+ForegroundInactive=161,169,177
+ForegroundLink=0,170,170
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [Colors:Window]
-BackgroundAlternate=227,229,231
-BackgroundNormal=239,240,241
+BackgroundAlternate=34,34,34
+BackgroundNormal=34,34,34
 DecorationFocus=0,170,170
 DecorationHover=0,170,170
 ForegroundActive=0,170,170
-ForegroundInactive=112,125,138
-ForegroundLink=0,124,124
+ForegroundInactive=161,169,177
+ForegroundLink=0,170,170
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=35,38,41
+ForegroundNormal=252,252,252
 ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=960,600
-History Items[$e]=file:$HOME/Games/Heroic/VtMB,file:$HOME/Games/Heroic/VtMB
-Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa3\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
+DirSelectDialog Size=1876,1200
 
 [General]
 AccentColor=0,170,170
 BrowserApplication=brave-browser.desktop
-ColorSchemeHash=b082986f0281217b6805dd8a33f4db473082e69e
+ColorSchemeHash=0594cdbf8684a5ef175629572f86003b65badc3d
 LastUsedCustomAccentColor=0,170,170
 TerminalApplication=foot
 TerminalService=foot.desktop
@@ -157,7 +155,7 @@ smallestReadableFont=SpaceMono Nerd Font,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 toolBarFont=SpaceMono Nerd Font,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [KDE]
-LookAndFeelPackage=org.rock.solidlight.desktop
+LookAndFeelPackage=org.rock.soliddark.desktop
 ShowDeleteCommand=true
 
 [KFileDialog Settings]
@@ -188,10 +186,10 @@ EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
 
 [WM]
-activeBackground=227,229,231
-activeBlend=227,229,231
+activeBackground=49,54,59
+activeBlend=252,252,252
 activeFont=SpaceMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-activeForeground=35,38,41
-inactiveBackground=239,240,241
-inactiveBlend=239,240,241
-inactiveForeground=112,125,138
+activeForeground=252,252,252
+inactiveBackground=34,34,34
+inactiveBlend=161,169,177
+inactiveForeground=161,169,177

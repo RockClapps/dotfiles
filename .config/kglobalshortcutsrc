@@ -309,7 +309,63 @@ previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org.chromium.Chromium]
-_k_friendly_name=org.chromium.Chromium
+11699A86DB81FD0B301C7B3D20442560-autofill_card=none,none,Autofill the last used card for the current website
+11699A86DB81FD0B301C7B3D20442560-autofill_identity=none,none,Autofill the last used identity for the current website
+11699A86DB81FD0B301C7B3D20442560-autofill_login=none,none,Autofill the last used login for the current website
+11699A86DB81FD0B301C7B3D20442560-generate_password=none,none,Generate and copy a new random password to the clipboard
+11699A86DB81FD0B301C7B3D20442560-lock_vault=none,none,Lock the vault
+8AF7265B95215D801139749BC630D267-c000-options-page=none,none,Open the options page
+8AF7265B95215D801139749BC630D267-c020-theme-youtube-dark=none,none,Theme: YouTube™ (Dark)
+8AF7265B95215D801139749BC630D267-c025-theme-enhanced-dark=none,none,Theme: Enhancer for YouTube™
+8AF7265B95215D801139749BC630D267-c030-theme-youtube-deep-dark=none,none,Theme: YouTube-DeepDark
+8AF7265B95215D801139749BC630D267-c040-theme-youtube-deep-dark-custom=none,none,Theme: YouTube-DeepDark (Custom)
+8AF7265B95215D801139749BC630D267-c050-theme-custom-theme=none,none,Theme: Custom theme
+8AF7265B95215D801139749BC630D267-c060-focus-video-player=none,none,Set focus on the video player
+8AF7265B95215D801139749BC630D267-c070-toggle-loop=none,none,Toggle the loop mode
+8AF7265B95215D801139749BC630D267-c080-stop-video=none,none,Stop the video
+8AF7265B95215D801139749BC630D267-c090-reverse-playlist=none,none,Reverse the playlist order
+8AF7265B95215D801139749BC630D267-c100-toggle-volume-booster=none,none,Toggle the volume booster
+8AF7265B95215D801139749BC630D267-c130-toggle-annotations=none,none,Toggle info cards and end screens visibility
+8AF7265B95215D801139749BC630D267-c140-toggle-cinema-mode=none,none,Toggle the cinema mode
+8AF7265B95215D801139749BC630D267-c150-toggle-player-size=none,none,Expand or shrink the video player
+8AF7265B95215D801139749BC630D267-c160-center-video-player=none,none,Center the video player within the viewport
+8AF7265B95215D801139749BC630D267-c170-pop-up-player=none,none,Watch with the pop-up player
+8AF7265B95215D801139749BC630D267-c180-decrease-speed=none,none,Decrease the playback speed
+8AF7265B95215D801139749BC630D267-c190-increase-speed=none,none,Increase the playback speed
+8AF7265B95215D801139749BC630D267-c200-default-speed=none,none,Select the default playback speed
+8AF7265B95215D801139749BC630D267-c210-normal-speed=none,none,Select the normal playback speed
+8AF7265B95215D801139749BC630D267-c220-toggle-video-filters=none,none,Toggle the video filters
+8AF7265B95215D801139749BC630D267-c230-flip-horizontally=none,none,Flip the video horizontally
+8AF7265B95215D801139749BC630D267-c240-flip-vertically=none,none,Flip the video vertically
+8AF7265B95215D801139749BC630D267-c250-take-screenshot=none,none,Take a screenshot of the video
+8AF7265B95215D801139749BC630D267-c260-keyboard-shortcuts=none,none,Display all the keyboard shortcuts for YouTube
+8AF7265B95215D801139749BC630D267-c270-custom-script=none,none,Execute the custom script
+8AF7265B95215D801139749BC630D267-c280-picture-in-picture=none,none,Toggle the Picture-in-Picture mode
+8AF7265B95215D801139749BC630D267-c290-quality-highres=none,none,Select the playback quality “4320p”
+8AF7265B95215D801139749BC630D267-c300-quality-hd2880=none,none,Select the playback quality “2880p”
+8AF7265B95215D801139749BC630D267-c310-quality-hd2160=none,none,Select the playback quality “2160p”
+8AF7265B95215D801139749BC630D267-c320-quality-hd1440=none,none,Select the playback quality “1440p”
+8AF7265B95215D801139749BC630D267-c330-quality-hd1080=none,none,Select the playback quality “1080p”
+8AF7265B95215D801139749BC630D267-c340-quality-hd720=none,none,Select the playback quality “720p”
+8AF7265B95215D801139749BC630D267-c350-quality-large=none,none,Select the playback quality “480p”
+8AF7265B95215D801139749BC630D267-c360-quality-medium=none,none,Select the playback quality “360p”
+8AF7265B95215D801139749BC630D267-c370-quality-small=none,none,Select the playback quality “240p”
+8AF7265B95215D801139749BC630D267-c380-quality-tiny=none,none,Select the playback quality “144p”
+8AF7265B95215D801139749BC630D267-c390-quality-auto=none,none,Select the playback quality “Auto”
+8AF7265B95215D801139749BC630D267-c400-comments-visibility=none,none,Toggle comments visibility
+8AF7265B95215D801139749BC630D267-c410-related-videos-visibility=none,none,Toggle related videos visibility
+8BF215686BBE583153BABCF53D0CE42A-addSite=none,none,Toggle current site
+8BF215686BBE583153BABCF53D0CE42A-switchEngine=none,none,Theme generation mode
+8BF215686BBE583153BABCF53D0CE42A-toggle=none,none,Toggle extension
+F1AC2CF94C170CC8FAB0F07A28792108-createTab=none,none,Create new tab
+F1AC2CF94C170CC8FAB0F07A28792108-goBack=none,none,Go back in history
+F1AC2CF94C170CC8FAB0F07A28792108-goForward=none,none,Go forward in history
+F1AC2CF94C170CC8FAB0F07A28792108-previousTab=none,none,Go one tab left
+F1AC2CF94C170CC8FAB0F07A28792108-quickNext=none,none,Go one tab right
+F1AC2CF94C170CC8FAB0F07A28792108-reloadTab=none,none,Reload tab
+F1AC2CF94C170CC8FAB0F07A28792108-userCustomized1=none,none,Custom shortcut 1
+F1AC2CF94C170CC8FAB0F07A28792108-userCustomized2=none,none,Custom shortcut 2
+_k_friendly_name=Chromium
 addSite=none,Alt+Shift+A,Toggle current site
 autofill_card=none,none,Autofill the last used card for the current website
 autofill_identity=none,none,Autofill the last used identity for the current website
@@ -368,7 +424,7 @@ userCustomized1=none,none,Custom shortcut 1
 userCustomized2=none,none,Custom shortcut 2
 
 [org.mozilla.Thunderbird]
-_k_friendly_name=org.mozilla.Thunderbird
+_k_friendly_name=Thunderbird
 addSite=none,Alt+Shift+A,Toggle current site
 autofill_card=none,none,Autofill the last used card for the current website
 autofill_identity=none,none,Autofill the last used identity for the current website
@@ -479,6 +535,9 @@ toggle do not disturb=none,,Toggle do not disturb
 _launch=
 
 [services][Beeper.desktop]
+_launch=
+
+[services][OpenMW.desktop]
 _launch=
 
 [services][Vscodium.desktop]
