@@ -5,13 +5,17 @@ $env.PATH = [ ($env.GOPATH | path join "bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join ".cargo/bin") ] ++ $env.PATH
 $env.PATH = [ ($env.HOME | path join "scripts/bin") ] ++ $env.PATH
 let fish_completer = {|spans|
-    let expanded_alias = (scope aliases | where name == $spans.0 | get -i 0 | get -i expansion)
-    let spans = (if $expanded_alias != null  {
-        $spans | skip 1 | prepend ($expanded_alias | split row " " | take 1)
-    } else { $spans })
-    fish --command $'complete "--do-complete=($spans | str join " ")"'
+    fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
     | from tsv --flexible --noheaders --no-infer
     | rename value description
+    | update value {|row|
+      let value = $row.value
+      let need_quote = ['\' ',' '[' ']' '(' ')' ' ' '\t' "'" '"' "`"] | any {$in in $value}
+      if ($need_quote and ($value | path exists)) {
+        let expanded_path = if ($value starts-with ~) {$value | path expand --no-symlink} else {$value}
+        $'"($expanded_path | str replace --all "\"" "\\\"")"'
+      } else {$value}
+    }
 }
 $env.config.completions.external = {
     enable: true
@@ -52,13 +56,18 @@ alias flatr = flatpak remove --delete-data
 alias flatu = flatpak update
 alias flats = flatpak search
 
-alias paci = sudo pacman -S
-alias pacr = sudo pacman -Rsn
-alias pacu = sudo pacman -Syu
-alias pacs = pacman -Ss
+alias pacs = sudo pacman -S
+alias pacrsn = sudo pacman -Rsn
+alias pacsyy = sudo pacman -Syy
+alias pacsyu = sudo pacman -Syu
+alias pacsyyu = sudo pacman -Syyu
+alias pacss = pacman -Ss
 alias pacsi = pacman -Si
 alias pacq = pacman -Q
 alias pacql = pacman -Ql
+alias pacqs = pacman -Qs
+alias pacqsq = pacman -Qsq
+alias pacu = sudo pacman -U
 
 alias apti = sudo apt install
 alias aptr = sudo apt remove
@@ -77,23 +86,23 @@ alias zypu = sudo zypper update
 alias zyps = zypper search
 
 def upd [] { 
-  if ('/bin/pacman' | path exists) {
-    pacu
-    if ('/bin/yay' | path exists) {
+  if (which pacman | is-not-empty) {
+    pacsyu
+    if (which yay | is-not-empty) {
       yay -Syua
     }
   }
-  if ('/bin/apt' | path exists) {
+  if (which apt | is-not-empty) {
     aptu
   }
-  if ('/bin/dnf' | path exists) {
+  if (which dnf | is-not-empty) {
     dnfu
   }
-  if ('/bin/zypu' | path exists) {
+  if (which zypu | is-not-empty) {
     zypu
   }
 
-  if ('/bin/flatpak' | path exists) {
+  if (which flatpak | is-not-empty) {
     flatu
   }
 }
@@ -101,7 +110,7 @@ def upd [] {
 #ALIASES
 
 #STARSHIP
-if ('/bin/starship' | path exists) {
+if (which starship | is-not-empty) {
   export-env { $env.STARSHIP_SHELL = "nu"; load-env {
       STARSHIP_SESSION_KEY: (random chars -l 16)
       PROMPT_MULTILINE_INDICATOR: (
@@ -144,7 +153,7 @@ if (not ($env | default false __zoxide_hooked | get __zoxide_hooked)) {
   $env.config = ($env.config | update hooks ($env.config.hooks | default {} env_change))
   $env.config = ($env.config | update hooks.env_change ($env.config.hooks.env_change | default [] PWD))
   $env.config = ($env.config | update hooks.env_change.PWD ($env.config.hooks.env_change.PWD | append {|_, dir|
-    if ('/bin/zoxide' | path exists) {
+    if (which zoxide | is-not-empty) {
       zoxide add -- $dir
     }
   }))
