@@ -45,9 +45,7 @@
 
 (use-package evil
  :init
- (setq evil-want-C-u-scroll t)
- :config
- (evil-mode))
+ (setq evil-want-C-u-scroll t))
 (use-package evil-exchange)
 (use-package evil-matchit)
 (use-package evil-nerd-commenter)
@@ -87,7 +85,7 @@
  '(make-backup-files nil)
  '(package-selected-packages
    '(avy company ellama evil flycheck go-mode magit rainbow-delimiters
-         which-key))
+         typescript-mode which-key))
  '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
@@ -192,9 +190,11 @@
 (global-completion-preview-mode)
 (which-key-mode)
 (electric-pair-mode)
+(add-hook 'text-mode-hook 'evil-local-mode)
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'electric-pair-mode)
+(add-hook 'prog-mode-hook 'evil-local-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'eglot-ensure)
