@@ -8,7 +8,7 @@ if status is-interactive
     if test -e ~/.aliases
       cat ~/.aliases \
         | string replace --all alias abbr \
-        | string replace --all = ' -a ' \
+        | string replace = ' -a ' \
         | source
     end
 
