@@ -9,8 +9,12 @@ if status is-interactive
       cat ~/.aliases | 
         string replace --all alias abbr | 
         string replace = ' -a ' | 
+        grep -v 'abbr pac' |
+        grep -v 'abbr \.' |
         source
     end
+    abbr -e l
+    alias l='ls -AGXhl --group-directories-first --color=auto'
 
     function upd
       if type -q pacman
@@ -57,6 +61,6 @@ if status is-interactive
       end
       echo "$sudo"pacman -$first(string sub -s 2 $arguments)
     end
-    abbr --add pacmanAbbrev --regex '^pac[^m]*' --function pacmanAbbrev
+    abbr --add pacmanAbbrev --regex '^pac(?!man)(?!cache).*' --function pacmanAbbrev
 
 end
