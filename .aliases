@@ -1,4 +1,3 @@
-alias sudo='sudo-rs'
 alias please='sudo'
 alias l='ls -AGXhl --group-directories-first --color=auto'
 alias suedit='sudo nvim -u ~/.config/nvim/init-compat'
