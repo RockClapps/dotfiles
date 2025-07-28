@@ -165,7 +165,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][101][Applets][106][Applets][120][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][101][Applets][106][Applets][121]
 immutability=1
@@ -179,7 +179,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][101][Applets][106][Applets][122][Configuration]
-PreloadWeight=100
+PreloadWeight=49
 
 [Containments][101][Applets][106][Applets][122][Configuration][General]
 currentDetailsTab=details
@@ -562,7 +562,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][2][Applets][7][Applets][21][Configuration]
-PreloadWeight=5
+PreloadWeight=47
 
 [Containments][2][Applets][7][Applets][22]
 immutability=1
@@ -576,7 +576,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][2][Applets][7][Applets][23][Configuration]
-PreloadWeight=100
+PreloadWeight=53
 
 [Containments][2][Applets][7][Applets][23][Configuration][General]
 currentDetailsTab=details
@@ -697,6 +697,7 @@ SlidePaths=/usr/share/wallpapers/
 
 [Containments][36]
 ItemGeometries-1920x1080=
+ItemGeometries-1920x1200=
 ItemGeometries-3840x2160=
 ItemGeometriesHorizontal=
 activityId=bba2ed27-ab72-41ed-8127-f74cea27b13e

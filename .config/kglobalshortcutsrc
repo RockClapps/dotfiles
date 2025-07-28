@@ -73,6 +73,22 @@ F1AC2CF94C170CC8FAB0F07A28792108-userCustomized1=none,none,Custom shortcut 1
 F1AC2CF94C170CC8FAB0F07A28792108-userCustomized2=none,none,Custom shortcut 2
 _k_friendly_name=Brave
 
+[chromium]
+09D58D86D8FA947A0E5B6FB62DFF4758-enter-picker-mode=none,none,Create a custom filter
+09D58D86D8FA947A0E5B6FB62DFF4758-enter-zapper-mode=none,none,Remove an element
+377211ECE6B9DAEF055CB5C329A219AE-addSite=none,none,Toggle current site
+377211ECE6B9DAEF055CB5C329A219AE-switchEngine=none,none,Theme generation mode
+377211ECE6B9DAEF055CB5C329A219AE-toggle=none,none,Toggle extension
+_k_friendly_name=Chromium
+
+[foot]
+09D58D86D8FA947A0E5B6FB62DFF4758-enter-picker-mode=none,none,Create a custom filter
+09D58D86D8FA947A0E5B6FB62DFF4758-enter-zapper-mode=none,none,Remove an element
+377211ECE6B9DAEF055CB5C329A219AE-addSite=none,none,Toggle current site
+377211ECE6B9DAEF055CB5C329A219AE-switchEngine=none,none,Theme generation mode
+377211ECE6B9DAEF055CB5C329A219AE-toggle=none,none,Toggle extension
+_k_friendly_name=Foot
+
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
 _k_friendly_name=Accessibility

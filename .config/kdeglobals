@@ -136,12 +136,14 @@ ForegroundPositive=39,174,96
 ForegroundVisited=155,89,182
 
 [DirSelect Dialog]
-DirSelectDialog Size=1876,1200
+DirSelectDialog Size=844,588
+History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\xa4\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
 AccentColor=0,170,170
 BrowserApplication=brave-browser.desktop
-ColorSchemeHash=0594cdbf8684a5ef175629572f86003b65badc3d
+ColorSchemeHash=b082986f0281217b6805dd8a33f4db473082e69e
 LastUsedCustomAccentColor=0,170,170
 TerminalApplication=foot
 TerminalService=foot.desktop
