@@ -86,7 +86,6 @@
  '(package-selected-packages
    '(avy company ellama evil flycheck go-mode magit rainbow-delimiters
          typescript-mode which-key))
- '(pixel-scroll-precision-mode t)
  '(savehist-mode t)
  '(standard-indent 2)
  '(tab-always-indent t))
@@ -123,8 +122,9 @@
  "J" 'evil-forward-WORD-end
  "K" 'evil-insert-line
  "L" 'evil-open-above
- (kbd "<leader>q") 'evil-window-delete
- ;;(kbd "<leader>Q") 'kill-emacs
+ (kbd "<leader>q") '(lambda () (interactive)
+                      (if (= (length (window-list)) 1) (delete-frame) (evil-window-delete)))
+ (kbd "<leader>Q") 'kill-emacs
  (kbd "<leader>w") 'save-buffer
  (kbd "<leader>e") 'split-window-below
  (kbd "<leader>o") 'split-window-right
@@ -208,6 +208,10 @@
 
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
 (load-file (concat custom-theme-directory "/womby-dark-theme.el"))
+
+(add-hook 'tetris-mode-hook
+          (lambda ()
+            (keymap-set tetris-mode-map "<up>" 'tetris-rotate-next)))
 
 ;; To recompile all .el files, run C-u 0 M-x byte-recompile-directory
 (custom-set-faces
