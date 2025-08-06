@@ -2,14 +2,15 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 48, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "modules-left": [
+        "clock",
         "hyprland/workspaces",
         "custom/media"
     ],
@@ -20,18 +21,18 @@
         "mpd",
         "tray",
         "idle_inhibitor",
-        "pulseaudio",
-        "network",
+        //"pulseaudio",
+        //"network",
         //"power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
+        //"cpu",
+        //"memory",
+        //"temperature",
         "backlight",
         //"keyboard-state",
         //"sway/language",
+        "power-profiles-daemon",
         "battery",
-        "battery#bat2",
-        "clock"
+        "battery#bat2"
         //"custom/power"
     ],
     // Modules configuration
@@ -136,7 +137,9 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        // "format": "{percent}% {icon}",
+        "format": "{icon}",
+        "tooltip-format": "{percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {

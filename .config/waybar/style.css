@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: SpaceMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -76,7 +76,8 @@ button:hover {
 
 #window {
   border-radius: 8;
-  background-color: #222222;
+  background-color: transparent;
+  color: #ffffff;
   padding: 0 8;
 }
 
@@ -97,8 +98,11 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
+    border-radius: 8;
     padding: 0 10px;
-    color: #ffffff;
+    margin: 0 4px;
+    color: #000000;
+    background-color: #00aaaa;
 }
 
 #window,
@@ -108,18 +112,17 @@ button:hover {
 
 .modules-left {
   border-radius: 8;
-  background-color: #222222;
+  margin: 8;
 }
 
 .modules-center {
   border-radius: 8;
-  padding: 0;
-  margin: 0;
+  margin: 8;
 }
 
 .modules-right {
   border-radius: 8;
-  background-color: #222222;
+  margin: 8;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -136,30 +139,21 @@ button:hover {
 }
 
 #clock {
-    background-color: rgba(0,0,0,0);
 }
 
 #battery {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: rgba(0,0,0,0);
 }
 
 @keyframes blink {
     to {
-        background-color: rgba(0,0,0,0);
-        color: #ffffff;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -172,94 +166,66 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 label:focus {
-    background-color: rgba(0,0,0,0);
 }
 
 #cpu {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #memory {
-    background-color: rgba(0,0,0,0);
 }
 
 #disk {
-    background-color: rgba(0,0,0,0);
 }
 
 #backlight {
-    background-color: rgba(0,0,0,0);
 }
 
 #network {
-    background-color: rgba(0,0,0,0);
     padding-right: 16;
 }
 
 #network.disconnected {
-    background-color: rgba(0,0,0,0);
 }
 
 #pulseaudio {
     border-radius: 8;
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #pulseaudio.muted {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #wireplumber {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #wireplumber.muted {
-    background-color: rgba(0,0,0,0);
 }
 
 #custom-media {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: rgba(0,0,0,0);
 }
 
 #custom-media.custom-vlc {
-    background-color: rgba(0,0,0,0);
 }
 
 #temperature {
-    background-color: rgba(0,0,0,0);
 }
 
 #temperature.critical {
-    background-color: rgba(0,0,0,0);
 }
 
 #tray {
-    background-color: rgba(0,0,0,0);
 }
 
 #tray > .passive {
@@ -268,35 +234,26 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #00aaaa;
 }
 
 #idle_inhibitor {
-    background-color: rgba(0,0,0,0);
     border-radius: 8;
     padding-right: 16;
 }
 
 #idle_inhibitor.activated {
-    background-color: #00aaaa;
-    color: #222222;
 }
 
 #mpd {
-    background-color: rgba(0,0,0,0);
-    color: #ffffff;
 }
 
 #mpd.disconnected {
-    background-color: rgba(0,0,0,0);
 }
 
 #mpd.stopped {
-    background-color: rgba(0,0,0,0);
 }
 
 #mpd.paused {
-    background-color: rgba(0,0,0,0);
 }
 
 #language {
@@ -328,7 +285,6 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: rgba(0,0,0,0);
 }
 
 #privacy {
@@ -341,15 +297,12 @@ label:focus {
 }
 
 #privacy-item.screenshare {
-    background-color: rgba(0,0,0,0);
 }
 
 #privacy-item.audio-in {
-    background-color: rgba(0,0,0,0);
 }
 
 #privacy-item.audio-out {
-    background-color: rgba(0,0,0,0);
 }
 
 #custom-power {
@@ -367,7 +320,5 @@ label:focus {
 #backlight:hover,
 #battery:hover,
 #clock:hover {
-    background-color: #00aaaa;
-    color: #222222;
     border-radius: 8;
 }
