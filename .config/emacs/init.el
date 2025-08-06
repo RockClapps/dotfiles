@@ -1,3 +1,4 @@
+(setq gc-cons-threshold (* 64 1024 1024))
 (dolist (package '(use-package))
  (unless (package-installed-p package)
   (package-install package)))
@@ -43,6 +44,11 @@
   ;; show ellama context in header line in all buffers
   (ellama-context-header-line-global-mode +1))
 
+(use-package eglot
+  :config
+  (add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
+  (add-to-list 'eglot-server-programs '((csharp-mode) "~/.dotnet/tools/csharp-ls"))
+  )
 (use-package evil
  :init
  (setq evil-want-C-u-scroll t))
@@ -52,7 +58,93 @@
 (use-package evil-numbers)
 (use-package evil-surround
  :config
- (global-evil-surround-mode))
+ (global-evil-surround-mode)
+ ;; key bindings
+ (evil-set-undo-system 'undo-tree)
+ (evil-set-leader '(normal visual motion) (kbd "<SPC>"))
+ (evil-define-key '(normal visual motion) 'global
+  "n" 'evil-backward-char
+  "e" 'evil-next-line
+  "i" 'evil-previous-line
+  "o" 'evil-forward-char
+  "N" 'evil-window-top
+  "E" 'evil-join
+  "I" 'evil-lookup
+  "O" 'evil-window-bottom
+  "h" 'evil-search-next
+  "j" 'evil-forward-word-end
+  "k" 'evil-insert
+  "l" 'evil-open-below
+  "H" 'evil-search-previous
+  "J" 'evil-forward-WORD-end
+  "K" 'evil-insert-line
+  "L" 'evil-open-above
+  (kbd "<leader>q") '(lambda () (interactive)
+                       ;;(if (= (length (window-list)) 1) (delete-frame) (evil-window-delete)))
+                       (if (= (length (window-list)) 1) (save-buffers-kill-emacs) (evil-window-delete)))
+  (kbd "<leader>Q") 'kill-emacs
+  (kbd "<leader>w") 'save-buffer
+  (kbd "<leader>e") 'split-window-below
+  (kbd "<leader>o") 'split-window-right
+  (kbd "<leader>T") 'evil-buffer-new
+  (kbd "<leader>X") 'evil-delete-buffer
+  (kbd "<leader>N") 'evil-next-buffer
+  (kbd "<leader>P") 'evil-prev-buffer
+  (kbd "<leader>b") 'helm-buffers-list
+  (kbd "<leader>t") 'tab-new
+  (kbd "<leader>x") 'tab-close
+  (kbd "<leader>n") 'tab-next
+  (kbd "<leader>p") 'tab-previous
+  (kbd "<leader>g") 'magit
+  (kbd "<leader>h") 'help
+  (kbd "<leader>C") 'toggle-theme
+  (kbd "<leader>s") 'avy-goto-char-2
+  (kbd "<leader>d") 'eglot-find-declaration
+  (kbd "<leader>D") 'eglot-find-typeDefinition
+  (kbd "<leader>i") 'eglot-find-implementation
+  (kbd "<leader>r") 'eglot-rename
+  ;;(kbd "<leader>ff") 'project-find-file
+  (kbd "<leader>ff") 'find-name-dired
+  (kbd "<leader>fg") 'helm-regexp
+  (kbd "<leader>fp") 'helm-recentf
+  (kbd "<leader>/") 'comment-line
+  (kbd "<leader><return>") 'ellama-code-complete
+ )
+ 
+ (evil-define-key '(normal) 'global
+  "gi" 'evil-previous-visual-line
+  "gk" 'evil-insert-resume
+  "gK" 'evil-insert-0-line
+  "gE" 'evil-join-whitespace
+  "zl" 'evil-open-fold
+  "zL" 'evil-open-fold-rec
+  "\C-h" 'evil-paste-pop-next
+  )
+ (evil-define-key '(visual) 'global
+  "K" 'evil-insert
+  "l" 'exchange-point-and-mark
+  "L" 'evil-visual-exchange-corners
+  "k" evil-inner-text-objects-map
+  )
+ (evil-define-key '(motion) 'global
+  "gj" 'evil-backward-word-end
+  "gJ" 'evil-backward-WORD-end
+  "ge" 'evil-next-visual-line
+  "gi" 'evil-previous-visual-line
+  "gl" 'evil-goto-char
+  (kbd "C-j") 'evil-scroll-line-down
+  (kbd "C-l") 'evil-jump-backward
+  "zo" 'evil-scroll-column-right
+  [?z right] "zo"
+  "zn" 'evil-scroll-column-left
+  [?z left] "zn"
+  "zO" 'evil-scroll-right
+  "zN" 'evil-scroll-left
+  )
+ (evil-define-key '(operator) 'global
+  "k" evil-inner-text-objects-map
+  )
+ )
 (use-package flycheck)
 (use-package go-mode)
 (use-package helm)
@@ -102,91 +194,6 @@
 (global-set-key (kbd "C-p") 'completion-preview-prev-candidate)
 (global-set-key (kbd "C-<return>") 'ellama-chat)
 
-(require 'evil)
-(evil-set-undo-system 'undo-tree)
-(evil-set-leader '(normal visual motion) (kbd "<SPC>"))
-(evil-define-key '(normal visual motion) 'global
- "n" 'evil-backward-char
- "e" 'evil-next-line
- "i" 'evil-previous-line
- "o" 'evil-forward-char
- "N" 'evil-window-top
- "E" 'evil-join
- "I" 'evil-lookup
- "O" 'evil-window-bottom
- "h" 'evil-search-next
- "j" 'evil-forward-word-end
- "k" 'evil-insert
- "l" 'evil-open-below
- "H" 'evil-search-previous
- "J" 'evil-forward-WORD-end
- "K" 'evil-insert-line
- "L" 'evil-open-above
- (kbd "<leader>q") '(lambda () (interactive)
-                      (if (= (length (window-list)) 1) (delete-frame) (evil-window-delete)))
- (kbd "<leader>Q") 'kill-emacs
- (kbd "<leader>w") 'save-buffer
- (kbd "<leader>e") 'split-window-below
- (kbd "<leader>o") 'split-window-right
- (kbd "<leader>T") 'evil-buffer-new
- (kbd "<leader>X") 'evil-delete-buffer
- (kbd "<leader>N") 'evil-next-buffer
- (kbd "<leader>P") 'evil-prev-buffer
- (kbd "<leader>b") 'helm-buffers-list
- (kbd "<leader>t") 'tab-new
- (kbd "<leader>x") 'tab-close
- (kbd "<leader>n") 'tab-next
- (kbd "<leader>p") 'tab-previous
- (kbd "<leader>g") 'magit
- (kbd "<leader>h") 'help
- (kbd "<leader>C") 'toggle-theme
- (kbd "<leader>s") 'avy-goto-char-2
- (kbd "<leader>d") 'eglot-find-declaration
- (kbd "<leader>D") 'eglot-find-typeDefinition
- (kbd "<leader>i") 'eglot-find-implementation
- (kbd "<leader>r") 'eglot-rename
- ;;(kbd "<leader>ff") 'project-find-file
- (kbd "<leader>ff") 'find-name-dired
- (kbd "<leader>fg") 'helm-regexp
- (kbd "<leader>fp") 'helm-recentf
- (kbd "<leader>/") 'comment-line
- (kbd "<leader><return>") 'ellama-code-complete
-)
-
-(evil-define-key '(normal) 'global
- "gi" 'evil-previous-visual-line
- "gk" 'evil-insert-resume
- "gK" 'evil-insert-0-line
- "gE" 'evil-join-whitespace
- "zl" 'evil-open-fold
- "zL" 'evil-open-fold-rec
- "\C-h" 'evil-paste-pop-next
- )
-(evil-define-key '(visual) 'global
- "K" 'evil-insert
- "l" 'exchange-point-and-mark
- "L" 'evil-visual-exchange-corners
- "k" evil-inner-text-objects-map
- )
-(evil-define-key '(motion) 'global
- "gj" 'evil-backward-word-end
- "gJ" 'evil-backward-WORD-end
- "ge" 'evil-next-visual-line
- "gi" 'evil-previous-visual-line
- "gl" 'evil-goto-char
- (kbd "C-j") 'evil-scroll-line-down
- (kbd "C-l") 'evil-jump-backward
- "zo" 'evil-scroll-column-right
- [?z right] "zo"
- "zn" 'evil-scroll-column-left
- [?z left] "zn"
- "zO" 'evil-scroll-right
- "zN" 'evil-scroll-left
- )
-(evil-define-key '(operator) 'global
- "k" evil-inner-text-objects-map
- )
-
 (global-completion-preview-mode)
 (which-key-mode)
 (electric-pair-mode)
@@ -201,9 +208,6 @@
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook 'eglot-format-buffer)
 
-(require 'eglot)
-(add-to-list 'eglot-server-programs '((java-mode) "~/Apps/jdt-language-server/bin/jdtls"))
-(add-to-list 'eglot-server-programs '((csharp-mode) "~/.dotnet/tools/csharp-ls"))
 (add-to-list 'default-frame-alist '(font . "SpaceMono Nerd Font-12"))
 
 (load-file (concat custom-theme-directory "/womby-light-theme.el"))
