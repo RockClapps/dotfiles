@@ -11,11 +11,11 @@ Id_6=ef87bf3b-7641-4215-89ef-00f0f3798820
 Id_7=351d9702-8c6f-475f-afae-f4e7364015a8
 Id_8=537b543c-8971-4bfb-ad65-50f43ef2408a
 Number=8
-Rows=8
+Rows=1
 
 [Effect-blur]
-BlurStrength=4
-NoiseStrength=14
+BlurStrength=3
+NoiseStrength=12
 
 [Effect-overview]
 BorderActivate=9
@@ -30,25 +30,16 @@ LongitudeAuto=-73.67
 NightTemperature=3600
 
 [Plugins]
-blurEnabled=false
+blurEnabled=true
 contrastEnabled=false
 desktopchangeosdEnabled=false
 dimscreenEnabled=true
 fadingpopupsEnabled=false
-frozenappEnabled=false
-fullscreenEnabled=false
 hidecursorEnabled=true
 krohnkiteEnabled=true
-loginEnabled=false
-logoutEnabled=false
-maximizeEnabled=false
 overviewEnabled=false
-scaleEnabled=false
 screenedgeEnabled=false
-slideEnabled=false
-slidingpopupsEnabled=false
-squashEnabled=false
-windowapertureEnabled=false
+wobblywindowsEnabled=true
 
 [Script-desktopchangeosd]
 PopupHideDelay=256
@@ -57,11 +48,11 @@ PopupHideDelay=256
 binaryTreeLayoutOrder=1
 floatingClass=gamescope
 floatingTitle=Picture in picture,Picture-in-Picture
-screenGapBetween=4
-screenGapBottom=4
-screenGapLeft=4
-screenGapRight=4
-screenGapTop=4
+screenGapBetween=8
+screenGapBottom=8
+screenGapLeft=8
+screenGapRight=8
+screenGapTop=17
 tileLayoutOrder=11
 
 [Tiling]

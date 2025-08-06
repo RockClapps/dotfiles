@@ -88,22 +88,6 @@ Description=NO BORDERS
 noborder=true
 noborderrule=2
 
-[9dcbbfa7-8fdb-4e66-b384-ae74894712b1]
-Description=Foot borderless
-noborder=true
-noborderrule=3
-wmclass=foot foot
-wmclasscomplete=true
-wmclassmatch=1
-
 [General]
-count=5
-rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c,f6ed4766-4942-4e5f-bfc0-4404fc9f66fd,9dcbbfa7-8fdb-4e66-b384-ae74894712b1,7815876c-40ca-4b7e-9c17-5134c0a146fc
-
-[f6ed4766-4942-4e5f-bfc0-4404fc9f66fd]
-Description=Kitty borderless
-noborder=true
-noborderrule=3
-wmclass=kitty kitty
-wmclasscomplete=true
-wmclassmatch=1
+count=3
+rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c,7815876c-40ca-4b7e-9c17-5134c0a146fc

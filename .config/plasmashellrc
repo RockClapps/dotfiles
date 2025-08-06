@@ -15,6 +15,15 @@ Number of Actions=0
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
+[PlasmaTransientsConfig]
+PreloadWeight=0
+popupHeight=188
+popupWidth=217
+
+[PlasmaTransientsConfig][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [PlasmaViews][Panel 101]
 floating=0
 panelOpacity=1
@@ -23,13 +32,64 @@ panelVisibility=2
 [PlasmaViews][Panel 101][Defaults]
 thickness=44
 
+[PlasmaViews][Panel 131]
+floating=1
+floatingApplets=1
+panelLengthMode=0
+panelOpacity=2
+panelVisibility=0
+
+[PlasmaViews][Panel 131][Defaults]
+maxLength=1913
+minLength=1896
+
+[PlasmaViews][Panel 131][Horizontal1920]
+maxLength=1913
+minLength=1896
+
+[PlasmaViews][Panel 180]
+floating=1
+
+[PlasmaViews][Panel 180][Defaults]
+thickness=20
+
+[PlasmaViews][Panel 182]
+floating=1
+floatingApplets=1
+panelLengthMode=0
+panelOpacity=2
+panelVisibility=0
+
+[PlasmaViews][Panel 182][Defaults]
+maxLength=1913
+minLength=1896
+
+[PlasmaViews][Panel 182][Horizontal1920]
+maxLength=1913
+minLength=1896
+
 [PlasmaViews][Panel 2]
 floating=0
-panelOpacity=1
-panelVisibility=0
+panelOpacity=2
+panelVisibility=1
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=44
+
+[PlasmaViews][Panel 261]
+floating=1
+floatingApplets=1
+panelLengthMode=0
+panelOpacity=2
+panelVisibility=0
+
+[PlasmaViews][Panel 261][Defaults]
+maxLength=1913
+minLength=1896
+
+[PlasmaViews][Panel 261][Horizontal1920]
+maxLength=1913
+minLength=1896
 
 [PlasmaViews][Panel 37]
 floating=0
