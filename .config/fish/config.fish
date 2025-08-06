@@ -56,7 +56,7 @@ if status is-interactive
       if test $first = 'S' || test $first = 'R' || test $first = 'U'
         set sudo 'sudo '
       end
-      if test (string sub -e 2 $arguments) = 'ss'
+      if test (string sub -e 2 $arguments) = 'ss' || test (string sub -e 2 $arguments) = 'si'
         set sudo ''
       end
       echo "$sudo"pacman -$first(string sub -s 2 $arguments)

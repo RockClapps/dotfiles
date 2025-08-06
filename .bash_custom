@@ -7,6 +7,7 @@ source ~/.aliases
 HISTSIZE=1000
 
 bind Space:magic-space
+bind "\C-Space":alias-expand-line
 bind '"\C-p":history-search-backward'
 bind '"\C-n":history-search-forward'
 bind '"\e[A":history-search-backward'
