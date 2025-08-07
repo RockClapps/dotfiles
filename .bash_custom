@@ -24,9 +24,36 @@ shopt -s autocd 2> /dev/null
 shopt -s dirspell 2> /dev/null
 shopt -s cdspell 2> /dev/null
 
+prompt_bad_exit () {
+  if [[ "$?" != 0 ]]; then
+    PS1="${PS1}\e[31m!\e[0m "
+  fi
+}
+prompt_name () {
+  PS1="${PS1}\e[32m\u@\h \e[34m\w\e[0m "
+}
+prompt_git_branch () {
+  gitbranch=$(git branch --show-current 2> /dev/null)
+  if [[ $gitbranch != "" ]]; then
+    PS1="${PS1}\e[31m${gitbranch}\e[0m "
+  fi
+}
+prompt_job_count () {
+  jobs=$(jobs | wc -l)
+  if [[ $jobs != 0 ]]; then
+    PS1="${PS1}\e[33m${jobs}\e[0m "
+  fi
+}
+prompt_arrow () {
+  PS1="${PS1}\n\e[32m>\e[0m "
+}
+
 if type starship &> /dev/null; then
   eval "$(starship init bash)"
+else
+  PROMPT_COMMAND=(PS1="" prompt_name prompt_git_branch prompt_bad_exit prompt_job_count prompt_arrow)
 fi
+
 
 if type zoxide &> /dev/null; then
 	eval "$(zoxide init bash)"
