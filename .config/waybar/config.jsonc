@@ -21,11 +21,11 @@
         "mpd",
         "tray",
         "idle_inhibitor",
-        //"pulseaudio",
+        "pulseaudio",
         //"network",
         //"power-profiles-daemon",
-        //"cpu",
-        //"memory",
+        "cpu",
+        "memory",
         //"temperature",
         "backlight",
         //"keyboard-state",
@@ -77,6 +77,7 @@
       // "rewrite": {
       //   "^$": "Hyprland"
       // }
+      "on-click": "hyprctl kill"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -121,11 +122,13 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": "",
+        "tooltip": true,
+        "on-click": "foot -a floatfoot btop"
     },
     "memory": {
-        "format": "{}% "
+        "format": "",
+        "on-click": "foot -a floatfoot btop"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -150,7 +153,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% {icon}",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -182,12 +185,13 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        //"format-source": "{volume}% ",
+        "format-source": "",
+        "format-source-muted": " ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -197,7 +201,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "foot -a floatfoot wiremix"
     },
     "custom/media": {
         "format": "{icon} {text}",

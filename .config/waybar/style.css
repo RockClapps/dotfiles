@@ -105,6 +105,10 @@ button:hover {
     background-color: #00aaaa;
 }
 
+#tray {
+  background-color: transparent;
+}
+
 #window,
 #workspaces {
     color: #ffffff;
@@ -145,6 +149,7 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
+  background: #00ff44;
 }
 
 @keyframes blink {
@@ -178,9 +183,11 @@ label:focus {
 }
 
 #cpu {
+  padding-right: 14px;
 }
 
 #memory {
+  padding-right: 12px;
 }
 
 #disk {
