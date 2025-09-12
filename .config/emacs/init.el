@@ -90,7 +90,7 @@
   (kbd "<leader>X") 'evil-delete-buffer
   (kbd "<leader>N") 'evil-next-buffer
   (kbd "<leader>P") 'evil-prev-buffer
-  (kbd "<leader>b") 'helm-buffers-list
+  (kbd "<leader>b") 'switch-to-buffer
   (kbd "<leader>t") 'tab-new
   (kbd "<leader>x") 'tab-close
   (kbd "<leader>n") 'tab-next
@@ -165,8 +165,7 @@
  '(custom-enabled-themes '(womby-dark))
  '(custom-safe-themes
    '("ce705d0cd0b55d19cb48596f0f2b91c0c986c2d015a48aa22a4ee588cd128445"
-     "427eb94b8511f8d6d1e7756367369beb179f19dfbe0de478065543cab9c2c3d5"
-     default))
+     "427eb94b8511f8d6d1e7756367369beb179f19dfbe0de478065543cab9c2c3d5" default))
  '(custom-theme-directory "~/.config/emacs/themes")
  '(delete-selection-mode nil)
  '(global-display-line-numbers-mode t)
@@ -175,9 +174,13 @@
  '(initial-scratch-message nil)
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
+ '(org-agenda-files
+   '("~/Sync/Notes/School Notes/Semester 8/Homework.org"))
  '(package-selected-packages
-   '(avy company ellama evil flycheck go-mode magit rainbow-delimiters
-         typescript-mode which-key))
+   '(avy company ellama evil flycheck go-mode magit rainbow-delimiters typescript-mode
+         which-key))
+ '(read-buffer-completion-ignore-case t)
+ '(read-file-name-completion-ignore-case t)
  '(savehist-mode t)
  '(standard-indent 2)
  '(tab-always-indent t))
@@ -197,11 +200,13 @@
 (global-completion-preview-mode)
 (which-key-mode)
 (electric-pair-mode)
-(add-hook 'text-mode-hook 'evil-local-mode)
+(evil-mode)
+;;(add-hook 'text-mode-hook 'evil-local-mode)
+(setq-default fill-column 85) ;;Exactly half my 1080p screen
 (add-hook 'text-mode-hook 'auto-fill-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'electric-pair-mode)
-(add-hook 'prog-mode-hook 'evil-local-mode)
+;;(add-hook 'prog-mode-hook 'evil-local-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'eglot-ensure)
