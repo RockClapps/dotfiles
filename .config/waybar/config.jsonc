@@ -24,15 +24,15 @@
         "pulseaudio",
         //"network",
         //"power-profiles-daemon",
-        "cpu",
-        "memory",
         //"temperature",
         "backlight",
         //"keyboard-state",
         //"sway/language",
         "power-profiles-daemon",
-        "battery",
-        "battery#bat2"
+        "cpu",
+        "memory",
+        "battery"
+        // "battery#bat2"
         //"custom/power"
     ],
     // Modules configuration
@@ -143,13 +143,17 @@
         // "format": "{percent}% {icon}",
         "format": "{icon}",
         "tooltip-format": "{percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "reverse-scrolling": true,
     },
     "battery": {
         "states": {
             // "good": 95,
-            "warning": 30,
-            "critical": 15
+            "warning": 20,
+            "critical": 10
+        },
+        "events": {
+          "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
@@ -187,20 +191,21 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}{format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": "{format_source}",
         //"format-source": "{volume}% ",
-        "format-source": "",
+        "format-source": "  ",
         "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
             "phone": "",
             "portable": "",
             "car": "",
             "default": ["", "", ""]
         },
+        "reverse-scrolling": true,
         "on-click": "foot -a floatfoot wiremix"
     },
     "custom/media": {

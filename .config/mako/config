@@ -2,3 +2,4 @@ default-timeout=8000
 border-radius=8
 background-color=#222222
 border-color=#00aaaa
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga

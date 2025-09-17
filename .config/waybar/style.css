@@ -107,6 +107,7 @@ button:hover {
 
 #tray {
   background-color: transparent;
+  padding: 0;
 }
 
 #window,
@@ -205,6 +206,7 @@ label:focus {
 
 #pulseaudio {
     border-radius: 8;
+    padding-right: 16;
 }
 
 #pulseaudio.muted {
@@ -246,9 +248,13 @@ label:focus {
 #idle_inhibitor {
     border-radius: 8;
     padding-right: 16;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0);
 }
 
 #idle_inhibitor.activated {
+    color: #000000;
+    background: #00aaaa;
 }
 
 #mpd {
