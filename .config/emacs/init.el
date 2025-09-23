@@ -175,7 +175,8 @@
  '(kill-buffer-delete-auto-save-files t)
  '(make-backup-files nil)
  '(org-agenda-files
-   '("~/Sync/Notes/School Notes/Semester 8/Homework.org"))
+   '("~/Sync/Notes/ResearchFediverse.org"
+     "/home/rock/Sync/Notes/School Notes/Semester 8/Homework.org"))
  '(package-selected-packages
    '(avy company ellama evil flycheck go-mode magit rainbow-delimiters typescript-mode
          which-key))
