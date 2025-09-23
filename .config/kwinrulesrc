@@ -68,6 +68,14 @@ wmclass=xwaylandvideobridge xwaylandvideobridge
 wmclasscomplete=true
 wmclassmatch=1
 
+[50e336f5-9b2b-4784-8100-134aaf18380b]
+Description=Translucent windows
+Enabled=false
+opacityactive=80
+opacityactiverule=2
+opacityinactive=80
+opacityinactiverule=2
+
 [554f82be-6e7e-42f4-9e68-5196fe88f79b]
 Description=Gamescope borderless window
 above=true
@@ -88,6 +96,14 @@ Description=NO BORDERS
 noborder=true
 noborderrule=2
 
+[97253590-68e5-4f43-b763-af1968f1a0e6]
+Description=Non-transluscent windows
+Enabled=false
+opacityactiverule=2
+opacityinactiverule=2
+wmclass=foot|gnome-boxes
+wmclassmatch=3
+
 [General]
-count=3
-rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c,7815876c-40ca-4b7e-9c17-5134c0a146fc
+count=5
+rules=554f82be-6e7e-42f4-9e68-5196fe88f79b,18051806-0af1-46d9-8999-5830b2fec91c,7815876c-40ca-4b7e-9c17-5134c0a146fc,97253590-68e5-4f43-b763-af1968f1a0e6,50e336f5-9b2b-4784-8100-134aaf18380b

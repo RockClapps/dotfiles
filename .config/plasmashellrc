@@ -15,6 +15,9 @@ Number of Actions=0
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
+[PIMEventsPlugin]
+calendars=2,8
+
 [PlasmaViews][Panel 101]
 floating=0
 panelOpacity=1
@@ -86,7 +89,7 @@ minLength=1896
 alignment=2
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 289][Defaults]
 thickness=32
@@ -94,7 +97,7 @@ thickness=32
 [PlasmaViews][Panel 310]
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 310][Defaults]
 thickness=32
@@ -103,7 +106,7 @@ thickness=32
 alignment=1
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 313][Defaults]
 thickness=32
@@ -111,7 +114,7 @@ thickness=32
 [PlasmaViews][Panel 321]
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 321][Defaults]
 thickness=32
@@ -120,7 +123,7 @@ thickness=32
 alignment=1
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 324][Defaults]
 thickness=32
@@ -129,7 +132,7 @@ thickness=32
 alignment=2
 floating=1
 panelLengthMode=1
-panelOpacity=2
+panelOpacity=1
 
 [PlasmaViews][Panel 328][Defaults]
 thickness=32

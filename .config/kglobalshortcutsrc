@@ -6,10 +6,8 @@ switch-to-activity-7e18d393-45bd-4b81-8a02-175f641eed84=none,none,Switch to acti
 switch-to-activity-bba2ed27-ab72-41ed-8127-f74cea27b13e=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
-Switch keyboard layout to Colefix=none,none,Switch keyboard layout to Colefix
-Switch keyboard layout to English (Colemak)=none,none,Switch keyboard layout to English (Colemak)
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
-Switch keyboard layout to English(US, Colefix)=none,none,Switch keyboard layout to English(US\\, Colefix)
+Switch keyboard layout to colefix=none,none,Switch keyboard layout to colefix
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
@@ -161,7 +159,7 @@ KrohnkiteStackedLayout=none,none,Krohnkite: Stacked Layout
 KrohnkiteStairLayout=none,none,Krohnkite: Stair Layout
 KrohnkiteTileLayout=none,none,Krohnkite: Tile Layout
 KrohnkiteToggleFloat=Meta+Space,none,Krohnkite: Toggle Float
-KrohnkiteTreeColumnLayout=none,none,Krohnkite: Tree Column Layout
+KrohnkiteTreeColumnLayout=none,none,Krohnkite: Three Column Layout
 KrohnkitegrowWidth=none,none,Krohnkite: Grow Width
 KrohnkitetoggleDock=none,none,Krohnkite: Toggle Dock
 Move Tablet to Next Output=none,none,Move the tablet to the next output
@@ -531,6 +529,7 @@ activate widget 181=none,none,Activate Pager Widget
 activate widget 29=none,none,Activate Icons-only Task Manager Widget
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 activate widget 351=none,none,Activate Application Launcher Widget
+activate widget 352=none,none,Activate Application Launcher Widget
 clear-history=Meta+Shift+V,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -561,15 +560,15 @@ _launch=
 [services][Vscodium.desktop]
 _launch=
 
+[services][app.zen_browser.zen.desktop]
+new-private-window=Meta+Shift+B
+new-window=Meta+B
+
 [services][dev.vencord.Vesktop.desktop]
 _launch=Meta+D
 
 [services][emacs.desktop]
 _launch=Meta+Shift+Return
-
-[services][firefox.desktop]
-_launch=Meta+B
-new-private-window=Meta+Shift+B
 
 [services][foot.desktop]
 _launch=Meta+Return
@@ -608,6 +607,10 @@ new-window=Meta+Shift+B
 
 [services][thunderbird.desktop]
 _launch=Meta+M
+
+[services][zen.desktop]
+_launch=Meta+B
+new-private-window=Meta+Shift+B
 
 [wacomtablet]
 Map to fullscreen=none,Meta+Ctrl+F,Map to fullscreen

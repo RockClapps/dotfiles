@@ -20,25 +20,37 @@ NoiseStrength=2
 [Effect-overview]
 BorderActivate=9
 
+[Effect-shakecursor]
+Magnification=6
+
 [Effect-slide]
+HorizontalGap=0
 SlideBackground=false
 
 [NightColor]
 Active=true
-LatitudeAuto=42.73
-LongitudeAuto=-73.67
-NightTemperature=3600
+LatitudeFixed=43.179178434984344
+LongitudeFixed=-74.84643510205754
+Mode=Location
 
 [Plugins]
-blurEnabled=true
+blurEnabled=false
 contrastEnabled=false
 desktopchangeosdEnabled=false
 dimscreenEnabled=true
 fadingpopupsEnabled=false
+fullscreenEnabled=false
 hidecursorEnabled=true
 krohnkiteEnabled=true
+loginEnabled=false
+logoutEnabled=false
+maximizeEnabled=false
+scaleEnabled=false
 screenedgeEnabled=false
-wobblywindowsEnabled=true
+slideEnabled=false
+slidingpopupsEnabled=false
+squashEnabled=false
+windowapertureEnabled=false
 
 [Script-desktopchangeosd]
 PopupHideDelay=256
